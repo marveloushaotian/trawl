@@ -1,5 +1,30 @@
 [
  {
+  "source": "Proc. Natl. Acad. Sci. U.S.A.",
+  "doi": "10.1073/pnas.2619331123",
+  "title": "Linear plasmids mediate antimicrobial resistance gene transfer between environmental bacteria and hospital-adapted enterococci",
+  "authors": "Hashimoto Y, Suzuki M, Dao D, Kasuga I, Vu T, Takemura T",
+  "date": "2026-11-19",
+  "url": "https://doi.org/10.1073/pnas.2619331123",
+  "grade": "high",
+  "takeaway": "pELF 型线性质粒携带 qrtA，经 IS1216E 相关 MGE 在 Vagococcus 与肠球菌间接合转移且代价低。",
+  "reason": "是 MGE/HGT 生态与跨宿主转移的有用案例，但基于分离株且偏肠球菌 ARG，不直接命中主线。",
+  "run_date": "2026-11-22"
+ },
+ {
+  "source": "Nat Commun",
+  "pmid": "43052325",
+  "doi": "10.1038/s41467-026-78742-z",
+  "title": "Identification and genetic characterization of megabase-scale plasmids of Enterobacteriaceae.",
+  "authors": "Guitor AK, Wang S, Tuck OT, Firek B, Mostacci N, Jauhal A",
+  "date": "2026-10-20",
+  "url": "https://doi.org/10.1038/s41467-026-78742-z",
+  "grade": "core",
+  "takeaway": "发现21个最长1.58 Mbp的肠杆菌科巨型质粒，并在至少400份婴儿/成人肠道等宏基因组中检出。",
+  "reason": "命中主线1和3：巨型质粒可在婴儿肠道宏基因组中检出，值得纳入参考目录并检验read归属问题。",
+  "run_date": "2026-11-22"
+ },
+ {
   "source": "Nat Commun",
   "pmid": "43058101",
   "doi": "10.1038/s41467-026-78621-7",
@@ -8,8 +33,8 @@
   "date": "2026-10-21",
   "url": "https://doi.org/10.1038/s41467-026-78621-7",
   "grade": "high",
-  "takeaway": "4,839 个公共宏基因组的 strain-resolved 纵向分析：IBD 相关菌 persistence 降低、strain loss 增多、engraftment 变差。",
-  "reason": "不涉及质粒/噬菌体，但菌株追踪与纵向持续性的方法和统计思路可迁移到质粒宿主关联研究。",
+  "takeaway": "4,839 个公共宏基因组的 strain-resolved 纵向分析：IBD 菌群失调主要是共生菌减少，IBD 相关菌株 persistence 降低、strain loss 增加。",
+  "reason": "与质粒无关，但菌株追踪和纵向建模可迁移到质粒–宿主持续性分析，值得参考。",
   "run_date": "2026-11-22"
  },
  {
@@ -21,8 +46,23 @@
   "date": "2026-11-01",
   "url": "https://doi.org/10.1111/1751-7915.70485",
   "grade": "high",
-  "takeaway": "用液滴数字PCR单细胞筛选，在湖沉积物中发现PromAγ质粒（repA信号）关联多样的潜在天然宿主。",
-  "reason": "属质粒–宿主关联的新方法，但为湿实验、环境样本、靶向repA，可迁移性有限，不到Core。",
+  "takeaway": "用液滴数字PCR单细胞筛选，在湖泊沉积物中发现PromAγ质粒与多种细菌类群关联，含新候选宿主。",
+  "reason": "属质粒–宿主连接的新方法，但为环境样本、湿实验；可借鉴宿主范围思路，不直接用于短读长宏基因组。",
+  "run_date": "2026-11-22"
+ },
+ {
+  "source": "bioRxiv",
+  "doi": "10.64898/2026.11.09.765220",
+  "title": "Persistence of commensal Escherichia coli strains and plasmid transfer in a healthy adult",
+  "authors": "Moran, R. A.; Hall, R. M.",
+  "date": "2026-11-19",
+  "version": "1",
+  "category": "microbiology",
+  "published_doi": "",
+  "url": "https://www.biorxiv.org/content/10.64898/2026.11.09.765220",
+  "grade": "high",
+  "takeaway": "单个健康成人700天内，5个persistent E. coli菌株染色体几乎不变，但肠内发生质粒获得与丢失。",
+  "reason": "人类肠道质粒纵向证据，但仅一人且基于分离株，非宏基因组；可作质粒稳定性与更替的参照。",
   "run_date": "2026-11-22"
  },
  {
@@ -36,8 +76,8 @@
   "published_doi": "",
   "url": "https://www.biorxiv.org/content/10.64898/2026.11.19.767906",
   "grade": "high",
-  "takeaway": "346株 S. meliloti 长读长测序得到386个辅助质粒，多可移动，含质粒融合/cointegrate，13个 RepA replicon 组。",
-  "reason": "非人类肠道，但属质粒分类、模块化与融合进化的可迁移案例，可参考 replicon 分型与短读长难回收大质粒的问题。",
+  "takeaway": "长读长测 346 株 S. meliloti，得 386 个辅助质粒（76% 菌株携带），多可移动，并有质粒融合/cointegrate 证据。",
+  "reason": "非人类肠道，但属质粒群体结构与模块化进化；短读长难回收大质粒，对 replicon 分型和 read 归属有参考价值。",
   "run_date": "2026-11-22"
  }
 ]
