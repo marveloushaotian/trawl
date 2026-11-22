@@ -201,7 +201,7 @@ def _crossref_query(issns: list[str], start: date, end: date) -> list[dict]:
     while True:
         r = _get("https://api.crossref.org/works", {
             "filter": filt, "rows": 500, "cursor": cursor,
-            "select": "DOI,title,container-title,short-container-title,author,abstract,created,published-online,published-print,published",
+            "select": "DOI,ISSN,title,container-title,author,abstract,created,published-online,published-print,published",
         }).json()["message"]
         out.extend(r["items"])
         cursor = r.get("next-cursor")
@@ -234,9 +234,9 @@ def fetch_crossref(cfg: dict, start: date, end: date) -> list[dict]:
                 continue
             names = [f"{a.get('family', '')} {a.get('given', '')[:1]}".strip()
                      for a in (x.get("author") or [])[:6] if a.get("family")]
-            short = (x.get("short-container-title") or [""])[0]
+            ta = next((issn_to_ta[i] for i in x.get("ISSN", []) if i in issn_to_ta), None)
             papers.append({
-                "source": short or (x.get("container-title") or [""])[0],
+                "source": ta or (x.get("container-title") or [""])[0],
                 "doi": doi, "title": title, "authors": ", ".join(names),
                 "abstract": abstract, "date": _crossref_date(x), "pub_types": [],
                 "url": f"https://doi.org/{doi}",
