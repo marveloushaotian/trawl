@@ -262,7 +262,8 @@ def fetch_pubmed(cfg: dict, start: date, end: date) -> list[dict]:
 def fetch_all(cfg: dict, today: date) -> tuple[list[dict], dict]:
     start = today - timedelta(days=cfg["window_days"])
     cats = {c.lower() for c in cfg["biorxiv_categories"]}
-    bio = [p for p in fetch_rxiv("biorxiv", start, today) if p["category"] in cats]
+    bio = [p for p in fetch_rxiv("biorxiv", start, today)
+           if p["category"] in cats or keyword_hit(p["title"] + " " + p["abstract"], cfg["keyword_sets"])]
     med = [p for p in fetch_rxiv("medrxiv", start, today)
            if keyword_hit(p["title"] + " " + p["abstract"], cfg["keyword_sets"])]
     cr = fetch_crossref(cfg, start, today)

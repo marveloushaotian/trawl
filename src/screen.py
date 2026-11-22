@@ -106,7 +106,9 @@ def screen(papers: list[dict], profile: str, models: dict) -> list[dict]:
     if not papers:
         return []
     g = stage1(papers, profile, models["screen"])
-    picked = [p for i, p in enumerate(papers) if g.get(str(i)) in ("core", "high", "maybe")]
+    for i, p in enumerate(papers):
+        p["stage1"] = g.get(str(i), "error")
+    picked = [p for p in papers if p["stage1"] in ("core", "high", "maybe")]
     out = []
     print(f"stage1: {len(papers)} screened, {len(picked)} passed to stage 2")
     for p in picked:
@@ -115,7 +117,8 @@ def screen(papers: list[dict], profile: str, models: dict) -> list[dict]:
         except anthropic.APIError as e:
             print(f"stage2 failed for {p.get('doi')}: {e}")
             continue
-        if r.get("grade") in ("core", "high"):
+        p["final"] = r.get("grade", "low")
+        if p["final"] in ("core", "high"):
             out.append({**p, **r})
     return out
 

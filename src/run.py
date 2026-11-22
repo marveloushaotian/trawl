@@ -159,8 +159,19 @@ def main() -> None:
     profile = (ROOT / "config/profile.md").read_text()
     picked = screen(fresh, profile, cfg["models"])
 
+    # audit trail of the latest run: every screened paper with both grades (overwritten each run)
+    AUDIT = DATA / "last_run.tsv"
+    rows = ["stage1\tfinal\tsource\tdate\ttitle\turl"]
+    for p in sorted(fresh, key=lambda x: (x.get("stage1", ""), x.get("final", ""))):
+        rows.append("\t".join([p.get("stage1", ""), p.get("final", ""), p["source"], (p.get("date") or "")[:10],
+                               p["title"].replace("\t", " ")[:200], p["url"]]))
+    DATA.mkdir(exist_ok=True)
+    AUDIT.write_text("\n".join(rows) + "\n")
+
     for p in picked:
         p["run_date"] = today.isoformat()
+        p.pop("stage1", None)
+        p.pop("final", None)
         p.pop("abstract", None)
         p.pop("pub_types", None)
     items = [it for it in items if date.fromisoformat(it["run_date"]) >= today - timedelta(days=60)] + picked
