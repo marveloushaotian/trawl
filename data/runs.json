@@ -1,15 +1,15 @@
 [
  {
   "date": "2026-11-22",
-  "candidates": 481,
-  "screened": 481,
+  "candidates": 534,
+  "screened": 534,
   "picked": 6,
   "by_source": {
-   "bioRxiv": 131,
+   "bioRxiv": 184,
    "medRxiv": 1,
    "Crossref": 70,
    "PubMed": 389,
-   "after_dedupe": 481
+   "after_dedupe": 534
   }
  }
 ]
