@@ -1,0 +1,92 @@
+# trawl sources. Edit freely; the daily run reads this file.
+
+window_days: 3            # look back this many days (72 h)
+max_candidates: 900       # hard cap on abstracts screened per run (cost guard)
+keep_days: 14             # days of results shown in README
+
+models:
+  screen: claude-haiku-5-5     # stage 1: grade every abstract
+  write: claude-sonnet-5-5     # stage 2: write takeaway + reason for Core/High
+
+# --- bioRxiv / medRxiv ------------------------------------------------------
+# bioRxiv: every new preprint in these categories is screened (no keyword filter).
+biorxiv_categories:
+  - microbiology
+  - genomics
+  - bioinformatics
+  - evolutionary biology
+  - ecology
+  - systems biology
+# medRxiv is noisy: only preprints whose title/abstract hit the keyword sets below.
+medrxiv: keywords_only
+
+# --- PubMed -----------------------------------------------------------------
+# Specialist journals: every new article is screened.
+journals_all:
+  - Nat Microbiol
+  - Microbiome
+  - Cell Host Microbe
+  - ISME J
+  - ISME Commun
+  - mBio
+  - mSystems
+  - Gut Microbes
+  - Microb Genom
+  - Plasmid
+  - Trends Microbiol
+  - Nat Rev Microbiol
+  - Curr Opin Microbiol
+  - NPJ Biofilms Microbiomes
+  - Lancet Microbe
+  - Nucleic Acids Res
+  - Genome Res
+  - Mol Biol Evol
+  - Mol Syst Biol
+
+# Broad journals: only articles that also match the microbial filter below.
+journals_filtered:
+  - Nature
+  - Science
+  - Cell
+  - Nat Commun
+  - Proc Natl Acad Sci U S A
+  - Sci Adv
+  - PLoS Biol
+  - Elife
+  - Curr Biol
+  - Cell Rep
+  - Nat Med
+  - Nat Biotechnol
+  - Nat Methods
+  - Genome Biol
+  - Philos Trans R Soc Lond B Biol Sci
+  - Microbiol Spectr
+  - J Antimicrob Chemother
+  - Diabetologia
+
+microbial_filter: >-
+  microbio*[tiab] OR bacteri*[tiab] OR phage*[tiab] OR bacteriophage*[tiab]
+  OR prophage*[tiab] OR plasmid*[tiab] OR microbiome*[tiab] OR microbiota[tiab]
+  OR metagenom*[tiab] OR virome*[tiab] OR "mobile genetic"[tiab]
+  OR "horizontal gene transfer"[tiab]
+
+# --- Keyword sets (all of PubMed + medRxiv) ----------------------------------
+# Taken from the former bioRxiv alerts; each set is ORed inside, sets are ORed together.
+# "pairs" sets require one term from each list.
+keyword_sets:
+  plasmids_mge:
+    any: [plasmid, plasmids, plasmidome, plasmidomics, mobilome, mobilomes,
+          integron, integrons, transposon, transposons, "mobile genetic element",
+          "mobile genetic elements", "conjugative", "phage-plasmid"]
+  phages:
+    any: [phage, phages, bacteriophage, bacteriophages, prophage, prophages,
+          virome, viromes, viromics]
+  early_life_gut:
+    pairs:
+      - [gut, intestinal, infant, infants, neonatal, newborn, maternal, mother]
+      - [microbiome, microbiota, metagenome, metagenomics]
+  metagenomic_methods:
+    pairs:
+      - [metagenome, metagenomes, metagenomic, metagenomics, plasmidomics, viromics]
+      - [assembly, binning, reconstruction, database, catalog, catalogue,
+         benchmark, software, tool, pipeline]
