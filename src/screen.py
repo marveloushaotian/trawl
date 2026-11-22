@@ -24,7 +24,7 @@ GRADE_TOOL = {
                     "type": "object",
                     "properties": {
                         "id": {"type": "string"},
-                        "grade": {"type": "string", "enum": ["core", "high", "low"]},
+                        "grade": {"type": "string", "enum": ["core", "high", "maybe", "low"]},
                     },
                     "required": ["id", "grade"],
                 },
@@ -71,7 +71,7 @@ def _system(profile: str) -> list[dict]:
 
 
 def _paper_block(pid: str, p: dict) -> str:
-    abstract = p["abstract"][:2500]
+    abstract = (p.get("abstract") or "")[:2500] or "（暂无摘要，只能根据标题判断）"
     return f"<paper id=\"{pid}\">\nTitle: {p['title']}\nSource: {p['source']}\nAbstract: {abstract}\n</paper>"
 
 
@@ -82,7 +82,9 @@ def stage1(papers: list[dict], profile: str, model: str, batch: int = 20) -> dic
         body = "\n\n".join(_paper_block(str(i + j), p) for j, p in enumerate(chunk))
         try:
             out = _call(model, 2000, profile, GRADE_TOOL,
-                        "按上面的标准给每篇论文定级（core / high / low）。大多数应为 low。\n\n" + body)
+                        "按上面的标准给每篇论文定级：core / high / maybe / low。大多数应为 low。"
+                        "拿不准、但有可能是 core 或 high 的标 maybe（会交给更强的模型复核）；"
+                        "只有标题、没有摘要时，看起来相关就标 maybe。\n\n" + body)
         except anthropic.APIError as e:
             print(f"stage1 batch {i} failed: {e}")
             continue
@@ -93,8 +95,9 @@ def stage1(papers: list[dict], profile: str, model: str, batch: int = 20) -> dic
 
 def stage2(paper: dict, profile: str, model: str) -> dict:
     out = _call(model, 600, profile, WRITE_TOOL,
-                "这篇论文初筛被标为 core 或 high。请按标准复核等级（不够格就改成 low），"
-                "然后用中文写“最重要的结论”和“相关理由或下一步”。只依据摘要，不要编造摘要里没有的数字。\n\n"
+                "这篇论文通过了初筛。请严格按标准定最终等级（不够格就标 low，宁缺毋滥），"
+                "然后用中文写“最重要的结论”和“相关理由或下一步”。只依据摘要，不要编造摘要里没有的数字；"
+                "没有摘要时，结论写“暂无摘要，按标题判断：……”。\n\n"
                 + _paper_block("0", paper))
     return out or {"grade": "low", "takeaway": "", "reason": ""}
 
@@ -103,9 +106,9 @@ def screen(papers: list[dict], profile: str, models: dict) -> list[dict]:
     if not papers:
         return []
     g = stage1(papers, profile, models["screen"])
-    picked = [p for i, p in enumerate(papers) if g.get(str(i)) in ("core", "high")]
+    picked = [p for i, p in enumerate(papers) if g.get(str(i)) in ("core", "high", "maybe")]
     out = []
-    print(f"stage1: {len(papers)} screened, {len(picked)} core/high")
+    print(f"stage1: {len(papers)} screened, {len(picked)} passed to stage 2")
     for p in picked:
         try:
             r = stage2(p, profile, models["write"])

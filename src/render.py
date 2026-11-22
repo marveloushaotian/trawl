@@ -75,16 +75,17 @@ def render(items: list[dict], runs: list[dict], cfg: dict, now: datetime) -> Non
             continue
         head = f"### {iso}（周{WEEKDAY[d.weekday()]}）"
         if run:
-            head += f" · 候选 {run['candidates']} 篇，新筛 {run['screened']} 篇，入选 {run['picked']} 篇"
+            head += f" · 新筛 {run['screened']} 篇，入选 {run['picked']} 篇"
         out += [head, ""]
         if not day_items:
             out += ["_今日无符合条件的文献。_", ""]
             continue
         day_items.sort(key=lambda it: (it.get("grade") != "core", it.get("source", "")))
-        out += ["| 等级 | 论文 | 来源 | 最重要的结论 | 相关理由或下一步 |",
-                "|---|---|---|---|---|"]
+        out += ["| 等级 | 论文 | 来源 | 发表 | 最重要的结论 | 相关理由或下一步 |",
+                "|---|---|---|---|---|---|"]
         for it in day_items:
             out.append(f"| {GRADE.get(it.get('grade'), '')} | {paper_cell(it)} | {source_cell(it)} "
+                       f"| {cell((it.get('date') or '')[:10])} "
                        f"| {cell(it.get('takeaway', ''))} | {cell(it.get('reason', ''))} |")
         out.append("")
 

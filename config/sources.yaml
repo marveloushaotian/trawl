@@ -1,6 +1,7 @@
 # trawl sources. Edit freely; the daily run reads this file.
 
-window_days: 3            # look back this many days (72 h)
+window_days: 2            # look back this many days (one day of buffer)
+max_age_days: 60          # skip papers published longer ago than this (late-indexed)
 max_candidates: 900       # hard cap on abstracts screened per run (cost guard)
 keep_days: 14             # days of results shown in README
 
@@ -21,48 +22,55 @@ biorxiv_categories:
 medrxiv: keywords_only
 
 # --- PubMed -----------------------------------------------------------------
+# Journals are queried in two places: Crossref (by ISSN, on the day the DOI is registered,
+# i.e. at online publication) and PubMed (later, usually with the abstract).
 # Specialist journals: every new article is screened.
 journals_all:
-  - Nat Microbiol
-  - Microbiome
-  - Cell Host Microbe
-  - ISME J
-  - ISME Commun
-  - mBio
-  - mSystems
-  - Gut Microbes
-  - Microb Genom
-  - Plasmid
-  - Trends Microbiol
-  - Nat Rev Microbiol
-  - Curr Opin Microbiol
-  - NPJ Biofilms Microbiomes
-  - Lancet Microbe
-  - Nucleic Acids Res
-  - Genome Res
-  - Mol Biol Evol
-  - Mol Syst Biol
+  - {ta: "Nat Microbiol", issn: [2058-5276]}
+  - {ta: "Microbiome", issn: [2049-2618]}
+  - {ta: "Cell Host Microbe", issn: [1931-3128, 1934-6069]}
+  - {ta: "ISME J", issn: [1751-7362, 1751-7370]}
+  - {ta: "ISME Commun", issn: [2730-6151]}
+  - {ta: "mBio", issn: [2150-7511]}
+  - {ta: "mSystems", issn: [2379-5077]}
+  - {ta: "Gut Microbes", issn: [1949-0976, 1949-0984]}
+  - {ta: "Microb Genom", issn: [2057-5858]}
+  - {ta: "Plasmid", issn: [0147-619X, 1095-9890]}
+  - {ta: "Trends Microbiol", issn: [0966-842X]}
+  - {ta: "Nat Rev Microbiol", issn: [1740-1526, 1740-1534]}
+  - {ta: "Curr Opin Microbiol", issn: [1369-5274]}
+  - {ta: "NPJ Biofilms Microbiomes", issn: [2055-5008]}
+  - {ta: "Lancet Microbe", issn: [2666-5247]}
+  - {ta: "Nucleic Acids Res", issn: [0305-1048, 1362-4962]}
+  - {ta: "Genome Res", issn: [1088-9051, 1549-5469]}
+  - {ta: "Mol Biol Evol", issn: [0737-4038, 1537-1719]}
+  - {ta: "Mol Syst Biol", issn: [1744-4292]}
 
 # Broad journals: only articles that also match the microbial filter below.
 journals_filtered:
-  - Nature
-  - Science
-  - Cell
-  - Nat Commun
-  - Proc Natl Acad Sci U S A
-  - Sci Adv
-  - PLoS Biol
-  - Elife
-  - Curr Biol
-  - Cell Rep
-  - Nat Med
-  - Nat Biotechnol
-  - Nat Methods
-  - Genome Biol
-  - Philos Trans R Soc Lond B Biol Sci
-  - Microbiol Spectr
-  - J Antimicrob Chemother
-  - Diabetologia
+  - {ta: "Nature", issn: [0028-0836, 1476-4687]}
+  - {ta: "Science", issn: [0036-8075, 1095-9203]}
+  - {ta: "Cell", issn: [0092-8674, 1097-4172]}
+  - {ta: "Nat Commun", issn: [2041-1723]}
+  - {ta: "Proc Natl Acad Sci U S A", issn: [0027-8424, 1091-6490]}
+  - {ta: "Sci Adv", issn: [2375-2548]}
+  - {ta: "PLoS Biol", issn: [1544-9173, 1545-7885]}
+  - {ta: "Elife", issn: [2050-084X]}
+  - {ta: "Curr Biol", issn: [0960-9822]}
+  - {ta: "Cell Rep", issn: [2211-1247]}
+  - {ta: "Nat Med", issn: [1078-8956, 1546-170X]}
+  - {ta: "Nat Biotechnol", issn: [1087-0156, 1546-1696]}
+  - {ta: "Nat Methods", issn: [1548-7091, 1548-7105]}
+  - {ta: "Genome Biol", issn: [1465-6906, 1474-760X]}
+  - {ta: "Philos Trans R Soc Lond B Biol Sci", issn: [0962-8436, 1471-2970]}
+  - {ta: "Microbiol Spectr", issn: [2165-0497]}
+  - {ta: "J Antimicrob Chemother", issn: [0305-7453, 1460-2091]}
+  - {ta: "Diabetologia", issn: [0012-186X, 1432-0428]}
+
+# local version of the filter for Crossref records (prefix match on title/abstract)
+microbial_terms: [microbio, bacteri, phage, bacteriophage, prophage, plasmid, microbiome,
+                  microbiota, metagenom, virome, viromic, "mobile genetic", "horizontal gene",
+                  conjugat, integron, transposon, mobilome, gut flora, commensal]
 
 microbial_filter: >-
   microbio*[tiab] OR bacteri*[tiab] OR phage*[tiab] OR bacteriophage*[tiab]

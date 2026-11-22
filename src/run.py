@@ -36,21 +36,30 @@ def keys_of(p: dict) -> set[str]:
 
 
 def h(k: str) -> str:
-    return hashlib.sha1(k.encode()).hexdigest()[:16]
+    return hashlib.sha1(k.encode()).hexdigest()[:12]
+
+
+def primary(p: dict) -> str:
+    return p.get("doi") or norm_title(p["title"])
 
 
 def load_json(path: Path, default):
     return json.loads(path.read_text()) if path.exists() else default
 
 
-def load_screened(today: date) -> dict[str, str]:
+def load_screened(today: date, keep_days: int) -> dict[str, str]:
+    """key-hash -> 'YYYY-MM-DD' (graded with abstract) or 'YYYY-MM-DD:t' (title only)."""
     out = {}
     if SCREENED.exists():
         for line in SCREENED.read_text().splitlines():
-            k, d = line.split("\t")
-            if date.fromisoformat(d) >= today - timedelta(days=6):
-                out[k] = d
+            k, v = line.split("\t")
+            if date.fromisoformat(v[:10]) >= today - timedelta(days=keep_days):
+                out[k] = v
     return out
+
+
+def is_preprint(p: dict) -> bool:
+    return p["source"] in ("bioRxiv", "medRxiv")
 
 
 def dedupe(cands: list[dict]) -> list[dict]:
@@ -58,16 +67,21 @@ def dedupe(cands: list[dict]) -> list[dict]:
     by_key: dict[str, dict] = {}
     result: list[dict] = []
     # journal articles first, so their keys claim the slot
-    for p in sorted(cands, key=lambda x: x["source"] in ("bioRxiv", "medRxiv")):
+    for p in sorted(cands, key=lambda x: (is_preprint(x), not x.get("abstract"))):
         hit = next((by_key[k] for k in keys_of(p) if k in by_key), None)
         if hit is None:
             result.append(p)
             for k in keys_of(p):
                 by_key[k] = p
-        elif p["source"] in ("bioRxiv", "medRxiv") and hit["source"] not in ("bioRxiv", "medRxiv"):
+            continue
+        if is_preprint(p) and not is_preprint(hit):
             hit["preprint_url"] = p["url"]
-            for k in keys_of(p):
-                by_key[k] = hit
+        if not hit.get("abstract") and p.get("abstract"):
+            hit["abstract"] = p["abstract"]
+        if not hit.get("date") and p.get("date"):
+            hit["date"] = p["date"]
+        for k in keys_of(p):
+            by_key[k] = hit
     return result
 
 
@@ -84,6 +98,8 @@ def main() -> None:
     ap.add_argument("--scheduled", action="store_true", help="cron mode: run once per day after 12:00 Helsinki")
     ap.add_argument("--render-only", action="store_true")
     ap.add_argument("--window-days", type=int, default=None)
+    ap.add_argument("--reset-today", action="store_true",
+                    help="forget today's results and screening, then run again (for testing)")
     args = ap.parse_args()
 
     from render import render  # local import keeps --render-only light
@@ -102,22 +118,40 @@ def main() -> None:
         return
     if args.window_days:
         cfg["window_days"] = args.window_days
+    if args.reset_today:
+        iso = today.isoformat()
+        items = [it for it in items if it.get("run_date") != iso]
+        runs = [r for r in runs if r["date"] != iso]
 
     from fetch import fetch_all
     from screen import screen
 
     cands, stats = fetch_all(cfg, today)
     cands = dedupe(cands)
-    screened = load_screened(today)
+    # drop late-indexed papers published long ago
+    cutoff = today - timedelta(days=cfg["max_age_days"])
+    cands = [p for p in cands if not p.get("date") or date.fromisoformat(p["date"][:10]) >= cutoff]
+
+    screened = load_screened(today, cfg["max_age_days"])
+    if args.reset_today:
+        screened = {k: v for k, v in screened.items() if not v.startswith(today.isoformat())}
     reported = {k for it in items for k in keys_of(it)}
 
-    fresh = [p for p in cands
-             if not ({h(k) for k in keys_of(p)} & screened.keys()) and not (keys_of(p) & reported)]
+    def needs_screen(p: dict) -> bool:
+        if keys_of(p) & reported:
+            return False
+        prev = screened.get(h(primary(p)))
+        if not prev:
+            return True
+        # graded earlier on the title alone; grade again once the abstract is available
+        return bool(p.get("abstract")) and prev.endswith(":t")
+
+    fresh = [p for p in cands if needs_screen(p)]
     # a newly indexed journal version of a paper already listed as a preprint: annotate, don't relist
     for p in cands:
-        if p["source"] not in ("bioRxiv", "medRxiv") and keys_of(p) & reported:
+        if not is_preprint(p) and keys_of(p) & reported:
             for it in items:
-                if keys_of(it) & keys_of(p) and it["source"] in ("bioRxiv", "medRxiv") and not it.get("published_url"):
+                if keys_of(it) & keys_of(p) and is_preprint(it) and not it.get("published_url"):
                     it["published_url"] = p["url"]
                     it["published_in"] = p["source"]
     fresh = fresh[: cfg["max_candidates"]]
@@ -131,10 +165,10 @@ def main() -> None:
         p.pop("pub_types", None)
     items = [it for it in items if date.fromisoformat(it["run_date"]) >= today - timedelta(days=60)] + picked
     for p in fresh:
-        for k in keys_of(p):
-            screened[h(k)] = today.isoformat()
+        screened[h(primary(p))] = today.isoformat() + ("" if p.get("abstract") else ":t")
 
     prev = next((r for r in runs if r["date"] == today.isoformat()), None)
+    stats["after_dedupe"] = len(cands)
     runs = [r for r in runs if r["date"] != today.isoformat()]
     runs.append({"date": today.isoformat(), "candidates": len(cands),
                  "screened": len(fresh) + (prev["screened"] if prev else 0),

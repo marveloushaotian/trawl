@@ -13,6 +13,10 @@ on:
         description: "Look-back window in days (blank = config default)"
         required: false
         default: ""
+      reset_today:
+        description: "Forget today's results and screen again (testing)"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
@@ -46,10 +50,11 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
             python src/run.py --scheduled
-          elif [ -n "${{ github.event.inputs.window_days }}" ]; then
-            python src/run.py --window-days "${{ github.event.inputs.window_days }}"
           else
-            python src/run.py
+            ARGS=""
+            [ -n "${{ github.event.inputs.window_days }}" ] && ARGS="$ARGS --window-days ${{ github.event.inputs.window_days }}"
+            [ "${{ github.event.inputs.reset_today }}" = "true" ] && ARGS="$ARGS --reset-today"
+            python src/run.py $ARGS
           fi
 
       - name: Re-render after social/events update

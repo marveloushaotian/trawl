@@ -90,6 +90,7 @@ def fetch_rxiv(server: str, start: date, end: date) -> list[dict]:
                 "authors": (c.get("authors") or "").strip(),
                 "abstract": (c.get("abstract") or "").strip(),
                 "date": c.get("date", ""),
+                "version": str(c.get("version", "")),
                 "category": (c.get("category") or "").strip().lower(),
                 "published_doi": "" if pub in ("", "NA") else pub.lower(),
                 "url": f"https://www.{server}.org/content/{c.get('doi')}",
@@ -100,10 +101,12 @@ def fetch_rxiv(server: str, start: date, end: date) -> list[dict]:
         if not coll or cursor >= total:
             break
         time.sleep(0.5)
-    latest: dict[str, dict] = {}
-    for p in out:  # API lists versions in order; keep the newest per DOI
-        latest[p["doi"]] = p
-    return list(latest.values())
+    # only first versions are new papers; revisions of older preprints are skipped
+    first: dict[str, dict] = {}
+    for p in out:
+        if p["version"] == "1":
+            first.setdefault(p["doi"], p)
+    return list(first.values())
 
 
 # ---------------------------------------------------------------- PubMed
@@ -138,6 +141,19 @@ def _parse_pubmed(art) -> dict:
         if last:
             names.append(f"{last} {ini}".strip())
     ptypes = [_text(p) for p in art.findall(".//PublicationType")]
+    pub_date = ""
+    ad = art.find(".//Article/ArticleDate")
+    if ad is not None and _text(ad.find("Year")):
+        pub_date = f"{_text(ad.find('Year'))}-{int(_text(ad.find('Month')) or 1):02d}-{int(_text(ad.find('Day')) or 1):02d}"
+    else:
+        pd = art.find(".//Journal/JournalIssue/PubDate")
+        y = _text(pd.find("Year")) if pd is not None else ""
+        if y:
+            m = _text(pd.find("Month")) or "1"
+            months = "jan feb mar apr may jun jul aug sep oct nov dec".split()
+            m = months.index(m[:3].lower()) + 1 if m[:3].lower() in months else int(m) if m.isdigit() else 1
+            d = _text(pd.find("Day")) or "1"
+            pub_date = f"{y}-{m:02d}-{int(d):02d}"
     return {
         "source": ta or journal,
         "pmid": pmid,
@@ -146,6 +162,7 @@ def _parse_pubmed(art) -> dict:
         "authors": ", ".join(names),
         "abstract": abstract,
         "pub_types": ptypes,
+        "date": pub_date,
         "url": f"https://doi.org/{doi}" if doi else f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
     }
 
@@ -160,19 +177,86 @@ def _efetch(pmids: list[str]) -> list[dict]:
     return out
 
 
+# ---------------------------------------------------------------- Crossref
+
+def _strip_jats(t: str) -> str:
+    t = re.sub(r"<[^>]+>", " ", t or "")
+    t = re.sub(r"^\s*(Abstract|ABSTRACT)\s*", "", t.strip())
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def _crossref_date(x: dict) -> str:
+    for k in ("published-online", "published-print", "published", "created"):
+        parts = (x.get(k) or {}).get("date-parts") or []
+        if parts and parts[0] and parts[0][0]:
+            p = parts[0] + [1, 1]
+            return f"{p[0]}-{p[1]:02d}-{p[2]:02d}"
+    return ""
+
+
+def _crossref_query(issns: list[str], start: date, end: date) -> list[dict]:
+    filt = ",".join(f"issn:{i}" for i in issns)
+    filt += f",from-created-date:{start},until-created-date:{end},type:journal-article"
+    out, cursor = [], "*"
+    while True:
+        r = _get("https://api.crossref.org/works", {
+            "filter": filt, "rows": 500, "cursor": cursor,
+            "select": "DOI,title,container-title,short-container-title,author,abstract,created,published-online,published-print,published",
+        }).json()["message"]
+        out.extend(r["items"])
+        cursor = r.get("next-cursor")
+        if not r["items"] or not cursor or len(out) >= r.get("total-results", 0):
+            break
+    return out
+
+
+def _term_hit(text: str, terms: list[str]) -> bool:
+    low = text.lower()
+    return any(re.search(r"\b" + re.escape(t.lower()), low) for t in terms)
+
+
+def fetch_crossref(cfg: dict, start: date, end: date) -> list[dict]:
+    papers = []
+    for group, filtered in (("journals_all", False), ("journals_filtered", True)):
+        issn_to_ta = {i: j["ta"] for j in cfg[group] for i in j["issn"]}
+        items = []
+        issns = list(issn_to_ta)
+        for k in range(0, len(issns), 20):  # keep the filter string short
+            items.extend(_crossref_query(issns[k:k + 20], start, end))
+            time.sleep(0.5)
+        for x in items:
+            title = _strip_jats((x.get("title") or [""])[0])
+            doi = (x.get("DOI") or "").lower()
+            if not title or doi.startswith("10.1038/d41586"):  # Nature news/comment
+                continue
+            abstract = _strip_jats(x.get("abstract", ""))
+            if filtered and not _term_hit(title + " " + abstract, cfg["microbial_terms"]):
+                continue
+            names = [f"{a.get('family', '')} {a.get('given', '')[:1]}".strip()
+                     for a in (x.get("author") or [])[:6] if a.get("family")]
+            short = (x.get("short-container-title") or [""])[0]
+            papers.append({
+                "source": short or (x.get("container-title") or [""])[0],
+                "doi": doi, "title": title, "authors": ", ".join(names),
+                "abstract": abstract, "date": _crossref_date(x), "pub_types": [],
+                "url": f"https://doi.org/{doi}",
+            })
+    # one record per DOI
+    return list({p["doi"]: p for p in papers}.values())
+
+
 SKIP_TYPES = {"Published Erratum", "Retraction of Publication", "Comment", "Editorial", "News"}
 
 
 def fetch_pubmed(cfg: dict, start: date, end: date) -> list[dict]:
     ids: set[str] = set()
-    all_j = " OR ".join(f'"{j}"[ta]' for j in cfg["journals_all"])
+    all_j = " OR ".join(f'"{j["ta"]}"[ta]' for j in cfg["journals_all"])
     ids.update(_esearch(f"({all_j})", start, end))
-    filt_j = " OR ".join(f'"{j}"[ta]' for j in cfg["journals_filtered"])
+    filt_j = " OR ".join(f'"{j["ta"]}"[ta]' for j in cfg["journals_filtered"])
     ids.update(_esearch(f"({filt_j}) AND ({cfg['microbial_filter']})", start, end))
     ids.update(_esearch(pubmed_keyword_query(cfg["keyword_sets"]), start, end))
     papers = _efetch(sorted(ids))
-    return [p for p in papers
-            if p["title"] and p["abstract"] and not SKIP_TYPES & set(p["pub_types"])]
+    return [p for p in papers if p["title"] and not SKIP_TYPES & set(p["pub_types"])]
 
 
 def fetch_all(cfg: dict, today: date) -> tuple[list[dict], dict]:
@@ -181,5 +265,7 @@ def fetch_all(cfg: dict, today: date) -> tuple[list[dict], dict]:
     bio = [p for p in fetch_rxiv("biorxiv", start, today) if p["category"] in cats]
     med = [p for p in fetch_rxiv("medrxiv", start, today)
            if keyword_hit(p["title"] + " " + p["abstract"], cfg["keyword_sets"])]
+    cr = fetch_crossref(cfg, start, today)
     pm = fetch_pubmed(cfg, start, today)
-    return bio + med + pm, {"bioRxiv": len(bio), "medRxiv": len(med), "PubMed": len(pm)}
+    return bio + med + cr + pm, {"bioRxiv": len(bio), "medRxiv": len(med),
+                                 "Crossref": len(cr), "PubMed": len(pm)}
