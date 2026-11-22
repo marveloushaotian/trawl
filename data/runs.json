@@ -1,0 +1,13 @@
+[
+ {
+  "date": "2026-11-22",
+  "candidates": 580,
+  "screened": 580,
+  "picked": 12,
+  "by_source": {
+   "bioRxiv": 196,
+   "medRxiv": 1,
+   "PubMed": 383
+  }
+ }
+]
