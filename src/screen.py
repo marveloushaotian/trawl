@@ -49,6 +49,23 @@ WRITE_TOOL = {
 }
 
 
+def _call(model: str, max_tokens: int, profile: str, tool: dict, prompt: str) -> dict | None:
+    """Ask for one tool call. Some models reject a forced tool_choice; fall back to auto."""
+    kwargs = dict(model=model, max_tokens=max_tokens, system=_system(profile), tools=[tool],
+                  messages=[{"role": "user", "content": prompt}])
+    try:
+        msg = client.messages.create(tool_choice={"type": "tool", "name": tool["name"]}, **kwargs)
+    except anthropic.BadRequestError as e:
+        if "tool_choice" not in str(e):
+            raise
+        kwargs["messages"][0]["content"] = prompt + f"\n\n请只通过调用 {tool['name']} 工具作答。"
+        msg = client.messages.create(tool_choice={"type": "auto"}, **kwargs)
+    for block in msg.content:
+        if block.type == "tool_use":
+            return dict(block.input)
+    return None
+
+
 def _system(profile: str) -> list[dict]:
     return [{"type": "text", "text": profile, "cache_control": {"type": "ephemeral"}}]
 
@@ -63,38 +80,23 @@ def stage1(papers: list[dict], profile: str, model: str, batch: int = 20) -> dic
     for i in range(0, len(papers), batch):
         chunk = papers[i:i + batch]
         body = "\n\n".join(_paper_block(str(i + j), p) for j, p in enumerate(chunk))
-        msg = client.messages.create(
-            model=model,
-            max_tokens=2000,
-            system=_system(profile),
-            tools=[GRADE_TOOL],
-            tool_choice={"type": "tool", "name": "record_grades"},
-            messages=[{"role": "user", "content":
-                       "按上面的标准给每篇论文定级（core / high / low）。大多数应为 low。\n\n" + body}],
-        )
-        for block in msg.content:
-            if block.type == "tool_use":
-                for g in block.input.get("grades", []):
-                    grades[str(g["id"])] = g["grade"]
+        try:
+            out = _call(model, 2000, profile, GRADE_TOOL,
+                        "按上面的标准给每篇论文定级（core / high / low）。大多数应为 low。\n\n" + body)
+        except anthropic.APIError as e:
+            print(f"stage1 batch {i} failed: {e}")
+            continue
+        for g in (out or {}).get("grades", []):
+            grades[str(g["id"])] = g["grade"]
     return grades
 
 
 def stage2(paper: dict, profile: str, model: str) -> dict:
-    msg = client.messages.create(
-        model=model,
-        max_tokens=600,
-        system=_system(profile),
-        tools=[WRITE_TOOL],
-        tool_choice={"type": "tool", "name": "record_entry"},
-        messages=[{"role": "user", "content":
-                   "这篇论文初筛被标为 core 或 high。请按标准复核等级（不够格就改成 low），"
-                   "然后用中文写“最重要的结论”和“相关理由或下一步”。只依据摘要，不要编造摘要里没有的数字。\n\n"
-                   + _paper_block("0", paper)}],
-    )
-    for block in msg.content:
-        if block.type == "tool_use":
-            return dict(block.input)
-    return {"grade": "low", "takeaway": "", "reason": ""}
+    out = _call(model, 600, profile, WRITE_TOOL,
+                "这篇论文初筛被标为 core 或 high。请按标准复核等级（不够格就改成 low），"
+                "然后用中文写“最重要的结论”和“相关理由或下一步”。只依据摘要，不要编造摘要里没有的数字。\n\n"
+                + _paper_block("0", paper))
+    return out or {"grade": "low", "takeaway": "", "reason": ""}
 
 
 def screen(papers: list[dict], profile: str, models: dict) -> list[dict]:
@@ -103,8 +105,13 @@ def screen(papers: list[dict], profile: str, models: dict) -> list[dict]:
     g = stage1(papers, profile, models["screen"])
     picked = [p for i, p in enumerate(papers) if g.get(str(i)) in ("core", "high")]
     out = []
+    print(f"stage1: {len(papers)} screened, {len(picked)} core/high")
     for p in picked:
-        r = stage2(p, profile, models["write"])
+        try:
+            r = stage2(p, profile, models["write"])
+        except anthropic.APIError as e:
+            print(f"stage2 failed for {p.get('doi')}: {e}")
+            continue
         if r.get("grade") in ("core", "high"):
             out.append({**p, **r})
     return out
