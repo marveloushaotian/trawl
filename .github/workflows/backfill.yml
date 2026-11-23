@@ -9,6 +9,10 @@ on:
       end:
         description: "Last publication date to screen (YYYY-MM-DD)"
         required: true
+      replace:
+        description: "Re-screen this period if it was already archived"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -32,7 +36,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
-        run: python src/backfill.py --start "${{ github.event.inputs.start }}" --end "${{ github.event.inputs.end }}"
+        run: python src/backfill.py --start "${{ github.event.inputs.start }}" --end "${{ github.event.inputs.end }}" $([ "${{ github.event.inputs.replace }}" = "true" ] && echo --replace)
       - name: Commit
         run: |
           git config user.name  "Haotian Zheng"

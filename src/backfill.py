@@ -30,10 +30,13 @@ def main() -> None:
     ap.add_argument("--start", required=True)
     ap.add_argument("--end", required=True)
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--replace", action="store_true", help="re-screen a period that was already archived")
     args = ap.parse_args()
     start, end = date.fromisoformat(args.start), date.fromisoformat(args.end)
     label = f"{start}_to_{end}"
 
+    if args.replace:
+        (DATA / "archive" / f"{label}.json").unlink(missing_ok=True)
     cfg = yaml.safe_load((ROOT / "config/sources.yaml").read_text())
     profile = (ROOT / "config/profile.md").read_text()
 
@@ -63,14 +66,21 @@ def main() -> None:
     print(f"candidates {len(cands)}, to screen {len(fresh)}")
 
     picked = screen(fresh, profile, cfg["models"], workers=args.workers)
+
+    # full audit of the period: every screened paper with both grades
+    adata = DATA / "archive"
+    adata.mkdir(parents=True, exist_ok=True)
+    rows = ["stage1\tfinal\tsource\tdate\ttitle\turl"]
+    for p in sorted(fresh, key=lambda x: (x.get("stage1", ""), x.get("final", ""), x.get("date") or "")):
+        rows.append("\t".join([p.get("stage1", ""), p.get("final", ""), p["source"], (p.get("date") or "")[:10],
+                               p["title"].replace("\t", " ")[:200], p["url"]]))
+    (adata / f"{label}_screened.tsv").write_text("\n".join(rows) + "\n")
     for p in picked:
         for k in ("abstract", "pub_types", "stage1", "final"):
             p.pop(k, None)
         p["run_date"] = f"archive:{label}"
 
     stats.update({"candidates": len(cands), "screened": len(fresh), "picked": len(picked)})
-    adata = DATA / "archive"
-    adata.mkdir(parents=True, exist_ok=True)
     (adata / f"{label}.json").write_text(json.dumps(
         {"start": args.start, "end": args.end, "stats": stats, "items": picked}, ensure_ascii=False, indent=1))
     render_archive(label, args.start, args.end, picked, stats)
