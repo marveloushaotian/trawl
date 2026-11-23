@@ -81,5 +81,30 @@
   "takeaway": "346 株 S. meliloti 长读长测序回收 386 个辅助质粒（76% 菌株携带），多数可移动，并有融合共整合证据。",
   "reason": "非人类肠道，但属质粒分类、replicon 分型与模块化进化的可推广案例，也说明短读长组装会漏掉大质粒。",
   "run_date": "2026-11-22"
+ },
+ {
+  "source": "Nat Commun",
+  "doi": "10.1038/s41467-026-79680-6",
+  "title": "Eco-evolutionary dynamics of active virus-host interactions in a freshwater lake revealed through metaHi-C",
+  "authors": "Nadal-Molero F, Martin-Cuadrado A, Mehrshad M",
+  "date": "2026-11-23",
+  "url": "https://doi.org/10.1038/s41467-026-79680-6",
+  "grade": "high",
+  "takeaway": "metaHi-C 在淡水湖群落中解析出 100 个高置信 phage–host 关联，并结合纵向 metagenomic recruitment 揭示感染模式与选择信号。",
+  "reason": "非人类肠道，但 Hi-C 宿主连接方法可迁移到质粒–宿主预测（主线3），按其他环境噬菌体生态入选 High。",
+  "run_date": "2026-11-23"
+ },
+ {
+  "source": "Nucleic Acids Res",
+  "pmid": "43069488",
+  "doi": "10.1093/nar/gkag1226",
+  "title": "PhageScope 2.0: a million-scale resource for integrated exploration of phage genomic, functional, and structural diversity.",
+  "authors": "Wang Y, Yang S, Wang R, Wang X, Li S",
+  "date": "2026-11-23",
+  "url": "https://doi.org/10.1093/nar/gkag1226",
+  "grade": "high",
+  "takeaway": "PhageScope 2.0 整合 2,576,925 条噬菌体序列及 58,314,540 个蛋白的结构，并提供 Foldseek 与 TM-Vec 检索。",
+  "reason": "属于大规模噬菌体资源，可用于肠道 virome 注释和宿主、生活方式预测；但不涉及质粒，也不是纵向研究。",
+  "run_date": "2026-11-23"
  }
 ]
