@@ -1,15 +1,16 @@
 # trawl
 
-New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. Last 14 days, newest first. Updated 2026-11-23 16:17.
+New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. Last 14 days, newest first. Updated 2026-11-23 18:29.
 
 ## 2026-11-23 (Mon)
 
-Screened 110 · selected 2
+Screened 110 · selected 3
 
 | Grade | Paper | Source | Published | 最重要的结论 | 相关理由 |
 |---|---|---|---|---|---|
 | High | [Eco-evolutionary dynamics of active virus-host interactions in a freshwater lake revealed through metaHi-C](https://doi.org/10.1038/s41467-026-79680-6) — Nadal-Molero F et al. | Nat Commun | 2026-11-23 | metaHi-C 在淡水湖群落中解析出 100 个高置信 phage–host 关联，并结合纵向 metagenomic recruitment 揭示感染模式与选择信号。 | 非人类肠道，但 Hi-C 宿主连接方法可迁移到质粒–宿主预测（主线3），按其他环境噬菌体生态入选 High。 |
 | High | [PhageScope 2.0: a million-scale resource for integrated exploration of phage genomic, functional, and structural diversity.](https://doi.org/10.1093/nar/gkag1226) — Wang Y et al. | Nucleic Acids Res | 2026-11-23 | PhageScope 2.0 整合 2,576,925 条噬菌体序列及 58,314,540 个蛋白的结构，并提供 Foldseek 与 TM-Vec 检索。 | 属于大规模噬菌体资源，可用于肠道 virome 注释和宿主、生活方式预测；但不涉及质粒，也不是纵向研究。 |
+| High | [Cross-species dissemination of diverse plasmid lineages and mobile resistance modules shapes carbapenemase co-production in Chilean Enterobacterales](https://www.biorxiv.org/content/10.64898/2026.11.22.768343) — Guerra-Leal, N. et al. | bioRxiv | 2026-11-23 | 30 株碳青霉烯酶共产生菌的 149 个完整质粒：3 个质粒谱系跨 11 个物种传播，耐药区和整合子/转座子平台在不相关骨架间重新分布。 | 骨架与货物模块重组的直接证据，对应质粒模块化与模块更替的思路；基于临床分离株。 |
 
 ## 2026-11-22 (Sun)
 
