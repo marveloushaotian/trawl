@@ -77,3 +77,4 @@ jobs:
           git commit -m "trawl: $(TZ=Europe/Helsinki date +%F)"
           git pull --rebase --quiet
           git push
+
