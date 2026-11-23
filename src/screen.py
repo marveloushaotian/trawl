@@ -7,6 +7,7 @@ Chinese takeaway and reason shown in the list.
 from __future__ import annotations
 
 import json
+from concurrent.futures import ThreadPoolExecutor
 
 import anthropic
 
@@ -75,9 +76,8 @@ def _paper_block(pid: str, p: dict) -> str:
     return f"<paper id=\"{pid}\">\nTitle: {p['title']}\nSource: {p['source']}\nAbstract: {abstract}\n</paper>"
 
 
-def stage1(papers: list[dict], profile: str, model: str, batch: int = 20) -> dict[str, str]:
-    grades: dict[str, str] = {}
-    for i in range(0, len(papers), batch):
+def stage1(papers: list[dict], profile: str, model: str, batch: int = 20, workers: int = 1) -> dict[str, str]:
+    def one(i: int) -> dict[str, str]:
         chunk = papers[i:i + batch]
         body = "\n\n".join(_paper_block(str(i + j), p) for j, p in enumerate(chunk))
         try:
@@ -87,9 +87,14 @@ def stage1(papers: list[dict], profile: str, model: str, batch: int = 20) -> dic
                         "只有标题、没有摘要时，看起来相关就标 maybe。\n\n" + body)
         except anthropic.APIError as e:
             print(f"stage1 batch {i} failed: {e}")
-            continue
-        for g in (out or {}).get("grades", []):
-            grades[str(g["id"])] = g["grade"]
+            return {}
+        return {str(g["id"]): g["grade"] for g in (out or {}).get("grades", [])}
+
+    grades: dict[str, str] = {}
+    starts = list(range(0, len(papers), batch))
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for g in ex.map(one, starts):
+            grades.update(g)
     return grades
 
 
@@ -102,25 +107,26 @@ def stage2(paper: dict, profile: str, model: str) -> dict:
     return out or {"grade": "low", "takeaway": "", "reason": ""}
 
 
-def screen(papers: list[dict], profile: str, models: dict) -> list[dict]:
+def screen(papers: list[dict], profile: str, models: dict, workers: int = 1) -> list[dict]:
     if not papers:
         return []
-    g = stage1(papers, profile, models["screen"])
+    g = stage1(papers, profile, models["screen"], workers=workers)
     for i, p in enumerate(papers):
         p["stage1"] = g.get(str(i), "error")
     picked = [p for p in papers if p["stage1"] in ("core", "high", "maybe")]
-    out = []
     print(f"stage1: {len(papers)} screened, {len(picked)} passed to stage 2")
-    for p in picked:
+
+    def two(p: dict) -> dict | None:
         try:
             r = stage2(p, profile, models["write"])
         except anthropic.APIError as e:
             print(f"stage2 failed for {p.get('doi')}: {e}")
-            continue
+            return None
         p["final"] = r.get("grade", "low")
-        if p["final"] in ("core", "high"):
-            out.append({**p, **r})
-    return out
+        return {**p, **r} if p["final"] in ("core", "high") else None
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        return [r for r in ex.map(two, picked) if r]
 
 
 if __name__ == "__main__":  # quick manual check: python src/screen.py paper.json

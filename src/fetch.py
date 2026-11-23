@@ -114,10 +114,10 @@ def fetch_rxiv(server: str, start: date, end: date) -> list[dict]:
 
 # ---------------------------------------------------------------- PubMed
 
-def _esearch(term: str, start: date, end: date) -> list[str]:
+def _esearch(term: str, start: date, end: date, datetype: str = "edat") -> list[str]:
     params = _ncbi({
-        "db": "pubmed", "term": term, "retmax": 5000, "retmode": "json",
-        "datetype": "edat", "mindate": start.strftime("%Y/%m/%d"),
+        "db": "pubmed", "term": term, "retmax": 9999, "retmode": "json",
+        "datetype": datetype, "mindate": start.strftime("%Y/%m/%d"),
         "maxdate": end.strftime("%Y/%m/%d"),
     })
     r = _get(f"{EUTILS}/esearch.fcgi", params, post=True)  # long queries: POST
@@ -251,25 +251,25 @@ def fetch_crossref(cfg: dict, start: date, end: date) -> list[dict]:
 SKIP_TYPES = {"Published Erratum", "Retraction of Publication", "Comment", "Editorial", "News"}
 
 
-def fetch_pubmed(cfg: dict, start: date, end: date) -> list[dict]:
+def fetch_pubmed(cfg: dict, start: date, end: date, datetype: str = "edat") -> list[dict]:
     ids: set[str] = set()
     all_j = " OR ".join(f'"{i}"[is]' for j in cfg["journals_all"] for i in j["issn"])
-    ids.update(_esearch(f"({all_j})", start, end))
+    ids.update(_esearch(f"({all_j})", start, end, datetype))
     filt_j = " OR ".join(f'"{i}"[is]' for j in cfg["journals_filtered"] for i in j["issn"])
-    ids.update(_esearch(f"({filt_j}) AND ({cfg['microbial_filter']})", start, end))
-    ids.update(_esearch(pubmed_keyword_query(cfg["keyword_sets"]), start, end))
+    ids.update(_esearch(f"({filt_j}) AND ({cfg['microbial_filter']})", start, end, datetype))
+    ids.update(_esearch(pubmed_keyword_query(cfg["keyword_sets"]), start, end, datetype))
     papers = _efetch(sorted(ids))
     return [p for p in papers if p["title"] and not SKIP_TYPES & set(p["pub_types"])]
 
 
-def fetch_all(cfg: dict, today: date) -> tuple[list[dict], dict]:
-    start = today - timedelta(days=cfg["window_days"])
+def fetch_all(cfg: dict, today: date, start: date | None = None, pubmed_datetype: str = "edat") -> tuple[list[dict], dict]:
+    start = start or today - timedelta(days=cfg["window_days"])
     cats = {c.lower() for c in cfg["biorxiv_categories"]}
     bio = [p for p in fetch_rxiv("biorxiv", start, today)
            if p["category"] in cats or keyword_hit(p["title"] + " " + p["abstract"], cfg["keyword_sets"])]
     med = [p for p in fetch_rxiv("medrxiv", start, today)
            if keyword_hit(p["title"] + " " + p["abstract"], cfg["keyword_sets"])]
     cr = fetch_crossref(cfg, start, today)
-    pm = fetch_pubmed(cfg, start, today)
+    pm = fetch_pubmed(cfg, start, today, pubmed_datetype)
     return bio + med + cr + pm, {"bioRxiv": len(bio), "medRxiv": len(med),
                                  "Crossref": len(cr), "PubMed": len(pm)}

@@ -22,6 +22,13 @@ ITEMS = DATA / "items.json"        # selected papers (kept 60 days for version d
 RUNS = DATA / "runs.json"          # per-day counts
 
 
+def archive_items() -> list[dict]:
+    out = []
+    for f in sorted((DATA / "archive").glob("*.json")):
+        out.extend(json.loads(f.read_text())["items"])
+    return out
+
+
 def norm_title(t: str) -> str:
     return "t:" + re.sub(r"[^a-z0-9]", "", t.lower())[:120]
 
@@ -135,7 +142,7 @@ def main() -> None:
     screened = load_screened(today, cfg["max_age_days"])
     if args.reset_today:
         screened = {k: v for k, v in screened.items() if not v.startswith(today.isoformat())}
-    reported = {k for it in items for k in keys_of(it)}
+    reported = {k for it in items + archive_items() for k in keys_of(it)}
 
     def needs_screen(p: dict) -> bool:
         if keys_of(p) & reported:
