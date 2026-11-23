@@ -13,10 +13,13 @@ UA = {"User-Agent": "trawl/1.0 (personal literature feed)"}
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 
 
-def _get(url: str, params: dict | None = None, tries: int = 4) -> requests.Response:
+def _get(url: str, params: dict | None = None, tries: int = 4, post: bool = False) -> requests.Response:
     for i in range(tries):
         try:
-            r = requests.get(url, params=params, headers=UA, timeout=60)
+            if post:
+                r = requests.post(url, data=params, headers=UA, timeout=60)
+            else:
+                r = requests.get(url, params=params, headers=UA, timeout=60)
             if r.status_code == 200:
                 return r
             if r.status_code in (429, 500, 502, 503, 504):
@@ -117,7 +120,7 @@ def _esearch(term: str, start: date, end: date) -> list[str]:
         "datetype": "edat", "mindate": start.strftime("%Y/%m/%d"),
         "maxdate": end.strftime("%Y/%m/%d"),
     })
-    r = _get(f"{EUTILS}/esearch.fcgi", params)
+    r = _get(f"{EUTILS}/esearch.fcgi", params, post=True)  # long queries: POST
     return r.json()["esearchresult"].get("idlist", [])
 
 
@@ -250,9 +253,9 @@ SKIP_TYPES = {"Published Erratum", "Retraction of Publication", "Comment", "Edit
 
 def fetch_pubmed(cfg: dict, start: date, end: date) -> list[dict]:
     ids: set[str] = set()
-    all_j = " OR ".join(f'"{j["ta"]}"[ta]' for j in cfg["journals_all"])
+    all_j = " OR ".join(f'"{i}"[is]' for j in cfg["journals_all"] for i in j["issn"])
     ids.update(_esearch(f"({all_j})", start, end))
-    filt_j = " OR ".join(f'"{j["ta"]}"[ta]' for j in cfg["journals_filtered"])
+    filt_j = " OR ".join(f'"{i}"[is]' for j in cfg["journals_filtered"] for i in j["issn"])
     ids.update(_esearch(f"({filt_j}) AND ({cfg['microbial_filter']})", start, end))
     ids.update(_esearch(pubmed_keyword_query(cfg["keyword_sets"]), start, end))
     papers = _efetch(sorted(ids))

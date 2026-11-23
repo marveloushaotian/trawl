@@ -50,6 +50,28 @@ journals_all:
   - {ta: "Genome Res", issn: [1088-9051, 1549-5469]}
   - {ta: "Mol Biol Evol", issn: [0737-4038, 1537-1719]}
   - {ta: "Mol Syst Biol", issn: [1744-4292]}
+  - {ta: "FEMS Microbiol Ecol", issn: [0168-6496, 1574-6941]}
+  - {ta: "FEMS Microbiol Rev", issn: [0168-6445, 1574-6976]}
+  - {ta: "Appl Environ Microbiol", issn: [0099-2240, 1098-5336]}
+  - {ta: "mSphere", issn: [2379-5042]}
+  - {ta: "Antimicrob Agents Chemother", issn: [0066-4804, 1098-6596]}
+  - {ta: "Clin Microbiol Rev", issn: [0893-8512, 1098-6618]}
+  - {ta: "BMC Microbiol", issn: [1471-2180]}
+  - {ta: "Virol J", issn: [1743-422X]}
+  - {ta: "PLoS Pathog", issn: [1553-7366, 1553-7374]}
+  - {ta: "Front Microbiol", issn: [1664-302X]}
+  - {ta: "Front Cell Infect Microbiol", issn: [2235-2988]}
+  - {ta: "Microbiology (Reading)", issn: [1350-0872, 1465-2080]}
+  - {ta: "Annu Rev Microbiol", issn: [0066-4227, 1545-3251]}
+  - {ta: "Microbiome Res Rep", issn: [2771-5965]}
+  - {ta: "NPJ Antimicrob Resist", issn: [2731-8745]}
+  - {ta: "Virus Evol", issn: [2057-1577]}
+  - {ta: "Environ Microbiol", issn: [1462-2912, 1462-2920]}
+  - {ta: "Clin Microbiol Infect", issn: [1198-743X, 1469-0691]}
+  - {ta: "Int J Antimicrob Agents", issn: [0924-8579]}
+  - {ta: "J Glob Antimicrob Resist", issn: [2213-7165]}
+  - {ta: "Antimicrob Resist Infect Control", issn: [2047-2994]}
+  - {ta: "Ann Clin Microbiol Antimicrob", issn: [1476-0711]}
 
 # Broad journals: only articles that also match the microbial filter below.
 journals_filtered:
@@ -71,6 +93,48 @@ journals_filtered:
   - {ta: "Microbiol Spectr", issn: [2165-0497]}
   - {ta: "J Antimicrob Chemother", issn: [0305-7453, 1460-2091]}
   - {ta: "Diabetologia", issn: [0012-186X, 1432-0428]}
+  - {ta: "Sci Rep", issn: [2045-2322]}
+  - {ta: "Nat Water", issn: [2731-6084]}
+  - {ta: "Commun Med", issn: [2730-664X]}
+  - {ta: "Nat Genet", issn: [1061-4036, 1546-1718]}
+  - {ta: "Pediatr Res", issn: [0031-3998, 1530-0447]}
+  - {ta: "Water Res", issn: [0043-1354]}
+  - {ta: "Curr Opin Immunol", issn: [0952-7915]}
+  - {ta: "Engineering", issn: [2095-8099]}
+  - {ta: "Sci Total Environ", issn: [0048-9697]}
+  - {ta: "Am J Clin Nutr", issn: [0002-9165, 1938-3207]}
+  - {ta: "Environ Int", issn: [0160-4120]}
+  - {ta: "Environ Sci Ecotechnol", issn: [2666-4984]}
+  - {ta: "Brief Bioinform", issn: [1467-5463, 1477-4054]}
+  - {ta: "PNAS Nexus", issn: [2752-6542]}
+  - {ta: "iScience", issn: [2589-0042]}
+  - {ta: "Cell Rep Med", issn: [2666-3791]}
+  - {ta: "Trends Ecol Evol", issn: [0169-5347]}
+  - {ta: "PLoS One", issn: [1932-6203]}
+  - {ta: "PLoS Genet", issn: [1553-7390, 1553-7404]}
+  - {ta: "PLoS Comput Biol", issn: [1553-734X, 1553-7358]}
+  - {ta: "iMeta", issn: [2770-596X, 2770-5986]}
+  - {ta: "J Med Virol", issn: [0146-6615, 1096-9071]}
+  - {ta: "Adv Sci", issn: [2198-3844]}
+  - {ta: "Ann N Y Acad Sci", issn: [0077-8923, 1749-6632]}
+  - {ta: "J Intern Med", issn: [0954-6820, 1365-2796]}
+  - {ta: "Antibiotics", issn: [2079-6382]}
+  - {ta: "Metabolites", issn: [2218-1989]}
+  - {ta: "Curr Issues Mol Biol", issn: [1467-3045]}
+  - {ta: "Genes", issn: [2073-4425]}
+  - {ta: "Sci Transl Med", issn: [1946-6234, 1946-6242]}
+  - {ta: "RNA Biol", issn: [1547-6286, 1555-8584]}
+  - {ta: "Expert Rev Clin Immunol", issn: [1744-666X, 1744-8409]}
+  - {ta: "Front Endocrinol", issn: [1664-2392]}
+  - {ta: "EBioMedicine", issn: [2352-3964]}
+  - {ta: "Diabetes Care", issn: [0149-5992, 1935-5548]}
+  - {ta: "Essays Biochem", issn: [0071-1365, 1744-1358]}
+  - {ta: "Nat Ecol Evol", issn: [2397-334X]}
+  - {ta: "Commun Biol", issn: [2399-3642]}
+  - {ta: "Genome Med", issn: [1756-994X]}
+  - {ta: "Cell Syst", issn: [2405-4712]}
+  - {ta: "Bioinformatics", issn: [1367-4803, 1367-4811]}
+  - {ta: "NAR Genom Bioinform", issn: [2631-9268]}
 
 # local version of the filter for Crossref records (prefix match on title/abstract)
 microbial_terms: [microbio, bacteri, phage, bacteriophage, prophage, plasmid, microbiome,
@@ -90,14 +154,20 @@ keyword_sets:
   plasmids_mge:
     any: [plasmid, plasmids, plasmidome, plasmidomics, mobilome, mobilomes,
           integron, integrons, transposon, transposons, "mobile genetic element",
+          "horizontal gene transfer", "integrative and conjugative element",
+          "integrative conjugative element", "insertion sequence", "insertion sequences",
           "mobile genetic elements", "conjugative", "phage-plasmid"]
   phages:
     any: [phage, phages, bacteriophage, bacteriophages, prophage, prophages,
-          virome, viromes, viromics]
+          virome, viromes, viromics, "phage-host"]
   early_life_gut:
     pairs:
       - [gut, intestinal, infant, infants, neonatal, newborn, maternal, mother]
       - [microbiome, microbiota, metagenome, metagenomics]
+  transmission:
+    pairs:
+      - ["strain transmission", "strain sharing", "mother-infant", "vertical transmission"]
+      - [microbiome, microbiota, gut, metagenome, metagenomics, strain, strains]
   metagenomic_methods:
     pairs:
       - [metagenome, metagenomes, metagenomic, metagenomics, plasmidomics, viromics]
