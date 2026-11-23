@@ -6,7 +6,7 @@ on:
     # The script itself runs once per day, only after 12:00 Helsinki (summer or winter time);
     # the other triggers exit in seconds.
     - cron: "23 9-15 * * *"
-    - cron: "*/5 * * * *"   # TEMP: schedule test, remove after
+    - cron: "*/6 * * * *"   # TEMP: schedule test, remove after
   workflow_dispatch:
     inputs:
       window_days:
