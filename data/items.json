@@ -121,5 +121,17 @@
   "takeaway": "30 株碳青霉烯酶共产生菌的 149 个完整质粒：3 个质粒谱系跨 11 个物种传播，耐药区和整合子/转座子平台在不相关骨架间重新分布。",
   "reason": "骨架与货物模块重组的直接证据，对应质粒模块化与模块更替的思路；基于临床分离株。",
   "run_date": "2026-11-23"
+ },
+ {
+  "source": "Front Microbiol",
+  "doi": "10.3389/fmicb.2026.1945493",
+  "title": "Rapid characterization of the impact of plasmid dependent phages on plasmid carriage and transfer in bacteria",
+  "authors": "",
+  "date": "2026-11-23",
+  "url": "https://doi.org/10.3389/fmicb.2026.1945493",
+  "grade": "high",
+  "takeaway": "用荧光标记质粒的快速实验体系，鉴定依赖质粒的噬菌体（PDP），并量化它们对质粒携带率和接合转移的抑制。",
+  "reason": "质粒–噬菌体相互作用的实验工具；PDP 是专门靶向带质粒宿主的新方向。",
+  "run_date": "2026-11-23"
  }
 ]
