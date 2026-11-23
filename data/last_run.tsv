@@ -1,111 +1,161 @@
 stage1	final	source	date	title	url
-high	high	Nat Commun	2026-11-23	Eco-evolutionary dynamics of active virus-host interactions in a freshwater lake revealed through metaHi-C	https://doi.org/10.1038/s41467-026-79680-6
-high	high	Nucleic Acids Res	2026-11-23	PhageScope 2.0: a million-scale resource for integrated exploration of phage genomic, functional, and structural diversity.	https://doi.org/10.1093/nar/gkag1226
-high	low	Gut Microbes	2026-11-22	Laxative treatment perturbs gut microbiome composition and metabolism in humans independent of short-term fiber consumption: a randomized controlled crossover intervention study.	https://doi.org/10.1080/19490976.2026.2761689
-high	low	bioRxiv	2026-11-23	Cross-species dissemination of diverse plasmid lineages and mobile resistance modules shapes carbapenemase co-production in Chilean Enterobacterales	https://www.biorxiv.org/content/10.64898/2026.11.22.768343
-low		mBio	2026-11-23	The mechanosensitive channel MscS links lipoteichoic acid synthesis alterations to beta-lactam sensitivity in Staphylococcus aureus	https://doi.org/10.1128/mbio.01500-26
-low		mSystems	2026-11-23	Integrated transcriptomics reveal fibroblast-monocyte crosstalk with JAK-STAT activation associated with Parvimonas micra -induced periodontitis	https://doi.org/10.1128/msystems.00753-26
-low		Nucleic Acids Res	2026-11-23	Translons upstream of protein-coding regions rather than their products are crucial for proliferation of human cells of distinct origin	https://doi.org/10.1093/nar/gkag1263
-low		Microbiol Spectr	2026-11-23	Plasmid-borne ThyA2 and DfrA mediate antimetabolite resistance in Staphylococcus aureus USA200	https://doi.org/10.1128/spectrum.02234-26
-low		Microbiol Spectr	2026-11-23	Valnemulin, a repurposed oral drug, demonstrates dual activity against Neisseria gonorrhoeae and Chlamydia trachomatis	https://doi.org/10.1128/spectrum.00803-26
-low		Harefuah	2026-11-01	[Mediterranean diet in irritable bowel syndrome].	https://pubmed.ncbi.nlm.nih.gov/43068370/
-low		J Neurooncol	2026-11-22	EPHA2 and EPHB4 expression in human brain tumors and preclinical evaluation of EPHRIN-B2-based CAR-T cells.	https://doi.org/10.1007/s11060-026-05884-x
-low		Phytomedicine	2026-11-19	Plant-derived extracellular vesicle-like nanoparticles in ulcerative colitis: Current progress, mechanisms, and translational challenges.	https://doi.org/10.1016/j.phymed.2026.158936
-low		Virology	2026-11-21	Stepwise phage isolation effectively suppresses Salmonella Gallinarum and facilitates the potential discovery of novel phage species.	https://doi.org/10.1016/j.virol.2026.111151
-low		Pharmacol Res	2026-11-22	Gut Microbial PncA as a Potential Target to Elevate NAD⁺ Biosynthetic Flux for Delaying Aging.	https://doi.org/10.1016/j.phrs.2026.109782
-low		Brain Behav Immun	2026-11-22	Diet correction after perinatal deficiency in vitamin B9 and B12 fails to rescue gut dysbiosis, serotonin pathway and psychiatric-like behavior in adult rats.	https://doi.org/10.1016/j.bbi.2026.107293
-low		Mol Biochem Parasitol	2026-11-22	Parasitic Infections as Upstream Drivers of the Gut-Kidney Axis: Dysbiosis, Uremic Toxin Generation, and Renal Injury - A Comprehensive Narrative Review.	https://doi.org/10.1016/j.molbiopara.2026.111795
-low		J Ethnopharmacol	2026-11-22	Potential Central Neuroprotective and Peripheral Intestinal Homeostasis-Regulating Effects of Jiuwei Xifeng Granules in MPTP-Induced Parkinson's Disease Mice.	https://doi.org/10.1016/j.jep.2026.122686
-low		J Sci Food Agric	2026-11-22	Steam explosion-assisted extraction, structure characterization, gastrointestinal distribution and gut microbiota modulation of polysaccharide from Gracilaria lemaneiformis.	https://doi.org/10.1002/jsfa.71254
-low		Nat Commun	2026-10-24	Asymmetry-induced distinct mechanisms and the transporting role of sodium in bacterial fluoride channel Fluc.	https://doi.org/10.1038/s41467-026-78935-6
-low		J Appl Genet	2026-11-23	Tissue-specific effects of in ovo prebiotic stimulation on cytokine gene expression in broiler chickens.	https://doi.org/10.1007/s13353-026-01136-w
-low		Drug Deliv Transl Res	2026-11-22	Targeted therapeutic delivery of the gut microbiota and its active metabolites in colonic inflammatory disorders.	https://doi.org/10.1007/s13346-026-02264-w
-low		Rheumatology (Oxford)	2026-11-21	Developing a patient-specific iPSC-derived monocyte model for familial Mediterranean fever and mevalonate kinase deficiency.	https://doi.org/10.1093/rheumatology/keag661
-low		Nucleic Acids Res	2026-11-23	CellColocDB: a disease-centred resource linking GWAS loci to genes, cell contexts, and fine-mapping evidence.	https://doi.org/10.1093/nar/gkag1209
-low		Nucleic Acids Res	2026-11-23	DrugMAP 3.0: an enriched molecular atlas featuring ADMET endpoints, pharmacogenomic perturbations, and bioactivity atlas of drugs.	https://doi.org/10.1093/nar/gkag1252
-low		Nucleic Acids Res	2026-11-23	MGnify analyses in 2027: enhancing the depth and breadth of analyses across metabarcoding, unassembled metagenomes, and assembled datasets.	https://doi.org/10.1093/nar/gkag1235
-low		Nucleic Acids Res	2026-11-23	Conserved Domain Database 2026 update.	https://doi.org/10.1093/nar/gkag1251
-low		Nucleic Acids Res	2026-11-23	MIsoTEx: a mammalian transcript-isoform classification framework and database for exploring tissue distribution, expression stability, and abundance patterns.	https://doi.org/10.1093/nar/gkag1261
-low		Gut Microbes	2026-11-22	Microbiota-Bile acid decoupling contributes to altered postnatal growth and metabolism in sFGR: a twin-paired dynamic study with FMT validation.	https://doi.org/10.1080/19490976.2026.2753236
-low		Gut Microbes	2026-11-22	The gut‒kidney axis.	https://doi.org/10.1080/19490976.2026.2760043
-low		Nucleic Acids Res	2026-11-23	miRTarBase 11.0: an evidence-centred resource for experimentally supported microRNA-target interactions.	https://doi.org/10.1093/nar/gkag1254
-low		Nucleic Acids Res	2026-11-23	VEuPathDB: 2026 update on data, tools, and infrastructure for eukaryotic pathogens, vectors, and hosts.	https://doi.org/10.1093/nar/gkag1245
-low		J Dent Res	2026-11-22	Periodontal Bacteria-Derived Vesicles Disrupt Maternal and Fetal Health.	https://doi.org/10.1177/00220345261500484
-low		J Environ Health Sci Eng	2026-11-21	Environmental microbial exposure as an under-measured exposome domain: Links to host microbiomes, immune regulation, and disease epidemiology.	https://doi.org/10.1007/s40201-026-01012-z
-low		Gastroenterol Rep (Oxf)	2026-11-22	Pathophysiology of slow-transit constipation: from cellular mechanisms to personalized therapy.	https://doi.org/10.1093/gastro/goag112
-low		Neuropsychiatr Dis Treat	2026-11-18	Gut Dysbiosis, IL-6, and White Matter Microstructure in Acute mTBI.	https://doi.org/10.2147/ndt.s642708
-low		Nucleic Acids Res	2026-11-23	BFVD v3-the atlas of predicted viral protein structures.	https://doi.org/10.1093/nar/gkag1206
-low		Nucleic Acids Res	2026-11-23	BGC Atlas v2: biosynthetic gene clusters with taxonomic and environmental context at scale.	https://doi.org/10.1093/nar/gkag1174
-low		Nucleic Acids Res	2026-11-23	MissenseDB: proteome-wide human missense variant effect prediction database with structural context.	https://doi.org/10.1093/nar/gkag1154
-low		Biotechnol Bioeng	2026-11-23	Mechanistic Insights Into Host Cell Protein Co-Purification With Adeno-Associated Virus Vectors During the Density-Gradient Ultracentrifugation Process.	https://doi.org/10.1002/bit.70450
-low		JMIR Res Protoc	2026-11-20	Comparative Effects of Mindful Yoga and Expressive Arts on Perceived Stress and Whole-Person Health in Individuals With Mild-to-Moderate Parkinson Disease: Protocol for a Randomized Controlled Trial.	https://doi.org/10.2196/101248
-low		DNA Res	2026-11-23	Genome-wide mutations and responses of transposable elements to heavy-ion beam irradiation in the haptophyte Tisochrysis lutea.	https://doi.org/10.1093/dnares/dsag021
-low		J Sci Food Agric	2026-11-23	Fermentation enhances the dietary fibre and uronic acid contents of plant foods.	https://doi.org/10.1002/jsfa.71268
-low		Animal Model Exp Med	2026-11-23	Systemic protection of Tongyang Zhixie decoction against radiation-induced intestinal injury: Role of stem cells, apozptosis, and gut microbiota.	https://doi.org/10.1002/ame2.70306
-low		Nucleic Acids Res	2026-11-23	Reprogramming mRNA localization by targeted RNA-protein interference reveals roles in oncogenesis.	https://doi.org/10.1093/nar/gkag1287
-low		Nucleic Acids Res	2026-11-23	Endogenous variability in transcription factor concentrations shapes their genome-wide occupancy.	https://doi.org/10.1093/nar/gkag1275
-low		Nucleic Acids Res	2026-11-23	AAV-mediated XIST deletion in female human hepatocytes with skewed X-inactivation induces limited reactivation of the X-linked OTC gene in vivo.	https://doi.org/10.1093/nar/gkag1237
-low		Nucleic Acids Res	2026-11-23	Rapid degradation of six class I HDAC complexes reveals a mixture of unique, cooperative, and antagonistic roles.	https://doi.org/10.1093/nar/gkag1258
-low		NPJ Biofilms Microbiomes	2026-11-23	Subacute ruminal acidosis tolerance: phenotyping and nutritional management through host–microbiome interaction insights	https://doi.org/10.1038/s41522-026-01205-2
-low		Nucleic Acids Res	2026-11-23	Correction to ‘Multiplexed CRISPR base editing enables pulse-activated irreversible biocontainment of engineered bacteria’	https://doi.org/10.1093/nar/gkag1308
-low		Cell Rep	2026-12-01	Arginine depletion by lactic acid bacteria drives a save-and-sequester metabolic strategy in competing yeast	https://doi.org/10.1016/j.celrep.2026.118346
-low		bioRxiv	2026-11-22	Xist deletion in T cells protects against influenza-induced lung injury	https://www.biorxiv.org/content/10.64898/2026.11.20.768059
-low		bioRxiv	2026-11-22	EPIC2: integrating single-cell chromatin accessibility with human genetics to identify trait-relevant cell types	https://www.biorxiv.org/content/10.64898/2026.11.12.766196
-low		bioRxiv	2026-11-22	Read&Tag enables antibody-independent combinatorial and multifactorial chromatin profiling	https://www.biorxiv.org/content/10.64898/2026.11.19.763725
-low		bioRxiv	2026-11-22	Myhre syndrome variants form long-lived SMAD heterotrimers through a rewired polar interface at the variant site	https://www.biorxiv.org/content/10.64898/2026.11.20.768049
-low		bioRxiv	2026-11-22	Genomic Epidemiology of Dengue Virus in Ivory Coast Reveals Five Decades of Viral Circulation with Repeated Introductions from Burkina Faso	https://www.biorxiv.org/content/10.64898/2026.11.18.767690
-low		bioRxiv	2026-11-22	Enabling Genotyping of Low-Biomass Zebra Mussel Samples via Multi-Displacement Amplification (MDA)	https://www.biorxiv.org/content/10.64898/2026.11.16.767020
-low		bioRxiv	2026-11-22	An open long non-coding RNA foundation model for generalizable prediction	https://www.biorxiv.org/content/10.64898/2026.11.20.768117
-low		bioRxiv	2026-11-22	Enhancing the Efficacy of Oncolytic Viruses by Engineering Virus Host Interactions Using CRISPR Cas13d	https://www.biorxiv.org/content/10.64898/2026.11.20.768134
-low		bioRxiv	2026-11-22	Microbiome complexity shapes host transcriptional networks across the ileum-liver axis	https://www.biorxiv.org/content/10.64898/2026.11.16.767119
-low		bioRxiv	2026-11-22	Differences in nodulation among rhizobia strains can obscure plant benefits per nodule in single-strain experiments	https://www.biorxiv.org/content/10.64898/2026.11.16.767161
-low		bioRxiv	2026-11-22	Phenotypic, ecological and genomic divergence support independent evolutionary trajectories in the Meganesian masked owls (Tyto novaehollandiae)	https://www.biorxiv.org/content/10.64898/2026.11.20.767495
-low		bioRxiv	2026-11-23	Terminally differentiated CX3CR1+ natural killer cells drive coronary arteritis through an NFAT-T-bet axis	https://www.biorxiv.org/content/10.64898/2026.11.20.767965
-low		bioRxiv	2026-11-23	Dynamic T-cell receptor repertoire remodeling is associated with murine and human lung allograft dysfunction	https://www.biorxiv.org/content/10.64898/2026.11.20.768159
-low		bioRxiv	2026-11-23	Non-invasive detection of tissue clonal mosaicism in chronic disease	https://www.biorxiv.org/content/10.64898/2026.11.20.767624
-low		bioRxiv	2026-11-23	Genomics of the diversification of Heliconius cydno (Lepidoptera: Nymphalidae) in northern South America: geographic and phenotypic patterns	https://www.biorxiv.org/content/10.64898/2026.11.20.768178
-low		bioRxiv	2026-11-23	The Impact of Germ Layer Origin on the Ageing Transcriptome	https://www.biorxiv.org/content/10.64898/2026.11.20.768114
-low		bioRxiv	2026-11-23	Machine Learning-based Transcriptomic Data Analysis of Long COVID Patients: Generating Hypotheses for Molecular Signatures	https://www.biorxiv.org/content/10.64898/2026.11.20.768015
-low		bioRxiv	2026-11-23	NanoHIV-DR: a Nextflow workflow for consensus and read level HIV-1 drug resistance profiling from Oxford Nanopore sequencing	https://www.biorxiv.org/content/10.64898/2026.11.20.768148
-low		bioRxiv	2026-11-23	Machine learning prediction of antimicrobial resistance in respiratory metagenomes	https://www.biorxiv.org/content/10.64898/2026.11.20.768127
-low		bioRxiv	2026-11-23	Predicted templates improve the prediction of antibody-antigen structures by AlphaFold 3 and Boltz-2	https://www.biorxiv.org/content/10.64898/2026.11.20.768078
-low		bioRxiv	2026-11-23	Large populations from few founders: founder-aware likelihoods for inferring cell proliferation rates	https://www.biorxiv.org/content/10.64898/2026.11.20.767990
-low		bioRxiv	2026-11-23	Modular innate recognition in conventional T cells through FcRγ reconstitution	https://www.biorxiv.org/content/10.64898/2026.11.20.768012
-low		bioRxiv	2026-11-23	The ACDC domains of AP2-O3 and FD3 contribute to protein interactions and ookinete development	https://www.biorxiv.org/content/10.64898/2026.11.19.767835
-low		bioRxiv	2026-11-23	Fungal abundance and community composition associations with environmental and operational factors within and between manufacturing facilities.	https://www.biorxiv.org/content/10.64898/2026.11.20.768029
-low		bioRxiv	2026-11-23	maoP impacts biofilm formation via csgD in Salmonella Typhimurium	https://www.biorxiv.org/content/10.64898/2026.11.20.767877
-low		bioRxiv	2026-11-23	Identification of two novel lipoteichoic acid synthases essential for viability in Clostridioides difficile.	https://www.biorxiv.org/content/10.64898/2026.11.20.767628
-low		bioRxiv	2026-11-23	Viral genetic variation programs divergent neuroimmune states during rabies infection	https://www.biorxiv.org/content/10.64898/2026.11.20.768130
-low		bioRxiv	2026-11-23	Structural analysis of DNA binding and flexibility of the homohexameric AAA+ helicase SaPIbov1 Rep	https://www.biorxiv.org/content/10.64898/2026.11.19.767935
-low		bioRxiv	2026-11-23	Complementary roles among traits in community assembly processes of benthic foraminifera	https://www.biorxiv.org/content/10.64898/2026.11.19.767260
-low		bioRxiv	2026-11-23	RustBEARS: Survival-Conditioned Likelihoods, Uniformization Stochastic Mapping, and Uncertainty Quantification for Historical Biogeography	https://www.biorxiv.org/content/10.64898/2026.11.20.768172
-low		bioRxiv	2026-11-23	Kinetic windows for abiogenesis	https://www.biorxiv.org/content/10.64898/2026.11.20.768022
-low		bioRxiv	2026-11-23	Barcoding the Past: A Cost-Effective ONT-Based Workflow for COI Recovery from Century-Old Spider Museum Specimens	https://www.biorxiv.org/content/10.64898/2026.11.20.762721
-low		bioRxiv	2026-11-23	First Broad-spectrum Sami and Norse diets in northern Norway over the last 4000 years revealed by sedaDNA	https://www.biorxiv.org/content/10.64898/2026.11.20.765463
-low		bioRxiv	2026-11-23	Reproductive competition amplifies purifying selection and reduces genetic load	https://www.biorxiv.org/content/10.64898/2026.11.20.768053
-low		bioRxiv	2026-11-23	Evolutionary constraints on mitochondrial bioenergetics are reshaped in cancer	https://www.biorxiv.org/content/10.64898/2026.11.20.768050
-low		bioRxiv	2026-11-23	Population-level learning of non-additive effects enables accurate and efficient prediction of combinatorial perturbation responses	https://www.biorxiv.org/content/10.64898/2026.11.20.768136
-low		bioRxiv	2026-11-23	A2Holo: Dual-Stream Flow Matching of 3D Structure and a Protein Language Model for Conformational Transition Prediction	https://www.biorxiv.org/content/10.64898/2026.11.20.768033
-low		bioRxiv	2026-11-23	siGMA: Modeling Label Noise and Heterogeneity in siRNA Efficacy Prediction	https://www.biorxiv.org/content/10.64898/2026.11.20.768048
-low		bioRxiv	2026-11-23	Dependence-Aware Conformal Prediction for 3D Uncertainty Quantification in Molecular Docking	https://www.biorxiv.org/content/10.64898/2026.11.20.768203
-low		bioRxiv	2026-11-23	Hyphosphere Hunting Grounds: Fungal Hyphae Guide a Protist Predator to its Bacterial Prey	https://www.biorxiv.org/content/10.64898/2026.11.22.768452
-low		bioRxiv	2026-11-23	The identification of 110 novel Mycobacterium species within 57,974 UK Health Security Agency clinical samples	https://www.biorxiv.org/content/10.64898/2026.11.19.767610
-low		bioRxiv	2026-11-23	Biotic interactions buffer the effects of biodiversity loss on ecosystem functioning	https://www.biorxiv.org/content/10.64898/2026.11.20.768031
-low		bioRxiv	2026-11-23	SCOPE: Gaussian-regularized graph learning for enzyme catalytic residue prediction	https://www.biorxiv.org/content/10.64898/2026.11.20.768221
-low		bioRxiv	2026-11-23	gutenTAG: A MALDI-IHC processing and quality control tool	https://www.biorxiv.org/content/10.64898/2026.11.20.767921
-low		bioRxiv	2026-11-23	SpliceVarMech: A causal generative framework for mechanistic interpretation of non-canonical splicing variants	https://www.biorxiv.org/content/10.64898/2026.11.19.767866
-low		bioRxiv	2026-11-23	Mutation induced disruption of domain coupling and interaction networks governs dysfunction of hDicer in recognizing pre-miRNA	https://www.biorxiv.org/content/10.64898/2026.11.20.767749
-low		bioRxiv	2026-11-23	Structural basis for Cas2/3 recruitment and nuclease-to-helicase DNA handover in type I-F CRISPR-Cas	https://www.biorxiv.org/content/10.64898/2026.11.20.768062
-low		bioRxiv	2026-11-23	ADTSIM2.0: An updated simulation of American dog tick (Dermacentor variabilis Acari: Ixodidae) population dynamics	https://www.biorxiv.org/content/10.64898/2026.11.20.768101
-low		bioRxiv	2026-11-23	Pollinator response diversity and turnover buffer pollination networks from habitat loss in human-modified landscapes	https://www.biorxiv.org/content/10.64898/2026.11.20.768076
-low		bioRxiv	2026-11-23	Disruption of the ecdysone oxidase gene fezzik drives transcriptomic, metabolic, and sex-specific lifespan changes in Drosophila melanogaster	https://www.biorxiv.org/content/10.64898/2026.11.20.768145
-low		bioRxiv	2026-11-23	Convergence stability, uninvadability, and mutual invadability for function-valued traits and life-history schedules on Hilbert spaces	https://www.biorxiv.org/content/10.64898/2026.11.21.768256
-low		bioRxiv	2026-11-23	Rooting the tree of eukaryotes using ancient gene duplications	https://www.biorxiv.org/content/10.64898/2026.11.20.768066
-low		bioRxiv	2026-11-23	Transposon-driven pervasive genome restructuring and regulatory evolution in early-diverging Holomycota	https://www.biorxiv.org/content/10.64898/2026.11.20.768218
-low		bioRxiv	2026-11-23	The IGVF Catalog Knowledge Graph	https://www.biorxiv.org/content/10.64898/2026.11.20.768224
-low		bioRxiv	2026-11-23	Unsupervised tensor integration of hippocampal and colonic multi-omics reveals enteric neural signatures in cognitive aging	https://www.biorxiv.org/content/10.64898/2026.11.20.768248
-low		bioRxiv	2026-11-23	The IGVF Data Portal: a repository for insights into genome function	https://www.biorxiv.org/content/10.64898/2026.11.18.767169
-low		bioRxiv	2026-11-23	A new thermophysiological model unifying heat balance theory and physiological feedback control: Framework, heat defence functions, and individualisation	https://www.biorxiv.org/content/10.64898/2026.11.20.768055
-low		bioRxiv	2026-11-23	Needle in a haystack: Fluorescence-guided 3D targeting for FIB milling in high-pressure-frozen samples	https://www.biorxiv.org/content/10.64898/2026.11.20.768024
-low		bioRxiv	2026-11-23	Expression, Purification and Preliminary Analysis of REcTO4, an Engineered Chimeric PIN-Domain Endoribonuclease	https://www.biorxiv.org/content/10.64898/2026.11.20.768124
-maybe	low	Microbiome	2026-11-23	Enrichment of horizontally transferred protease genes and protein-biased metabolism in felid gut microbiota	https://doi.org/10.1186/s40168-026-02585-5
+high	low	Front Microbiol	2026-11-23	Rapid characterization of the impact of plasmid dependent phages on plasmid carriage and transfer in bacterial populations	https://doi.org/10.3389/fmicb.2026.1945493
+high	low	Sci Rep	2026-11-21	Exploring conjugation between Streptomyces as a tool to mobilize biosynthetic gene clusters	https://doi.org/10.1038/s41598-026-81067-y
+high	low	bioRxiv	2026-11-23	Resistance evolution in a single species reorganizes community responses across a resource-antibiotic landscape	https://www.biorxiv.org/content/10.64898/2026.11.20.768032
+low		Microb Genom	2026-11-23	Divergent evolutionary trajectories of Lactobacillus crispatus and Lactobacillus iners in the Chinese vaginal microbiome	https://doi.org/10.1099/mgen.0.001818
+low		Microb Genom	2026-11-23	Linear plasmid prevalence and linezolid resistance gene carriage in vancomycin-resistant Enterococcus in Canada from 2009–2024	https://doi.org/10.1099/mgen.0.001867
+low		Microb Genom	2026-11-23	Genomic epidemiology of multidrug-resistant Salmonella Muenster in China reveals distinct resistance-associated lineages with contrasting IncHI2/IncHI2A replicon profiles	https://doi.org/10.1099/mgen.0.001842
+low		Virol J	2026-11-21	Parallel transcriptomic and single-cell analyses characterize innate immune responses in human adenovirus infection	https://doi.org/10.1186/s12985-026-03339-3
+low		BMC Microbiol	2026-11-21	Optimized RD1- and RD2-derived peptide pools for detecting T-Cell responses to Mycobacterium tuberculosis antigens	https://doi.org/10.1186/s12866-026-05914-8
+low		BMC Microbiol	2026-11-23	Genomic and biological characterization of exopolysaccharides produced by Streptococcus thermophilus CCASU-ST-S3 and CCASU-ST-S52, with statistical optimization and preliminary spectroscopic character	https://doi.org/10.1186/s12866-026-05775-1
+low		BMC Microbiol	2026-11-23	Fluoroquinolone resistance of Escherichia coli in urinary tract infection patients: a retrospective cross-sectional study in two hospitals in Mashhad, Iran (2017–2020)	https://doi.org/10.1186/s12866-026-05921-9
+low		Clin Microbiol Rev	2026-11-23	Antifungal combinations: enhanced antifungal effect, resistance suppression, and assessment of utility	https://doi.org/10.1128/cmr.00092-26
+low		Appl Environ Microbiol	2026-11-23	KvrA promotes pulmonary persistence and systemic dissemination of hypervirulent Klebsiella pneumoniae	https://doi.org/10.1128/aem.01401-26
+low		Appl Environ Microbiol	2026-11-23	Genetic redundancy of alkane-specific transporters contributes to alkane adaptation in Alloalcanivorax dieselolei	https://doi.org/10.1128/aem.01593-26
+low		Appl Environ Microbiol	2026-11-23	Evolutionary relatedness is a partially reliable predictor of host-associated microbiome composition	https://doi.org/10.1128/aem.01705-26
+low		mSphere	2026-11-23	“What’s SUPP”: developing an in vitro model for healthy oral biofilms	https://doi.org/10.1128/msphere.00643-26
+low		Antimicrob Agents Chemother	2026-11-23	A phase 1 study of secutrelvir with single and multiple oral doses evaluating the safety, tolerability, pharmacokinetics, and drug-drug interaction with midazolam	https://doi.org/10.1128/aac.00952-26
+low		Appl Environ Microbiol	2026-11-23	Characterization and heterologous expression of surface polysaccharides from pathogenic Enterococcus cecorum	https://doi.org/10.1128/aem.01151-26
+low		BMC Microbiol	2026-11-23	Biological activities of a novel myco-synthesized glycosylated derivative of a naphthazarin pigment from mangrove Aspergillus unguis AUMC15225	https://doi.org/10.1186/s12866-026-05793-z
+low		Mol Syst Biol	2026-11-23	Mechanistic pathway modeling reveals how IL-10 generates pleiotropic immune responses	https://doi.org/10.1038/s44320-026-00257-y
+low		Environ Microbiol	2026-11-20	Shrubification Has Limited Effects on Prokaryotic Communities in Northern Permafrost Regions	https://doi.org/10.1111/1462-2920.70497
+low		Environ Microbiol	2026-11-20	Conversion of Cyanotoxins to Harmless Peptides: Mechanistic Modelling of the MlrABCD ‐Mediated Microcystin Detoxification Pathway	https://doi.org/10.1111/1462-2920.70445
+low		Front Cell Infect Microbiol	2026-11-23	mRNA-LNP vaccines targeting the UreB199–338 immunogenic fragment elicit protective immunity against Helicobacter pylori infection	https://doi.org/10.3389/fcimb.2026.1931848
+low		Front Cell Infect Microbiol	2026-11-23	Letermovir combined with conventional anti-CMV agents for drug-intolerant cytomegalovirus infection after allogeneic HSCT: a perspective on real-world data from single-center analysis of 126 patients	https://doi.org/10.3389/fcimb.2026.1972734
+low		Front Cell Infect Microbiol	2026-11-23	Multi-omics profiling identifies immune metabolic and gut microbiota features associated with adjunctive Chaixiangdan treatment in human brucellosis	https://doi.org/10.3389/fcimb.2026.1943215
+low		Front Cell Infect Microbiol	2026-11-23	The clinical challenge of MRSA periprosthetic joint infection: significantly lower success rates and poorer functional outcomes compared to MSSA	https://doi.org/10.3389/fcimb.2026.1866449
+low		Front Cell Infect Microbiol	2026-11-23	Engineering LTB-displaying Shigella flexneri OMVs for combined Shigella-ETEC protection: cellular activation in vitro and cross-reactive protection in vivo	https://doi.org/10.3389/fcimb.2026.2014932
+low		Front Cell Infect Microbiol	2026-11-23	A first insight into the detection of fungal respiratory pathogens in patients with presumed tuberculosis in Ecuador: a worrisome diagnostic gap	https://doi.org/10.3389/fcimb.2026.1832682
+low		Front Cell Infect Microbiol	2026-11-23	Clinical and molecular epidemiology of carbapenem-resistant Acinetobacter baumannii bloodstream isolates in a tertiary hospital in Ningbo, China, 2022–2024	https://doi.org/10.3389/fcimb.2026.2001595
+low		Front Cell Infect Microbiol	2026-11-23	Association between early cumulative fluid overload trajectories and 28-day mortality in patients with sepsis-associated acute respiratory distress syndrome	https://doi.org/10.3389/fcimb.2026.1940530
+low		Front Microbiol	2026-11-23	Freshwater cyanobacteria as a reservoir of antibiotic resistance: a multiphasic approach from phenotypic to genomic analysis	https://doi.org/10.3389/fmicb.2026.1873087
+low		Front Cell Infect Microbiol	2026-11-23	VcmP, a novel membrane-associated virulence factor of Vibrio fluvialis, induces NLRP3 inflammasome-mediated pyroptosis	https://doi.org/10.3389/fcimb.2026.1993704
+low		Front Microbiol	2026-11-23	Gut microbiome and enterotype changes associated with Ayurvedic Virechana therapy in rheumatoid arthritis	https://doi.org/10.3389/fmicb.2026.1966662
+low		Front Microbiol	2026-11-23	Prevalence, molecular characterization, and resistance patterns of cefotaxime-resistant Escherichia coli carrying ESBL-associated determinants in slaughtered pigs in a Metropolitan Andean setting, Qui	https://doi.org/10.3389/fmicb.2026.1959697
+low		Front Microbiol	2026-11-23	Rhizosphere soil properties and metagenomic profiles associated with three woody species in a tin tailings pond	https://doi.org/10.3389/fmicb.2026.1956644
+low		Front Microbiol	2026-11-23	Multi-omics and biochemical analyses reveal nonlinear growth and redox responses of Morchella sextelata mycelia to potassium carbonate	https://doi.org/10.3389/fmicb.2026.2022598
+low		Front Microbiol	2026-11-23	A proposed multi-task machine learning strategy for dual-target quorum sensing inhibitor discovery in diabetic foot ulcer biofilms	https://doi.org/10.3389/fmicb.2026.2025257
+low		Front Microbiol	2026-11-23	Codon usage signatures reveal codon-host compatibility trade-offs in the sylvatic-urban cycle of Mayaro virus: implications for urban emergence	https://doi.org/10.3389/fmicb.2026.2011058
+low		Front Microbiol	2026-11-23	Selecting cellulolytic bacteria for ruminants: from recoverable isolates to added function in the rumen	https://doi.org/10.3389/fmicb.2026.2022869
+low		Microbiome Res Rep	2026-11-23	Prolonged supplementation with Lactiplantibacillus plantarum alleviates age-associated phenotypes in mice	https://doi.org/10.20517/mrr.2026.47
+low		Front Microbiol	2026-11-23	The gut mycobiome in autism spectrum disorder: emerging associations, cross-kingdom ecology, and unresolved mechanisms	https://doi.org/10.3389/fmicb.2026.1915848
+low		Front Cell Infect Microbiol	2026-11-23	Positivity rates, co-positivity patterns, and clinical associations of four sexually transmitted pathogens (Chlamydia trachomatis, Neisseria gonorrhoeae, Ureaplasma urealyticum, and HSV-2) at an infec	https://doi.org/10.3389/fcimb.2026.1966889
+low		Front Cell Infect Microbiol	2026-11-23	First report and genomic characterization of a Clostridioides difficile ST1/RT176 isolate from China	https://doi.org/10.3389/fcimb.2026.1996858
+low		Front Cell Infect Microbiol	2026-11-23	Post-treatment microbiome in cancer remission, residual disease, and recurrence	https://doi.org/10.3389/fcimb.2026.1991558
+low		Front Microbiol	2026-11-23	Gut microbiota–innate immune crosstalk in tendinopathy and tendon repair: a conceptual mechanistic framework and potential therapeutic implications	https://doi.org/10.3389/fmicb.2026.2034543
+low		Front Microbiol	2026-11-23	Engineering synthetic microbial communities for black-soil fertility: black-soil-prioritized functional targets, assembly principles, and the colonization gap	https://doi.org/10.3389/fmicb.2026.1971086
+low		Front Microbiol	2026-11-23	Advances in biocontrol and restoration technologies for stone cultural heritage: a bibliometric and qualitative review based on Web of Science	https://doi.org/10.3389/fmicb.2026.1989361
+low		Front Microbiol	2026-11-23	Fabclavines produced by entomopathogenic nematode-associated Xenorhabdus show potential for malaria vector control	https://doi.org/10.3389/fmicb.2026.1970201
+low		Front Microbiol	2026-11-23	Immune checkpoint modulation beyond cancer: a conceptual framework for small-molecule host-directed antiviral therapy	https://doi.org/10.3389/fmicb.2026.2023654
+low		Nat Commun	2026-11-23	Immunoglobulin A promotes stable colonization of Bifidobacterium to protect against allergic inflammation under fiber deprivation	https://doi.org/10.1038/s41467-026-79673-5
+low		Elife	2026-11-23	SATAY-based chemogenomic screening uncovers antifungal resistance mechanisms and key determinants of ATI-2307 and chitosan sensitivity	https://doi.org/10.7554/elife.105333.2
+low		Sci Rep	2026-11-21	Microfluidically fabricated purpurin microparticle-thermosensitive hydrogel hybrid system reduces inflammation and alveolar bone loss in rat periodontitis	https://doi.org/10.1038/s41598-026-80921-3
+low		Sci Rep	2026-11-21	Structural insight into dynamic switching mechanism o​f the SAM-IV riboswitch revealed by molecular simulations	https://doi.org/10.1038/s41598-026-78252-4
+low		Sci Rep	2026-11-22	A quinoa-associated Pantoea isolate displays salinity-responsive auxin production and promotes plant growth under salt stress	https://doi.org/10.1038/s41598-026-80573-3
+low		Sci Rep	2026-11-23	Chitosan-lipoic acid conjugate as an adsorbent for dispersive solid-phase microextraction of Cd, Cu and Pb in infant formulas	https://doi.org/10.1038/s41598-026-82150-0
+low		PNAS Nexus	2026-11-21	Azimuthal segment imaging in cryo-STEM tomography	https://doi.org/10.1093/pnasnexus/pgag390
+low		Adv Sci	2026-11-22	Rhizosphere Resource–Niche Coupling Mediates A Respiratory Trade‐Off in Microbial Carbon Use Under Contrasting Agricultural Management	https://doi.org/10.1002/advs.78900
+low		Adv Sci	2026-11-22	Bimetallic Sites Cu/Co Alloy Targeting Quorum Sensing Reversing MRSA Ciprofloxacin Susceptibility	https://doi.org/10.1002/advs.78689
+low		Adv Sci	2026-11-22	Membrane‐Embedded Antioxidant Lipids Overcome the Rapid Clearance Dilemma for Dry Eye Disease Treatment	https://doi.org/10.1002/advs.78549
+low		Antibiotics	2026-11-21	Evaluation of the Antimicrobial Activities of Clove Bud Oil and Cinnamaldehyde Against Major Liver Abscess-Causing Bacterial Pathogens in Cattle	https://doi.org/10.3390/antibiotics15121160
+low		Antibiotics	2026-11-22	Hospital-Acquired Pneumonia in Patients with Acute Poisoning: An Eight-Year Cohort Study	https://doi.org/10.3390/antibiotics15121161
+low		Antibiotics	2026-11-22	Unique Pseudopolymorphism in the Green Preparation, Antibiotic Potency, Anti-Inflammatory, and Toxicity Studies of Ciprofloxacin Mefenamate	https://doi.org/10.3390/antibiotics15121163
+low		Antibiotics	2026-11-23	Evolution of Reduced Cefiderocol Susceptibility in Carbapenem-Resistant Acinetobacter baumannii During Cefiderocol Therapy	https://doi.org/10.3390/antibiotics15121164
+low		BMC Microbiol	2026-10-31	Synergistic mechanism of Lactiplantibacillus plantarum combined with cellulase on nutrient retention, fermentation quality and bacterial metabolic function of Hulunbuir native grass silage.	https://doi.org/10.1186/s12866-026-05635-y
+low		Virus Evol	2026-11-08	Genomic diversity and inferred dispersal routes of Ostreid herpesvirus type 1 infecting Magallana gigas across Europe and the Pacific region.	https://doi.org/10.1093/ve/veag070
+low		Front Cell Infect Microbiol	2026-11-06	Diagnostic performance of Xpert-based assays for spinal tuberculosis: a systematic review and diagnostic accuracy meta-analysis.	https://doi.org/10.3389/fcimb.2026.1916158
+low		Front Cell Infect Microbiol	2026-11-06	Integrative transcriptomic and single-cell analyses identify Candida-responsive MMP10, CA9, and STC2 candidates in oral squamous cell carcinoma.	https://doi.org/10.3389/fcimb.2026.1953022
+low		Front Cell Infect Microbiol	2026-11-06	Ehrlichia infection progression drives tissue-independent transcriptional heterogeneity in tick cells.	https://doi.org/10.3389/fcimb.2026.1961724
+low		Front Microbiol	2026-11-06	Inhibition of quorum sensing and biofilm in Pseudomonas aeruginosa by erythrinin B: Bioinformatic evidence for the LasR binding.	https://doi.org/10.3389/fmicb.2026.1954689
+low		Front Cell Infect Microbiol	2026-11-06	Host-pathogen interactions in severe odontogenic infection: linking abscess findings to anatomical spread.	https://doi.org/10.3389/fcimb.2026.2003998
+low		Front Microbiol	2026-11-06	Two novel soil-derived Beauveria species from eastern China: integrative taxonomy and pathogenicity against Ostrinia furnacalis.	https://doi.org/10.3389/fmicb.2026.1980109
+low		Front Microbiol	2026-11-06	A mosaic of bacterial communities and their functional potential across Antarctic moss, lichen and soil.	https://doi.org/10.3389/fmicb.2026.1974728
+low		Front Microbiol	2026-11-06	A glycosylation-associated hemagglutinin substitution improves the breadth of an influenza B mRNA vaccine.	https://doi.org/10.3389/fmicb.2026.2002454
+low		Imeta	2026-11-20	Strain level variation in pathogenic invaders alters rhizosphere communities.	https://doi.org/10.1002/imt2.70196
+low		iScience	2026-11-13	Hierarchical multivariate analysis identifies dominant and secondary patterns in oral bacteria-host autophagy networks in oral squamous cell carcinoma.	https://doi.org/10.1016/j.isci.2026.118119
+low		Front Microbiol	2026-11-06	Unique and novel methanotroph taxa from the tropics: taxonomic novelty and a gateway to methane mitigation and valorization applications.	https://doi.org/10.3389/fmicb.2026.2001352
+low		Water Res	2026-11-17	Storage-enabled microbiomes for low-carbon wastewater treatment: Linking carbon capture and retention to electron allocation and process control.	https://doi.org/10.1016/j.watres.2026.127373
+low		Water Res	2026-11-17	Concentration-Dependent chlorine tolerance despite equivalent CT exposures in multidrug-resistant Stenotrophomonas maltophilia isolate: Associated with putative ribosomal remodeling.	https://doi.org/10.1016/j.watres.2026.127364
+low		Water Res	2026-11-18	Acceleration of nitrogen removal from oligotrophic reservoir water: Mechanisms underlying the aerobic denitrification driven by photogenerated electrons.	https://doi.org/10.1016/j.watres.2026.127379
+low		Clin Microbiol Infect	2026-11-21	Which rapid susceptibility testing methods for new antibiotics in clinical practice? a narrative review.	https://doi.org/10.1016/j.cmi.2026.11.018
+low		Clin Microbiol Infect	2026-11-21	Machine learning-based prediction of mortality at candidemia diagnosis: development and external validation across multicentre cohorts.	https://doi.org/10.1016/j.cmi.2026.11.021
+low		Clin Microbiol Infect	2026-11-21	Host-directed therapy for mycobacterial disease: a clinical perspective.	https://doi.org/10.1016/j.cmi.2026.11.019
+low		Clin Microbiol Infect	2026-11-21	Pentraxin 3 polymorphisms predispose to Aspergillus infection and rejection after lung transplantation.	https://doi.org/10.1016/j.cmi.2026.11.023
+low		Clin Microbiol Infect	2026-11-21	External validation of mortality risk scores in infective endocarditis: one size does not fit all.	https://doi.org/10.1016/j.cmi.2026.11.025
+low		Int J Antimicrob Agents	2026-11-21	Historical Genotyping in Long-Acting Cabotegravir Plus Rilpivirine: Resistance Background, Virological Failure, and Treatment Durability in the Spanish RELATIVITY Cohort.	https://doi.org/10.1016/j.ijantimicag.2026.108080
+low		J Glob Antimicrob Resist	2026-11-21	In silico structural analysis of EthA substitutions for prioritizing candidate variants associated with ethionamide resistance.	https://doi.org/10.1016/j.jgar.2026.11.012
+low		J Glob Antimicrob Resist	2026-11-21	Clinical impact of BIOFIRE® FILMARRAY® Pneumonia Panel for adult patient's pneumonia in Japan.	https://doi.org/10.1016/j.jgar.2026.11.011
+low		BMC Microbiol	2026-11-23	Mycobiota and phytochemistry of the most popular Saidi date in Egypt's Oases.	https://doi.org/10.1186/s12866-026-05215-0
+low		Antimicrob Resist Infect Control	2026-11-19	Knowledge, self-estimated risks and training participation surrounding infection prevention and control of COVID-19 and Ebola Disease among healthcare workers in Rwanda: a cross-sectional study.	https://doi.org/10.1186/s13756-026-01862-0
+low		Bioinformatics	2026-11-21	MaldiSuite: a Python ecosystem for MALDI-TOF spectral processing and analysis in antimicrobial resistance research.	https://doi.org/10.1093/bioinformatics/btag848
+low		J Antimicrob Chemother	2026-11-03	Effects of afabicin desphosphono (Debio 1452) on gut microbiota and subsequent risk of simulated Clostridium difficile infection in an in vitro human gut model.	https://doi.org/10.1093/jac/dkag359
+low		J Antimicrob Chemother	2026-11-03	A host-cell-based MRSA infection model identifies antibacterial activity not detected by conventional broth screening.	https://doi.org/10.1093/jac/dkag396
+low		Physiol Res	2026-11-20	Vitis vinifera L. Flavones Alleviate Alzheimer's Disease by Attenuating Microglial Polarization-Mediated Neuroinflammation and Cognitive Decline.	https://pubmed.ncbi.nlm.nih.gov/43070489/
+low		Scand J Gastroenterol	2026-11-23	Gastric juice, but not fecal microbiota, reflects gastric mucosal microbial profiles in patients with early gastric neoplasia: implications for minimally invasive sampling.	https://doi.org/10.1080/00365521.2026.2766473
+low		Microbiol Mol Biol Rev	2026-11-23	16S rRNA aminoglycoside resistance methyltransferases: an overview of structure, function, and fitness cost.	https://doi.org/10.1128/mmbr.00121-26
+low		Biotechnol J	2026-11-01	A Centrifugal Microfluidic Chip-Based Platform for Rapid On-Site Detection of Escherichia coli O157 in Water Samples.	https://doi.org/10.1002/biot.70340
+low		Chem Biodivers	2026-11-01	The Antihypertensive Potential of Seaweed-Derived Bioactive Compounds and Peptides: A Systematic Review.	https://doi.org/10.1002/cbdv.71879
+low		J Bacteriol	2026-11-23	Identifying phage host receptors using TraDIS.	https://doi.org/10.1128/jb.00569-25
+low		J Bacteriol	2026-11-23	A NanAKE-like pathway enables sialic acid catabolism in gut microbiome member Hungatella hathewayi.	https://doi.org/10.1128/jb.00281-26
+low		J Bacteriol	2026-11-23	Transposon insertion sequencing identifies genetic determinants of intrinsic rifamycin resistance in Mycobacterium abscessus.	https://doi.org/10.1128/jb.00358-26
+low		Food Funct	2026-11-23	Formation of an inulin biocorona on food-grade titanium dioxide nanoparticles alleviates gut microbiota dysbiosis and inflammatory responses under calorie restriction.	https://doi.org/10.1039/d6fo04110h
+low		Virol J	2026-11-21	Arginine starvation inhibits myxoma virus replication by preventing disassociation of the viral core	https://doi.org/10.1186/s12985-026-03372-2
+low		Virol J	2026-11-22	Human papillomavirus entry and intracellular trafficking: molecular mechanisms and host-factor networks	https://doi.org/10.1186/s12985-026-03369-x
+low		Virol J	2026-11-23	RNA sequencing-based transcriptomics reveals that ENTV-2 Env activates the PI3K/AKT signaling pathway during the induction of malignant cellular phenotypes	https://doi.org/10.1186/s12985-026-03370-4
+low		BMC Microbiol	2026-11-23	Preliminary comparative genomics of Bordetella pseudohinzii and B. hinzii reveals divergent virulence, antimicrobial resistance, mobile elements, and global environmental distribution	https://doi.org/10.1186/s12866-026-05932-6
+low		BMC Microbiol	2026-11-23	A comparative study on microbial community succession of carcasses in two environments	https://doi.org/10.1186/s12866-026-05936-2
+low		Genome Res	2026-11-23	J. Craig Venter (1946–2026)	https://doi.org/10.1101/gr.283001.126
+low		Virol J	2026-11-23	Early prediction of week-48 HBsAg clearance in nucleos(t)ide analogue-treated patients with chronic hepatitis B and low-level viremia receiving add-on pegylated interferon alfa-2b: a multicenter real-	https://doi.org/10.1186/s12985-026-03373-1
+low		Int J Antimicrob Agents	2026-11-01	Pharmacokinetics and Pharmacodynamics of Echinocandins in Pleural Effusion of Critically Ill Patients	https://doi.org/10.1016/j.ijantimicag.2026.108075
+low		Int J Antimicrob Agents	2026-11-01	Very High Baseline HIV-RNA and Advanced HIV Disease: Outcomes After INSTI-Based ART Initiation in the ICONA cohort	https://doi.org/10.1016/j.ijantimicag.2026.108074
+low		Clin Microbiol Infect	2026-11-01	Revisiting diagnostics: Sonication for Implant-Associated Infection Diagnosis: Why Controversy Persists Despite Years of Use	https://doi.org/10.1016/j.cmi.2026.11.024
+low		Clin Microbiol Infect	2026-11-01	Two-sample machine-learning estimation of rifampicin exposure in tuberculosis: an external validation study	https://doi.org/10.1016/j.cmi.2026.11.017
+low		Clin Microbiol Infect	2026-11-01	Re: ‘Evaluation of persistence of Candidozyma auris colonization’ by Bavastro et al.	https://doi.org/10.1016/j.cmi.2026.11.020
+low		Clin Microbiol Infect	2026-11-01	What can we recommend about infection risk and SGLT2 inhibitors?	https://doi.org/10.1016/j.cmi.2026.11.026
+low		Clin Microbiol Infect	2026-11-01	Bundibugyo virus disease outbreak in the Democratic Republic of the Congo and Uganda at day 100: an ESCMID Emerging Infections Subcommittee update	https://doi.org/10.1016/j.cmi.2026.10.042
+low		Int J Antimicrob Agents	2026-11-01	Chronic ulcers with cellulitis caused by multidrug-resistant Myroides odoratus	https://doi.org/10.1016/j.ijantimicag.2026.108079
+low		Int J Antimicrob Agents	2026-11-01	Pharmacokinetics of ceftazidime-avibactam and aztreonam-avibactam in post-neurosurgical NDM-producing Klebsiella pneumoniae ventriculitis	https://doi.org/10.1016/j.ijantimicag.2026.108081
+low		Clin Microbiol Infect	2026-11-01	When does AI improve decisions in clinical microbiology and infectious diseases?	https://doi.org/10.1016/j.cmi.2026.11.027
+low		Front Microbiol	2026-11-23	Editorial: Microbial metabolites to combat antimicrobial resistance	https://doi.org/10.3389/fmicb.2026.2044437
+low		NPJ Antimicrob Resist	2026-11-23	Sustainable approaches for antimicrobial resistance surveillance in resource-limited low- and middle-income countries	https://doi.org/10.1038/s44259-026-00290-9
+low		Antimicrob Resist Infect Control	2026-11-23	Gap analysis of national antimicrobial resistance reports and documented policy alignment with pathogen-specific action plans in five west African countries	https://doi.org/10.1186/s13756-026-01858-w
+low		Sci Rep	2026-11-21	Identification and characterization of unique plastic degrading bacteria from the east Kolkata wetlands	https://doi.org/10.1038/s41598-026-80766-w
+low		Sci Rep	2026-11-22	Distinct gut and lung microbiota profiles in a naturally occurring equine model of asthma	https://doi.org/10.1038/s41598-026-80914-2
+low		Sci Rep	2026-11-22	Pan-viral focused metagenomics reveals viral diversity in febrile patients from the Peruvian Amazon	https://doi.org/10.1038/s41598-026-77457-x
+low		Water Res	2026-11-01	Dipole moment governs antihypertensive drug-promoted plasmid conjugation in activated sludge independent of pharmacological action	https://doi.org/10.1016/j.watres.2026.127403
+low		Environ Int	2026-11-01	Endocrine-disrupting chemicals and their mixtures alter gut bacterial growth in a taxon- and trait-dependent manner and reshape community ecology	https://doi.org/10.1016/j.envint.2026.110620
+low		iScience	2026-12-01	Multi-omics profiling reveals metabolic and gut microbiome alterations in heart failure patients with anemia	https://doi.org/10.1016/j.isci.2026.118107
+low		Commun Biol	2026-11-23	Strain-resolved HiFi assemblies reveal seep microbiome adaptive divergence and interactions with viruses	https://doi.org/10.1038/s42003-026-11347-w
+low		bioRxiv	2026-11-23	Forecasting sockeye salmon migration timing and mortality under thermal stress	https://www.biorxiv.org/content/10.64898/2026.11.20.765466
+low		bioRxiv	2026-11-23	Cortical neurons accumulate point mutations at similar rates in mice and humans	https://www.biorxiv.org/content/10.64898/2026.11.21.768276
+low		bioRxiv	2026-11-23	DRP1 Orchestrates RNA Virus Permissiveness Through Metabolic Reprogramming Independent of Mitochondrial Dynamics	https://www.biorxiv.org/content/10.64898/2026.11.19.767996
+low		bioRxiv	2026-11-23	Infant formula composition is linked to distinct patterns of early gut colonization	https://www.biorxiv.org/content/10.64898/2026.11.20.768025
+low		bioRxiv	2026-11-23	Genomic Characterisation of the Irish Traditional BoRiabhach Cattle Breed	https://www.biorxiv.org/content/10.64898/2026.11.21.768272
+low		bioRxiv	2026-11-23	Plasma electrolyte changes can modulate post-repolarisation refractoriness in the human atrium	https://www.biorxiv.org/content/10.64898/2026.11.20.768085
+low		bioRxiv	2026-11-23	NADH regulation shapes competing acetate flux responses in Escherichia coli: kinetic modelling of the tricarboxylic acid cycle and acetate production	https://www.biorxiv.org/content/10.64898/2026.11.20.768084
+low		bioRxiv	2026-11-23	Model evaluation metrics of Virtual Cell Challenge 2026	https://www.biorxiv.org/content/10.64898/2026.11.17.767214
+low		bioRxiv	2026-11-23	Integrative structural biology of a giant marine virus reveals architectural and functional complexity beyond icosahedral symmetry	https://www.biorxiv.org/content/10.64898/2026.11.16.766480
+low		bioRxiv	2026-11-23	Structural basis for assembly of human cN1A filaments	https://www.biorxiv.org/content/10.64898/2026.11.20.768069
+low		bioRxiv	2026-11-23	A stop codon shared by all Gyps vultures, including the three Critically Endangered species of South Asia, lies in a coding exon of the bird gene CYP2C45	https://www.biorxiv.org/content/10.64898/2026.11.22.768365
+low		bioRxiv	2026-11-23	Transpiling reproducibility: Multi-language implementation for the St. Nicolas House Analysis algorithm using Fusion	https://www.biorxiv.org/content/10.64898/2026.11.20.768087
+low		bioRxiv	2026-11-23	How predictable is an individual's DNA methylation?	https://www.biorxiv.org/content/10.64898/2026.11.21.768291
+low		bioRxiv	2026-11-23	Deciphering state bridges via a single-cell large language model	https://www.biorxiv.org/content/10.64898/2026.11.21.768275
+low		bioRxiv	2026-11-23	Genomic foundation models and complementary variant-scoring strategies in LGMD-associated genes: architecture, adaptation, and sequence context	https://www.biorxiv.org/content/10.64898/2026.11.21.768324
+low		bioRxiv	2026-11-23	Modeling Host-Virus Interactions of Avian Corona Virus Reveals Cytokine Feedback as a driver of Strain-Specific Immune Response	https://www.biorxiv.org/content/10.64898/2026.11.20.768156
+low		bioRxiv	2026-11-23	VisioWell, an all-in-one high-throughput platform to study haematopoietic cells division	https://www.biorxiv.org/content/10.64898/2026.11.21.768298
+low		bioRxiv	2026-11-23	Local macrophage and cDC1 cooperation in the liver drives T-cell immune surveillance against pioneering metastatic cancer cells.	https://www.biorxiv.org/content/10.64898/2026.11.21.768283
+low		bioRxiv	2026-11-23	Age- and sex-related variation in TREC and KREC and the association of rs2204985 with TREC in adults	https://www.biorxiv.org/content/10.64898/2026.11.21.768288
+low		bioRxiv	2026-11-23	ViruDB: An Assay-Aware Molecular Database and Endpoint-Adaptive Multimodal Learning Framework for Antibiofilm, Quorum-Sensing Inhibition, and Antivirulence Research	https://www.biorxiv.org/content/10.64898/2026.11.21.768264
+low		bioRxiv	2026-11-23	Agreement between structure prediction tools does not indicate biological plausibility in cancer fusion proteins	https://www.biorxiv.org/content/10.64898/2026.11.20.768091
+low		bioRxiv	2026-11-23	Multiscale superinformation reveals structured organization of genomic sequence features	https://www.biorxiv.org/content/10.64898/2026.11.22.768374
+low		bioRxiv	2026-11-23	deeprok: highly accurate prokaryotic gene prediction through deep learning and overlap-aware decoding	https://www.biorxiv.org/content/10.64898/2026.11.21.768321
+low		bioRxiv	2026-11-23	TrailMix: Mixture Proportion and Placement Estimation of Ancient Hominin mtDNA Samples using a Pangenomic Reference	https://www.biorxiv.org/content/10.64898/2026.11.21.768339
+low		bioRxiv	2026-11-23	Integrating CRISPRi perturbation responses and transcription-factor binding priors for regulatory network inference in triple-negative breast cancer	https://www.biorxiv.org/content/10.64898/2026.11.20.768082
+low		bioRxiv	2026-11-23	Zero-shot virtual knock-out rankings do not recover causal genes from observational single-cell data	https://www.biorxiv.org/content/10.64898/2026.11.21.768293
+low		bioRxiv	2026-11-23	Oral microbiome and DNA virome profiling in pigs reveals age-associated dynamics and extracellular recovery of Streptococcus suis-associated phage lineages	https://www.biorxiv.org/content/10.64898/2026.11.21.768310
+low		bioRxiv	2026-11-23	BASIN: Background-Anchored Signal Normalization with Integrated Quality Control for CUT&RUN and CUT&Tag	https://www.biorxiv.org/content/10.64898/2026.11.21.768281
+low		medRxiv	2026-11-23	Context-dependent associations between recent antibiotic treatment, gut microbiome composition, blood metabolites, and metabolic health.	https://www.medrxiv.org/content/10.64898/2026.11.19.26368536
+low		medRxiv	2026-11-23	Paired molecular characterization of repeat Chlamydia trachomatis infection among pregnant women in East London, South Africa	https://www.medrxiv.org/content/10.64898/2026.11.20.26368559
+maybe	low	BMC Microbiol	2026-11-21	Multi-omics profiling identifies a candidate fecal Enterococcus–tyramine association in subacute hypertensive intracerebral hemorrhage	https://doi.org/10.1186/s12866-026-05866-z
+maybe	low	Clin Microbiol Infect	2026-11-01	Profiling immune capacity via the resident virome	https://doi.org/10.1016/j.cmi.2026.11.028
+maybe	low	bioRxiv	2026-11-23	Identification of eukaryotes as a bycatch in global microbiome data	https://www.biorxiv.org/content/10.64898/2026.11.21.765608
