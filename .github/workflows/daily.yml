@@ -2,11 +2,10 @@ name: daily
 
 on:
   schedule:
-    # Helsinki noon is 10:00 UTC in winter and 09:00 UTC in summer.
-    # Both fire; the script runs once per day, only after 12:00 Helsinki.
-    - cron: "7 9 * * *"
-    - cron: "7 10 * * *"
-    - cron: "37 11 * * *"   # safety net if the earlier runs were skipped or delayed
+    # GitHub may delay or drop scheduled runs, so fire hourly from 09:23 to 15:23 UTC.
+    # The script itself runs once per day, only after 12:00 Helsinki (summer or winter time);
+    # the other triggers exit in seconds.
+    - cron: "23 9-15 * * *"
   workflow_dispatch:
     inputs:
       window_days:
@@ -17,11 +16,6 @@ on:
         description: "Forget today's results and screen again (testing)"
         type: boolean
         default: false
-  push:
-    branches: [main]
-    paths:
-      - "data/social.md"
-      - "data/events.md"
 
 permissions:
   contents: write
@@ -43,7 +37,6 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Literature run
-        if: github.event_name != 'push'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
@@ -56,10 +49,6 @@ jobs:
             [ "${{ github.event.inputs.reset_today }}" = "true" ] && ARGS="$ARGS --reset-today"
             python src/run.py $ARGS
           fi
-
-      - name: Re-render after social/events update
-        if: github.event_name == 'push'
-        run: python src/run.py --render-only
 
       - name: Commit
         run: |
