@@ -25,7 +25,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: trawl
+  # its own group: the daily list must not wait behind a long backfill. Commits can no
+  # longer collide (each run writes its own per-month files and re-renders after rebasing).
+  group: trawl-daily
   cancel-in-progress: false
 
 jobs:
