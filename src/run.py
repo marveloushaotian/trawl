@@ -23,10 +23,9 @@ RUNS = DATA / "runs.json"          # per-day counts
 
 
 def archive_items() -> list[dict]:
-    out = []
-    for f in sorted((DATA / "archive").glob("*.json")):
-        out.extend(json.loads(f.read_text())["items"])
-    return out
+    """Every paper ever selected, so nothing is listed twice."""
+    f = DATA / "archive" / "picks.json"
+    return json.loads(f.read_text()) if f.exists() else []
 
 
 def norm_title(t: str) -> str:
@@ -168,12 +167,12 @@ def main() -> None:
 
     # audit trail of the latest run: every screened paper with both grades (overwritten each run)
     AUDIT = DATA / "last_run.tsv"
-    rows = ["stage1\tfinal\tsource\tdate\ttitle\turl"]
-    for p in sorted(fresh, key=lambda x: (x.get("stage1", ""), x.get("final", ""))):
-        rows.append("\t".join([p.get("stage1", ""), p.get("final", ""), p["source"], (p.get("date") or "")[:10],
-                               p["title"].replace("\t", " ")[:200], p["url"]]))
+    audit_rows = [[p.get("stage1", ""), p.get("final", ""), p["source"], (p.get("date") or "")[:10],
+                   p["title"].replace("\t", " ")[:200], p["url"]]
+                  for p in sorted(fresh, key=lambda x: (x.get("stage1", ""), x.get("final", "")))]
     DATA.mkdir(exist_ok=True)
-    AUDIT.write_text("\n".join(rows) + "\n")
+    AUDIT.write_text("\n".join(["stage1\tfinal\tsource\tdate\ttitle\turl"]
+                                + ["\t".join(r) for r in audit_rows]) + "\n")
 
     for p in picked:
         p["run_date"] = today.isoformat()
@@ -192,6 +191,12 @@ def main() -> None:
                  "screened": len(fresh) + (prev["screened"] if prev else 0),
                  "picked": len(picked) + (prev["picked"] if prev else 0), "by_source": stats})
     runs = sorted(runs, key=lambda r: r["date"])[-cfg["keep_days"]:]
+
+    import archive as arch
+    arch.add_picks([dict(p) for p in picked])
+    arch.add_screened(audit_rows)
+    arch.add_coverage(today.isoformat(), today.isoformat())
+    arch.rebuild(today)
 
     DATA.mkdir(exist_ok=True)
     ITEMS.write_text(json.dumps(items, ensure_ascii=False, indent=1))

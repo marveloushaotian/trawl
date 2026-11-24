@@ -1,8 +1,9 @@
 # trawl archive
 
-Papers from before the daily feed started, screened with the same profile.
+Every selected paper, one file per calendar month, by publication date. The daily feed in the top-level README is the rolling view of the last two weeks; this is the permanent record.
 
-| Period | Screened | Selected | Core |
-|---|---|---|---|
-| [2026-10-22 to 2026-11-21](2026-10-22_to_2026-11-21.md) | 6152 | 39 | 3 |
-| [2026-09-22 to 2026-10-21](2026-09-22_to_2026-10-21.md) | 7022 | 55 | 5 |
+| Month | Screened | Selected | Core | Coverage |
+|---|---|---|---|---|
+| [2026-11](2026-11.md) | 3950 | 31 | 1 | complete |
+| [2026-10](2026-10.md) | 7015 | 56 | 8 | complete |
+| [2026-09](2026-09.md) | 2176 | 17 | 0 | partial |

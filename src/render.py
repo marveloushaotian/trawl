@@ -65,7 +65,8 @@ def render(items: list[dict], runs: list[dict], cfg: dict, now: datetime) -> Non
         "# trawl",
         "",
         "New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. "
-        f"Last {keep} days, newest first. Updated {now:%Y-%m-%d %H:%M}.",
+        f"Last {keep} days, newest first. Updated {now:%Y-%m-%d %H:%M}. "
+        "Everything selected so far, month by month, is in the [archive](archive/).",
         "",
     ]
     for i in range(keep):
@@ -95,33 +96,3 @@ def table_rows(items: list[dict]) -> list[str]:
     return [f"| {GRADE.get(it.get('grade'), '')} | {paper_cell(it)} | {source_cell(it)} "
             f"| {cell((it.get('date') or '')[:10])} "
             f"| {cell(it.get('takeaway', ''))} | {cell(it.get('reason', ''))} |" for it in items]
-
-
-def render_archive(label: str, start: str, end: str, items: list[dict], stats: dict) -> None:
-    """One file per backfilled period, grouped by publication date (newest first)."""
-    adir = ROOT / "archive"
-    adir.mkdir(exist_ok=True)
-    n_core = sum(it.get("grade") == "core" for it in items)
-    n_zot = sum(in_zotero(it) for it in items)
-    out = [f"# trawl archive: {start} to {end}", "",
-           f"Screened {stats.get('screened', 0)} · selected {len(items)} "
-           f"({n_core} Core, {len(items) - n_core} High) · {n_zot} already in Zotero. "
-           "Grouped by publication date, newest first.", ""]
-    by_day: dict[str, list[dict]] = {}
-    for it in items:
-        by_day.setdefault((it.get("date") or "unknown")[:10], []).append(it)
-    for day in sorted(by_day, reverse=True):
-        out += [f"## {day}", ""] + TABLE_HEAD + table_rows(by_day[day]) + [""]
-    (adir / f"{label}.md").write_text("\n".join(out))
-
-    # index of all archive periods
-    rows = []
-    for f in sorted((ROOT / "data" / "archive").glob("*.json"), reverse=True):
-        d = json.loads(f.read_text())
-        its = d["items"]
-        rows.append(f"| [{d['start']} to {d['end']}]({f.stem}.md) | {d['stats'].get('screened', 0)} "
-                    f"| {len(its)} | {sum(i.get('grade') == 'core' for i in its)} |")
-    idx = ["# trawl archive", "",
-           "Papers from before the daily feed started, screened with the same profile.", "",
-           "| Period | Screened | Selected | Core |", "|---|---|---|---|"] + rows + [""]
-    (adir / "README.md").write_text("\n".join(idx))
