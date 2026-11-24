@@ -17,9 +17,8 @@ sys.path.insert(0, str(ROOT / "src"))
 
 ADATA = ROOT / "data" / "archive"
 ADIR = ROOT / "archive"
-PICKS = ADATA / "picks.json"
-COVERAGE = ADATA / "coverage.json"
-SCREENED_DIR = ADATA / "screened"
+MONTHS_DIR = ADATA / "months"      # one file per month: the only thing a run writes
+SCREENED_DIR = ADATA / "screened"  # one audit file per month
 AUDIT_HEAD = "stage1\tfinal\tsource\tdate\ttitle\turl"
 
 
@@ -27,42 +26,54 @@ def _d(s: str) -> date:
     return date.fromisoformat(s[:10])
 
 
-# ---------------------------------------------------------------- picks
+# ------------------------------------------------- per-month store
+
+def month_of(it: dict) -> str:
+    return (it.get("date") or "unknown")[:7]
+
+
+def load_month(month: str) -> dict:
+    f = MONTHS_DIR / f"{month}.json"
+    return json.loads(f.read_text()) if f.exists() else {"month": month, "covered": [], "items": []}
+
+
+def save_month(d: dict) -> None:
+    MONTHS_DIR.mkdir(parents=True, exist_ok=True)
+    d["items"].sort(key=lambda x: ((x.get("date") or "")[:10], x["title"]))
+    (MONTHS_DIR / f"{d['month']}.json").write_text(json.dumps(d, ensure_ascii=False, indent=1))
+
+
+def months_on_disk() -> list[str]:
+    return sorted(f.stem for f in MONTHS_DIR.glob("*.json")) if MONTHS_DIR.exists() else []
+
 
 def load_picks() -> list[dict]:
-    return json.loads(PICKS.read_text()) if PICKS.exists() else []
+    """Every paper ever selected, from all month files."""
+    return [it for m in months_on_disk() for it in load_month(m)["items"]]
 
 
-def add_picks(new: list[dict]) -> list[dict]:
-    """Merge selected papers into the permanent store, newest version of each wins."""
+def add_picks(new: list[dict]) -> None:
+    """File selected papers into their publication month. Only touches those months."""
     from run import keys_of
 
-    picks = load_picks()
-    index: dict[str, dict] = {}
-    for it in picks:
-        for k in keys_of(it):
-            index[k] = it
+    by_month: dict[str, list[dict]] = {}
     for p in new:
-        hit = next((index[k] for k in keys_of(p) if k in index), None)
-        if hit is None:
-            picks.append(p)
-            for k in keys_of(p):
-                index[k] = p
-        else:
-            hit.update({k: v for k, v in p.items() if v})
-            for k in keys_of(p):
-                index[k] = hit
-    picks.sort(key=lambda x: ((x.get("date") or "")[:10], x["title"]))
-    ADATA.mkdir(parents=True, exist_ok=True)
-    PICKS.write_text(json.dumps(picks, ensure_ascii=False, indent=1))
-    return picks
+        by_month.setdefault(month_of(p), []).append(p)
+    for month, papers in by_month.items():
+        d = load_month(month)
+        index: dict[str, dict] = {k: it for it in d["items"] for k in keys_of(it)}
+        for p in papers:
+            hit = next((index[k] for k in keys_of(p) if k in index), None)
+            if hit is None:
+                d["items"].append(p)
+                for k in keys_of(p):
+                    index[k] = p
+            else:
+                hit.update({k: v for k, v in p.items() if v})
+        save_month(d)
 
 
 # ---------------------------------------------------------------- coverage
-
-def load_coverage() -> list[list[str]]:
-    return json.loads(COVERAGE.read_text())["ranges"] if COVERAGE.exists() else []
-
 
 def _merge(ranges: list[list[str]]) -> list[list[str]]:
     out: list[list[str]] = []
@@ -74,11 +85,20 @@ def _merge(ranges: list[list[str]]) -> list[list[str]]:
     return out
 
 
-def add_coverage(start: str, end: str) -> list[list[str]]:
-    ranges = _merge(load_coverage() + [[start, end]])
-    ADATA.mkdir(parents=True, exist_ok=True)
-    COVERAGE.write_text(json.dumps({"ranges": ranges}, indent=1))
-    return ranges
+def load_coverage() -> list[list[str]]:
+    return _merge([r for m in months_on_disk() for r in load_month(m)["covered"]])
+
+
+def add_coverage(start: str, end: str) -> None:
+    """Record a screened range, split across the month files it spans."""
+    a, b = _d(start), _d(end)
+    while a <= b:
+        month = a.strftime("%Y-%m")
+        m_end = min(month_bounds(month)[1], b)
+        d = load_month(month)
+        d["covered"] = _merge(d["covered"] + [[a.isoformat(), m_end.isoformat()]])
+        save_month(d)
+        a = m_end + timedelta(days=1)
 
 
 def gaps(start: date, end: date) -> list[tuple[date, date]]:
@@ -160,11 +180,8 @@ def rebuild(today: date | None = None) -> list[str]:
     from render import TABLE_HEAD, in_zotero, table_rows
 
     today = today or date.today()
-    picks = load_picks()
     ADIR.mkdir(exist_ok=True)
-    by_month: dict[str, list[dict]] = {}
-    for it in picks:
-        by_month.setdefault((it.get("date") or "unknown")[:7], []).append(it)
+    by_month = {m: load_month(m)["items"] for m in months_on_disk()}
 
     written = []
     for month in sorted(by_month, reverse=True):
@@ -209,3 +226,12 @@ def rebuild(today: date | None = None) -> list[str]:
            "| Month | Screened | Selected | Core | Coverage |", "|---|---|---|---|---|"] + rows + [""]
     (ADIR / "README.md").write_text("\n".join(idx))
     return written
+
+
+if __name__ == "__main__":                 # `python src/archive.py --rebuild`
+    import argparse
+
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--rebuild", action="store_true")
+    ap.parse_args()
+    print("rebuilt:", ", ".join(rebuild()))

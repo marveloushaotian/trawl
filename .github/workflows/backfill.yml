@@ -25,6 +25,7 @@ jobs:
       months: ${{ steps.expand.outputs.months }}
     steps:
       - uses: actions/checkout@v5
+        with: { ref: main }
       - id: expand
         run: echo "months=$(python3 src/months.py '${{ github.event.inputs.month }}')" >> "$GITHUB_OUTPUT"
 
@@ -33,12 +34,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
-      max-parallel: 1          # one month at a time: they share picks.json and coverage.json
+      max-parallel: 1          # one month at a time, so each starts from the previous month's commit
       fail-fast: false
       matrix:
         month: ${{ fromJson(needs.plan.outputs.months) }}
     steps:
+      # ref: main, not the dispatch SHA, so every month sees the months already committed
       - uses: actions/checkout@v5
+        with: { ref: main }
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
@@ -53,11 +56,21 @@ jobs:
         run: |
           git config user.name  "Haotian Zheng"
           git config user.email "49090241+marveloushaotian@users.noreply.github.com"
-          git add archive/ data/archive/
-          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -m "trawl archive: ${{ matrix.month }}"
+          # Commit only the per-month sources of truth: no other job writes these files,
+          # so the rebase below can never conflict. Rendered files are regenerated after it.
+          git add data/archive/months/ data/archive/screened/
+          if git diff --cached --quiet; then echo "nothing screened"; exit 0; fi
+          git commit -q -m "trawl archive: ${{ matrix.month }}"
           for i in 1 2 3; do
-            git pull --rebase --quiet && git push && exit 0
-            sleep 10
+            git fetch -q origin main
+            if git rebase -q origin/main; then
+              python src/archive.py --rebuild
+              git add archive/
+              git diff --cached --quiet || git commit -q --amend --no-edit
+              git push -q && exit 0
+            fi
+            git rebase --abort || true
+            sleep $((i * 15))
           done
+          echo "could not push ${{ matrix.month }}"
           exit 1

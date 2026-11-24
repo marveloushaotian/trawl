@@ -24,8 +24,8 @@ RUNS = DATA / "runs.json"          # per-day counts
 
 def archive_items() -> list[dict]:
     """Every paper ever selected, so nothing is listed twice."""
-    f = DATA / "archive" / "picks.json"
-    return json.loads(f.read_text()) if f.exists() else []
+    import archive as arch
+    return arch.load_picks()
 
 
 def norm_title(t: str) -> str:

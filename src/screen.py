@@ -76,6 +76,23 @@ def _paper_block(pid: str, p: dict) -> str:
     return f"<paper id=\"{pid}\">\nTitle: {p['title']}\nSource: {p['source']}\nAbstract: {abstract}\n</paper>"
 
 
+def _parse_grades(out: dict | None) -> dict[str, str]:
+    """The model usually returns [{"id": .., "grade": ..}], but not always. Ignore anything else."""
+    grades = (out or {}).get("grades")
+    if isinstance(grades, dict):                    # {"0": "low", ...}
+        return {str(k): v for k, v in grades.items() if isinstance(v, str)}
+    if not isinstance(grades, list):
+        print(f"stage1: unusable grades payload {type(grades).__name__}")
+        return {}
+    out_map: dict[str, str] = {}
+    for g in grades:
+        if isinstance(g, dict) and "id" in g and isinstance(g.get("grade"), str):
+            out_map[str(g["id"])] = g["grade"]
+        else:
+            print(f"stage1: skipping malformed grade entry {g!r:.80}")
+    return out_map
+
+
 def stage1(papers: list[dict], profile: str, model: str, batch: int = 20, workers: int = 1) -> dict[str, str]:
     def one(i: int) -> dict[str, str]:
         chunk = papers[i:i + batch]
@@ -85,10 +102,10 @@ def stage1(papers: list[dict], profile: str, model: str, batch: int = 20, worker
                         "按上面的标准给每篇论文定级：core / high / maybe / low。大多数应为 low。"
                         "拿不准、但有可能是 core 或 high 的标 maybe（会交给更强的模型复核）；"
                         "只有标题、没有摘要时，看起来相关就标 maybe。\n\n" + body)
-        except anthropic.APIError as e:
-            print(f"stage1 batch {i} failed: {e}")
+        except Exception as e:                      # one bad batch must not kill the month
+            print(f"stage1 batch {i} failed: {type(e).__name__}: {e}")
             return {}
-        return {str(g["id"]): g["grade"] for g in (out or {}).get("grades", [])}
+        return _parse_grades(out)
 
     grades: dict[str, str] = {}
     starts = list(range(0, len(papers), batch))
@@ -113,14 +130,20 @@ def screen(papers: list[dict], profile: str, models: dict, workers: int = 1) -> 
     g = stage1(papers, profile, models["screen"], workers=workers)
     for i, p in enumerate(papers):
         p["stage1"] = g.get(str(i), "error")
-    picked = [p for p in papers if p["stage1"] in ("core", "high", "maybe")]
+    errors = sum(p["stage1"] == "error" for p in papers)
+    if errors > max(20, len(papers) // 5):
+        # a broad outage: stop instead of sending everything to the expensive model
+        raise RuntimeError(f"stage1 failed for {errors} of {len(papers)} papers")
+    if errors:
+        print(f"stage1: {errors} ungraded, sending them to stage 2 rather than dropping them")
+    picked = [p for p in papers if p["stage1"] in ("core", "high", "maybe", "error")]
     print(f"stage1: {len(papers)} screened, {len(picked)} passed to stage 2")
 
     def two(p: dict) -> dict | None:
         try:
             r = stage2(p, profile, models["write"])
-        except anthropic.APIError as e:
-            print(f"stage2 failed for {p.get('doi')}: {e}")
+        except Exception as e:
+            print(f"stage2 failed for {p.get('doi')}: {type(e).__name__}: {e}")
             return None
         p["final"] = r.get("grade", "low")
         return {**p, **r} if p["final"] in ("core", "high") else None
