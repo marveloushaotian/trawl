@@ -23,7 +23,7 @@ sys.path.insert(0, str(ROOT / "src"))
 import archive as arch  # noqa: E402
 from fetch import fetch_all  # noqa: E402
 from run import (DATA, SCREENED, archive_items, dedupe, h, keys_of, load_json,  # noqa: E402
-                 primary)
+                 norm_title, primary)
 from screen import screen  # noqa: E402
 
 
@@ -49,8 +49,11 @@ def screen_range(cfg: dict, profile: str, start: date, end: date, workers: int) 
             k, v = line.split("\t")
             screened[k] = v
     reported = {k for it in load_json(DATA / "items.json", []) + archive_items() for k in keys_of(it)}
+    seen = arch.screened_index()          # permanent: every paper graded in any earlier run
     fresh = [p for p in cands
-             if not (keys_of(p) & reported) and not screened.get(h(primary(p)), "").replace(":t", "")]
+             if not (keys_of(p) & reported)
+             and not screened.get(h(primary(p)), "").replace(":t", "")
+             and p["url"].strip() not in seen and norm_title(p["title"]) not in seen]
     print(f"candidates {len(cands)}, to screen {len(fresh)}", flush=True)
 
     picked = screen(fresh, profile, cfg["models"], workers=workers)

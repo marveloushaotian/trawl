@@ -123,6 +123,25 @@ def add_screened(rows: list[list[str]]) -> None:
         f.write_text("\n".join([AUDIT_HEAD] + sorted(keep)) + "\n")
 
 
+def screened_index() -> set[str]:
+    """Keys of every paper ever screened, from the permanent per-month audit.
+
+    data/screened.tsv only keeps 60 days, so this is what stops an old month
+    from being graded (and paid for) a second time.
+    """
+    from run import norm_title
+
+    keys: set[str] = set()
+    for f in sorted(SCREENED_DIR.glob("*.tsv")):
+        for line in f.read_text().splitlines()[1:]:
+            parts = line.split("\t")
+            if len(parts) < 6:
+                continue
+            keys.add(parts[5].strip())
+            keys.add(norm_title(parts[4]))
+    return keys
+
+
 def screened_count(month: str) -> int:
     f = SCREENED_DIR / f"{month}.tsv"
     return max(len(f.read_text().splitlines()) - 1, 0) if f.exists() else 0
