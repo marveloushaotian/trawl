@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       month:
-        description: "Calendar month to screen (YYYY-MM)"
+        description: "Month (2026-09), a list (2026-08,2026-09) or a range (2025-11..2026-08)"
         required: true
       replace:
-        description: "Screen the whole month again, ignoring what is already covered"
+        description: "Screen these months again, ignoring what is already covered"
         type: boolean
         default: false
 
@@ -19,9 +19,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      months: ${{ steps.expand.outputs.months }}
+    steps:
+      - uses: actions/checkout@v5
+      - id: expand
+        run: echo "months=$(python3 src/months.py '${{ github.event.inputs.month }}')" >> "$GITHUB_OUTPUT"
+
   backfill:
+    needs: plan
     runs-on: ubuntu-latest
     timeout-minutes: 300
+    strategy:
+      max-parallel: 1          # one month at a time: they share picks.json and coverage.json
+      fail-fast: false
+      matrix:
+        month: ${{ fromJson(needs.plan.outputs.months) }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -29,17 +44,20 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Screen the month
+      - name: Screen ${{ matrix.month }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
-        run: python src/backfill.py --month "${{ github.event.inputs.month }}" $([ "${{ github.event.inputs.replace }}" = "true" ] && echo --replace)
+        run: python src/backfill.py --month "${{ matrix.month }}" $([ "${{ github.event.inputs.replace }}" = "true" ] && echo --replace)
       - name: Commit
         run: |
           git config user.name  "Haotian Zheng"
           git config user.email "49090241+marveloushaotian@users.noreply.github.com"
           git add archive/ data/archive/
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -m "trawl archive: ${{ github.event.inputs.month }}"
-          git pull --rebase --quiet
-          git push
+          git commit -m "trawl archive: ${{ matrix.month }}"
+          for i in 1 2 3; do
+            git pull --rebase --quiet && git push && exit 0
+            sleep 10
+          done
+          exit 1
