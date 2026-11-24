@@ -16,6 +16,10 @@ on:
         description: "Forget today's results and screen again (testing)"
         type: boolean
         default: false
+      as_schedule:
+        description: "Behave like a scheduled run (used by the backup trigger in the profile repo)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -35,7 +39,7 @@ jobs:
       - name: Due today?
         id: gate
         run: |
-          if [ "${{ github.event_name }}" != "schedule" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ "${{ github.event_name }}" != "schedule" ] && [ "${{ github.event.inputs.as_schedule }}" != "true" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
           today=$(TZ=Europe/Helsinki date +%F); hour=$(TZ=Europe/Helsinki date +%-H)
           if [ "$hour" -lt 12 ] || grep -q "\"date\": \"$today\"" data/runs.json 2>/dev/null; then
             echo "go=false" >> "$GITHUB_OUTPUT"; echo "Not due (hour $hour, today $today)."
@@ -57,7 +61,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event.inputs.as_schedule }}" = "true" ]; then
             python src/run.py --scheduled
           else
             ARGS=""
