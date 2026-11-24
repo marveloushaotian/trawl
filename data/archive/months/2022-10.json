@@ -1,0 +1,146 @@
+{
+ "month": "2022-10",
+ "covered": [
+  [
+   "2022-10-01",
+   "2022-10-31"
+  ]
+ ],
+ "items": [
+  {
+   "source": "bioRxiv",
+   "doi": "10.1101/2022.09.30.510406",
+   "title": "Isotope-enrichment reveals active viruses follow microbial host dynamics during rewetting of a California grassland soil",
+   "authors": "Nicolas, A. M.; Sieradzki, E. T.; Pett-Ridge, J.; Banfield, J. F.; Taga, M. E.; Firestone, M. K.; Blazewicz, S. J.",
+   "date": "2022-10-01",
+   "version": "1",
+   "category": "microbiology",
+   "published_doi": "10.1038/s41467-023-40835-4",
+   "url": "https://www.biorxiv.org/content/10.1101/2022.09.30.510406",
+   "grade": "high",
+   "takeaway": "Isotope tracing 加时间分辨 metagenomics/viromics 显示土壤复湿后活跃噬菌体以 lytic 为主，随宿主动态变化。",
+   "reason": "土壤噬菌体生态，方法（同位素标记识别活跃病毒、时序宿主-病毒共变）可借鉴到肠道纵向研究。"
+  },
+  {
+   "source": "Mol Ecol",
+   "pmid": "36161739",
+   "doi": "10.1111/mec.16704",
+   "title": "Discordant population structure among rhizobium divided genomes and their legume hosts.",
+   "authors": "Riley AB, Grillo MA, Epstein B, Tiffin P, Heath KD",
+   "date": "2022-10-05",
+   "url": "https://doi.org/10.1111/mec.16704",
+   "grade": "high",
+   "takeaway": "191 株 S. meliloti 中，pSymA/pSymB 的群体结构彼此相似，但不同于染色体和宿主植物。",
+   "reason": "可借鉴多 replicon 基因组中 megaplasmid 与染色体的群体结构和重组差异分析，对应主线 6；但基于分离株。"
+  },
+  {
+   "source": "Environ Microbiol",
+   "pmid": "36123315",
+   "doi": "10.1111/1462-2920.16205",
+   "title": "Designation of optimal reference strains representing the infant gut bifidobacterial species through a comprehensive multi-omics approach.",
+   "authors": "Fontana F, Alessandri G, Tarracchini C, Bianchi MG, Rizzo SM, Mancabelli L",
+   "date": "2022-10-07",
+   "url": "https://doi.org/10.1111/1462-2920.16205",
+   "grade": "high",
+   "takeaway": "基于1664份婴儿粪便宏基因组的 strain tracking，筛选代表双歧杆菌物种的最优参考菌株，并经体外验证。",
+   "reason": "不涉及质粒，但属婴儿肠道菌株追踪与持续存在；strain tracking 思路可迁移到质粒宿主菌株关联。"
+  },
+  {
+   "source": "bioRxiv",
+   "doi": "10.1101/2022.10.09.511496",
+   "title": "Gut commensal Enterocloster species host inoviruses that are secreted in vitro and in vivo.",
+   "authors": "Burckhardt, J. C.; Chong, D. H. Y.; Pett, N.; Tropini, C.",
+   "date": "2022-10-10",
+   "version": "1",
+   "category": "microbiology",
+   "published_doi": "",
+   "url": "https://www.biorxiv.org/content/10.1101/2022.10.09.511496",
+   "grade": "high",
+   "takeaway": "肠道共生菌 Enterocloster 携带并分泌 inovirus，其分泌受渗透压调控，体外与小鼠体内均得到证实。",
+   "reason": "人类肠道噬菌体生态的新发现（首个肠道 inovirus），属湿实验；可作肠道 virome 与前噬菌体检出的参考。"
+  },
+  {
+   "source": "Nat Commun",
+   "doi": "10.1038/s41467-022-33771-2",
+   "title": "Response of soil viral communities to land use changes",
+   "authors": "Liao H, Li H, Duan C, Zhou X, Luo Q, An X",
+   "date": "2022-10-12",
+   "url": "https://doi.org/10.1038/s41467-022-33771-2",
+   "grade": "high",
+   "takeaway": "厦门不同土地利用土壤中回收 59,626 个 vOTU，pH 是病毒群落结构主要决定因素，微多样性显示存在选择。",
+   "reason": "属土壤噬菌体生态，微多样性分析与溶原 vOTU 动态可借鉴到肠道 virome；但非人类肠道、无质粒。"
+  },
+  {
+   "source": "Mol Biol Evol",
+   "doi": "10.1093/molbev/msac220",
+   "title": "The Role of the Environment in Horizontal Gene Transfer",
+   "authors": "Acar Kirit H, Bollback J, Lagator M",
+   "date": "2022-10-13",
+   "url": "https://doi.org/10.1093/molbev/msac220",
+   "grade": "high",
+   "takeaway": "44个Salmonella→E. coli直系同源基因的fitness效应高度依赖环境，但DFE形状跨环境一致。",
+   "reason": "非质粒专属的HGT适应性代价实验，可为质粒货物基因的环境依赖性与持续性提供参考。"
+  },
+  {
+   "source": "bioRxiv",
+   "doi": "10.1101/2022.10.12.511977",
+   "title": "IS200/IS605 Family-Associated TnpB Increases Transposon Activity and Retention",
+   "authors": "Kaur, D.; Kuhlman, T. E.",
+   "date": "2022-10-14",
+   "version": "1",
+   "category": "synthetic biology",
+   "published_doi": "",
+   "url": "https://www.biorxiv.org/content/10.1101/2022.10.12.511977",
+   "grade": "high",
+   "takeaway": "活细胞报告系统显示 IS608-TnpB 提高转座活性并减少转座子丢失，数学模型解释 tnpB 的广泛分布。",
+   "reason": "属 IS/转座子等 MGE 的维持与进化动力学（含数学模型），可借鉴；但为大肠杆菌湿实验，不直接涉及质粒或宏基因组。"
+  },
+  {
+   "source": "ISME J",
+   "doi": "10.1038/s41396-022-01329-1",
+   "title": "Metabolic genes on conjugative plasmids are highly prevalent in Escherichia coli and can protect against antibiotic treatment",
+   "authors": "Palomino A, Gewurz D, DeVine L, Zajmi U, Moralez J, Abu-Rumman F",
+   "date": "2022-10-19",
+   "url": "https://doi.org/10.1038/s41396-022-01329-1",
+   "grade": "high",
+   "takeaway": "1,775 个 E. coli 可转移质粒上代谢/应激基因丰富，与 ARG 存在菌株水平共现或排斥，体外验证 13 个基因影响抗生素敏感性。",
+   "reason": "质粒功能货物（非 ARG 货物）生态学证据，可借鉴货物注释与共现分析；仅限 E. coli，非宏基因组、无纵向。"
+  },
+  {
+   "source": "Front Microbiol",
+   "doi": "10.3389/fmicb.2022.1010387",
+   "title": "Persistence of plasmid and tet(X4) in an Escherichia coli isolate coharboring blaNDM-5 and mcr-1 after acquiring an IncFII tet(X4)-positive plasmid",
+   "authors": "Xiao X, Liu Z, Chen X, Peng K, Li R, Liu Y",
+   "date": "2022-10-19",
+   "url": "https://doi.org/10.3389/fmicb.2022.1010387",
+   "grade": "high",
+   "takeaway": "实验进化显示 tet(X4) IncFII 质粒在 E. coli 中稳定，但替加环素下 tet(X4) 基因因表达负担被快速丢弃。",
+   "reason": "属质粒维持、适应性代价与结构改变的实验进化，可借鉴质粒与货物基因稳定性分离的思路。"
+  },
+  {
+   "source": "bioRxiv",
+   "doi": "10.1101/2022.10.18.512733",
+   "title": "Mora: abundance aware metagenomic read re-assignment for disentangling similar strains",
+   "authors": "Zheng, A.; Shaw, J.; Yu, Y. W.",
+   "date": "2022-10-21",
+   "version": "1",
+   "category": "bioinformatics",
+   "published_doi": "10.1186/s12859-024-05768-9",
+   "url": "https://www.biorxiv.org/content/10.1101/2022.10.18.512733",
+   "grade": "high",
+   "takeaway": "Mora 用 EM 估计丰度后重新分配 read，可在高度相似的株/参考间精确归属 reads，避免过度分配。",
+   "reason": "处理冗余相似参考集上的 read 归属偏差，可迁移到嵌套质粒参考的 read mapping；需测试其在质粒目录上的表现。"
+  },
+  {
+   "source": "Genes",
+   "doi": "10.3390/genes13111960",
+   "title": "Occurrence of vanHAX and Related Genes beyond the Actinobacteria Phylum",
+   "authors": "Yushchuk O, Binda E, Fedorenko V, Marinelli F",
+   "date": "2022-10-27",
+   "url": "https://doi.org/10.3390/genes13111960",
+   "grade": "high",
+   "takeaway": "van 耐药基因见于放线菌门之外的多个类群，多数 van 位点与 MGE 相关基因共定位，并推断出 HGT 链。",
+   "reason": "属跨门 ARG 的 MGE 介导 HGT 进化分析，可借鉴其系统发育式 HGT 推断；但不涉及质粒骨架与宏基因组，仅列 High。"
+  }
+ ]
+}
