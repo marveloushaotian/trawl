@@ -643,6 +643,19 @@
    "reason": "属质粒维持与传播的实验进化（拷贝数、适应性代价权衡），可借鉴于理解质粒传播性与代价；非宏基因组，故不到 Core。"
   },
   {
+   "source": "ISME Commun",
+   "pmid": "43081137",
+   "doi": "10.1093/ismeco/ycag312",
+   "title": "Active temperate phages linked to core bacterial taxa dominate the wheat phyllosphere virome.",
+   "authors": "Forero-Junco L, Dougherty PE, Olsen NS, Djurhuus AM, Rohwer F, Riber L",
+   "date": "2026-10-29",
+   "url": "https://doi.org/10.1093/ismeco/ycag312",
+   "grade": "high",
+   "takeaway": "小麦叶际 virome 以活跃温和噬菌体为主，其流行度和丰度高于烈性噬菌体，并与核心细菌类群相关。",
+   "reason": "属其他环境噬菌体生态；温和噬菌体持续存在、prophage 诱导与宿主耦合的思路可借鉴到肠道 virome。",
+   "run_date": "2026-11-25"
+  },
+  {
    "source": "Microbiol Spectr",
    "doi": "10.1128/spectrum.01448-26",
    "title": "Persistent pseudolysogeny of bacteriophage phiSASD1 in Streptomyces avermitilis and its extrachromosomal plasmid-like DNA form",

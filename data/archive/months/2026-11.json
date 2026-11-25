@@ -3,7 +3,7 @@
  "covered": [
   [
    "2026-11-01",
-   "2026-11-24"
+   "2026-11-25"
   ]
  ],
  "items": [
@@ -399,6 +399,36 @@
    "takeaway": "用荧光标记质粒的快速实验体系，鉴定依赖质粒的噬菌体（PDP），并量化它们对质粒携带率和接合转移的抑制。",
    "reason": "质粒–噬菌体相互作用的实验工具；PDP 是专门靶向带质粒宿主的新方向。",
    "run_date": "2026-11-23"
+  },
+  {
+   "source": "bioRxiv",
+   "doi": "10.64898/2026.11.23.768377",
+   "title": "HGCF/LGCF classification from (Mavrich and Hatfull, 2017) is explained by heterogeneity in pairwise ANI rather than by intrinsic evolutionary modes",
+   "authors": "Boulay, A.; Galiez, C.",
+   "date": "2026-11-24",
+   "version": "1",
+   "category": "bioinformatics",
+   "published_doi": "",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768377",
+   "grade": "high",
+   "takeaway": "HGCF/LGCF 噬菌体分类源于成对 ANI 与比对覆盖度的异质性，Mash 偏向短高相似区，并非内在进化模式。",
+   "reason": "涉及噬菌体马赛克基因组与 Mash 相似度偏差，可借鉴到质粒聚类（PTU/MobMess）与嵌套参考集的相似度度量。",
+   "run_date": "2026-11-25"
+  },
+  {
+   "source": "bioRxiv",
+   "doi": "10.64898/2026.11.24.768926",
+   "title": "Phage integrons are vaults of privatized counterdefense genes",
+   "authors": "Ono, R.; Cress, B. F.",
+   "date": "2026-11-25",
+   "version": "1",
+   "category": "microbiology",
+   "published_doi": "",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768926",
+   "grade": "high",
+   "takeaway": "噬菌体携带反向排列的 integron cassette，富含 counterdefense 基因，与细菌/质粒 integron 的交换受方向性限制",
+   "reason": "涉及 phage 与 integron 这类 MGE 的边界与跨 MGE 基因盒流动，属 MGE 模块化进化；可借鉴到质粒货物模块分析。",
+   "run_date": "2026-11-25"
   }
  ]
 }

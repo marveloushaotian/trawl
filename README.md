@@ -1,6 +1,16 @@
 # trawl
 
-New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. Last 14 days, newest first. Updated 2026-11-24 15:48. Everything selected so far, month by month, is in the [archive](archive/).
+New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. Last 14 days, newest first. Updated 2026-11-25 21:27. Everything selected so far, month by month, is in the [archive](archive/).
+
+## 2026-11-25 (Wed)
+
+Screened 519 · selected 3
+
+| Grade | Paper | Source | Published | 最重要的结论 | 相关理由 |
+|---|---|---|---|---|---|
+| High | [Active temperate phages linked to core bacterial taxa dominate the wheat phyllosphere virome.](https://doi.org/10.1093/ismeco/ycag312) — Forero-Junco L et al. | ISME Commun | 2026-10-29 | 小麦叶际 virome 以活跃温和噬菌体为主，其流行度和丰度高于烈性噬菌体，并与核心细菌类群相关。 | 属其他环境噬菌体生态；温和噬菌体持续存在、prophage 诱导与宿主耦合的思路可借鉴到肠道 virome。 |
+| High | [Phage integrons are vaults of privatized counterdefense genes](https://www.biorxiv.org/content/10.64898/2026.11.24.768926) — Ono, R. et al. | bioRxiv | 2026-11-25 | 噬菌体携带反向排列的 integron cassette，富含 counterdefense 基因，与细菌/质粒 integron 的交换受方向性限制 | 涉及 phage 与 integron 这类 MGE 的边界与跨 MGE 基因盒流动，属 MGE 模块化进化；可借鉴到质粒货物模块分析。 |
+| High | [HGCF/LGCF classification from (Mavrich and Hatfull, 2017) is explained by heterogeneity in pairwise ANI rather than by intrinsic evolutionary modes](https://www.biorxiv.org/content/10.64898/2026.11.23.768377) — Boulay, A. et al. | bioRxiv | 2026-11-24 | HGCF/LGCF 噬菌体分类源于成对 ANI 与比对覆盖度的异质性，Mash 偏向短高相似区，并非内在进化模式。 | 涉及噬菌体马赛克基因组与 Mash 相似度偏差，可借鉴到质粒聚类（PTU/MobMess）与嵌套参考集的相似度度量。 |
 
 ## 2026-11-24 (Tue)
 

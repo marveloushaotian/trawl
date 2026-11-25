@@ -133,5 +133,48 @@
   "takeaway": "用荧光标记质粒的快速实验体系，鉴定依赖质粒的噬菌体（PDP），并量化它们对质粒携带率和接合转移的抑制。",
   "reason": "质粒–噬菌体相互作用的实验工具；PDP 是专门靶向带质粒宿主的新方向。",
   "run_date": "2026-11-23"
+ },
+ {
+  "source": "ISME Commun",
+  "pmid": "43081137",
+  "doi": "10.1093/ismeco/ycag312",
+  "title": "Active temperate phages linked to core bacterial taxa dominate the wheat phyllosphere virome.",
+  "authors": "Forero-Junco L, Dougherty PE, Olsen NS, Djurhuus AM, Rohwer F, Riber L",
+  "date": "2026-10-29",
+  "url": "https://doi.org/10.1093/ismeco/ycag312",
+  "grade": "high",
+  "takeaway": "小麦叶际 virome 以活跃温和噬菌体为主，其流行度和丰度高于烈性噬菌体，并与核心细菌类群相关。",
+  "reason": "属其他环境噬菌体生态；温和噬菌体持续存在、prophage 诱导与宿主耦合的思路可借鉴到肠道 virome。",
+  "run_date": "2026-11-25"
+ },
+ {
+  "source": "bioRxiv",
+  "doi": "10.64898/2026.11.24.768926",
+  "title": "Phage integrons are vaults of privatized counterdefense genes",
+  "authors": "Ono, R.; Cress, B. F.",
+  "date": "2026-11-25",
+  "version": "1",
+  "category": "microbiology",
+  "published_doi": "",
+  "url": "https://www.biorxiv.org/content/10.64898/2026.11.24.768926",
+  "grade": "high",
+  "takeaway": "噬菌体携带反向排列的 integron cassette，富含 counterdefense 基因，与细菌/质粒 integron 的交换受方向性限制",
+  "reason": "涉及 phage 与 integron 这类 MGE 的边界与跨 MGE 基因盒流动，属 MGE 模块化进化；可借鉴到质粒货物模块分析。",
+  "run_date": "2026-11-25"
+ },
+ {
+  "source": "bioRxiv",
+  "doi": "10.64898/2026.11.23.768377",
+  "title": "HGCF/LGCF classification from (Mavrich and Hatfull, 2017) is explained by heterogeneity in pairwise ANI rather than by intrinsic evolutionary modes",
+  "authors": "Boulay, A.; Galiez, C.",
+  "date": "2026-11-24",
+  "version": "1",
+  "category": "bioinformatics",
+  "published_doi": "",
+  "url": "https://www.biorxiv.org/content/10.64898/2026.11.23.768377",
+  "grade": "high",
+  "takeaway": "HGCF/LGCF 噬菌体分类源于成对 ANI 与比对覆盖度的异质性，Mash 偏向短高相似区，并非内在进化模式。",
+  "reason": "涉及噬菌体马赛克基因组与 Mash 相似度偏差，可借鉴到质粒聚类（PTU/MobMess）与嵌套参考集的相似度度量。",
+  "run_date": "2026-11-25"
  }
 ]
