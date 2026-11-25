@@ -9,6 +9,7 @@ Every selected paper, one file per calendar month, by publication date. The dail
 | [2026-09](2026-09.md) | 6854 | 59 | 5 | complete |
 | [2025-12](2025-12.md) | 6213 | 59 | 5 | complete |
 | [2025-11](2025-11.md) | 6089 | 52 | 5 | complete |
+| [2024-07](2024-07.md) | 5092 | 35 | 1 | complete |
 | [2024-06](2024-06.md) | 4798 | 32 | 3 | complete |
 | [2024-05](2024-05.md) | 4761 | 22 | 2 | complete |
 | [2024-04](2024-04.md) | 4676 | 37 | 2 | complete |
