@@ -3,7 +3,7 @@
  "covered": [
   [
    "2026-11-01",
-   "2026-11-25"
+   "2026-11-26"
   ]
  ],
  "items": [
@@ -42,6 +42,19 @@
    "grade": "high",
    "takeaway": "暂无摘要，按标题判断：发现一类独特的接合型巨型质粒（megaplasmid），与多个远缘细菌谱系中的 prophage 相关联。",
    "reason": "涉及质粒分类、进化及与 prophage 的 MGE 边界，可补充巨型质粒检出与 read 归属；需读全文确认。"
+  },
+  {
+   "source": "Microorganisms",
+   "pmid": "43092381",
+   "doi": "10.3390/microorganisms14112516",
+   "title": "Sampling Design and Temporal Variation Constrain Inference of Human Gut Microbiome Recovery.",
+   "authors": "Zhang M, Weng Q",
+   "date": "2026-11-02",
+   "url": "https://doi.org/10.3390/microorganisms14112516",
+   "grade": "high",
+   "takeaway": "肠道菌群恢复推断取决于采样时间、参照和距离度量；稀疏个体采样无法识别全部恢复参数，重分配随访点可提高估计精度。",
+   "reason": "不涉及质粒，但采样间隔对稳定性/更替估计的影响及采样设计模拟可借鉴到质粒纵向队列。",
+   "run_date": "2026-11-26"
   },
   {
    "source": "Genome Biol",
@@ -141,6 +154,19 @@
    "grade": "high",
    "takeaway": "用 VAE 定义 critical latent dimension（E_c），发现其随观测物种数线性增长，覆盖质粒转移模拟与人类微生物组。",
    "reason": "可借鉴为纵向质粒队列轨迹的低维建模思路；质粒仅出现在模拟中，故不标 Core。"
+  },
+  {
+   "source": "Front Microbiol",
+   "pmid": "43094605",
+   "doi": "10.3389/fmicb.2026.1994598",
+   "title": "Long-read metagenomic characterization of the resistome and mobilome in heavy-metal-contaminated soils.",
+   "authors": "Isgandarov I, Abilda Z, Daurov D, Sapakhova Z, Kanat R, Zhambakin K",
+   "date": "2026-11-11",
+   "url": "https://doi.org/10.3389/fmicb.2026.1994598",
+   "grade": "high",
+   "takeaway": "土壤长读长宏基因组中，ARG与金属抗性基因物理共载极少（4 vs 期望28.9），但质粒富集金属抗性基因。",
+   "reason": "环境质粒/mobilome研究，可借鉴degree-preserving null model检验共载，而非依赖共现；非人类肠道，故High。",
+   "run_date": "2026-11-26"
   },
   {
    "source": "Microbiol Resour Announc",
@@ -417,6 +443,21 @@
   },
   {
    "source": "bioRxiv",
+   "doi": "10.64898/2026.11.18.767757",
+   "title": "Archetypal analysis provides interpretable mixture representations of microbiome community structure",
+   "authors": "Verma, R.; Albert, A.; Ioannidis, A. G.; Jha, A.",
+   "date": "2026-11-25",
+   "version": "1",
+   "category": "bioinformatics",
+   "published_doi": "",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.11.18.767757",
+   "grade": "high",
+   "takeaway": "Archetypal analysis 把菌群表示为极端群落谱的凸组合，可将早期生命菌群演替描述为各 archetype 贡献随年龄变化。",
+   "reason": "不涉及质粒；可借鉴到质粒组成的纵向轨迹，用 archetype 混合描述演替而无需硬聚类。",
+   "run_date": "2026-11-26"
+  },
+  {
+   "source": "bioRxiv",
    "doi": "10.64898/2026.11.24.768926",
    "title": "Phage integrons are vaults of privatized counterdefense genes",
    "authors": "Ono, R.; Cress, B. F.",
@@ -429,6 +470,18 @@
    "takeaway": "噬菌体携带反向排列的 integron cassette，富含 counterdefense 基因，与细菌/质粒 integron 的交换受方向性限制",
    "reason": "涉及 phage 与 integron 这类 MGE 的边界与跨 MGE 基因盒流动，属 MGE 模块化进化；可借鉴到质粒货物模块分析。",
    "run_date": "2026-11-25"
+  },
+  {
+   "source": "Microbiome",
+   "doi": "10.1186/s40168-026-02582-8",
+   "title": "VirMake: a flexible and user-friendly pipeline for viral taxonomic and functional characterization from shotgun metagenomic sequencing data",
+   "authors": "Birkeland E, Istvan P, Avershina E, Branders S, Rognes T, Rounge T",
+   "date": "2026-11-26",
+   "url": "https://doi.org/10.1186/s40168-026-02582-8",
+   "grade": "high",
+   "takeaway": "VirMake 是模块化 Snakemake 式流程，可从短读长宏基因组端到端识别噬菌体并做分类与功能注释，含整合状态判断。",
+   "reason": "可迁移到肠道 phage/prophage 的宏基因组识别；摘要未显示质粒内容或新算法，可作 virome 流程参考。",
+   "run_date": "2026-11-26"
   }
  ]
 }

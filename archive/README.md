@@ -4,8 +4,8 @@ Every selected paper, one file per calendar month, by publication date. The dail
 
 | Month | Screened | Selected | Core | Coverage |
 |---|---|---|---|---|
-| [2026-11](2026-11.md) | 4422 | 33 | 1 | complete |
-| [2026-10](2026-10.md) | 7028 | 57 | 8 | complete |
+| [2026-11](2026-11.md) | 4714 | 37 | 1 | complete |
+| [2026-10](2026-10.md) | 7078 | 57 | 8 | complete |
 | [2026-09](2026-09.md) | 6854 | 59 | 5 | complete |
 | [2026-08](2026-08.md) | 6102 | 40 | 4 | complete |
 | [2026-07](2026-07.md) | 6664 | 38 | 4 | complete |

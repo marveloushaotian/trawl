@@ -1,6 +1,17 @@
 # trawl
 
-New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. Last 14 days, newest first. Updated 2026-11-25 21:27. Everything selected so far, month by month, is in the [archive](archive/).
+New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. Last 14 days, newest first. Updated 2026-11-26 13:26. Everything selected so far, month by month, is in the [archive](archive/).
+
+## 2026-11-26 (Thu)
+
+Screened 462 · selected 4
+
+| Grade | Paper | Source | Published | 最重要的结论 | 相关理由 |
+|---|---|---|---|---|---|
+| High | [Long-read metagenomic characterization of the resistome and mobilome in heavy-metal-contaminated soils.](https://doi.org/10.3389/fmicb.2026.1994598) — Isgandarov I et al. | Front Microbiol | 2026-11-11 | 土壤长读长宏基因组中，ARG与金属抗性基因物理共载极少（4 vs 期望28.9），但质粒富集金属抗性基因。 | 环境质粒/mobilome研究，可借鉴degree-preserving null model检验共载，而非依赖共现；非人类肠道，故High。 |
+| High | [VirMake: a flexible and user-friendly pipeline for viral taxonomic and functional characterization from shotgun metagenomic sequencing data](https://doi.org/10.1186/s40168-026-02582-8) — Birkeland E et al. | Microbiome | 2026-11-26 | VirMake 是模块化 Snakemake 式流程，可从短读长宏基因组端到端识别噬菌体并做分类与功能注释，含整合状态判断。 | 可迁移到肠道 phage/prophage 的宏基因组识别；摘要未显示质粒内容或新算法，可作 virome 流程参考。 |
+| High | [Sampling Design and Temporal Variation Constrain Inference of Human Gut Microbiome Recovery.](https://doi.org/10.3390/microorganisms14112516) — Zhang M et al. | Microorganisms | 2026-11-02 | 肠道菌群恢复推断取决于采样时间、参照和距离度量；稀疏个体采样无法识别全部恢复参数，重分配随访点可提高估计精度。 | 不涉及质粒，但采样间隔对稳定性/更替估计的影响及采样设计模拟可借鉴到质粒纵向队列。 |
+| High | [Archetypal analysis provides interpretable mixture representations of microbiome community structure](https://www.biorxiv.org/content/10.64898/2026.11.18.767757) — Verma, R. et al. | bioRxiv | 2026-11-25 | Archetypal analysis 把菌群表示为极端群落谱的凸组合，可将早期生命菌群演替描述为各 archetype 贡献随年龄变化。 | 不涉及质粒；可借鉴到质粒组成的纵向轨迹，用 archetype 混合描述演替而无需硬聚类。 |
 
 ## 2026-11-25 (Wed)
 

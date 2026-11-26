@@ -115,6 +115,7 @@ high	low	Microorganisms	2026-10-03	Escherichia marmotae Dominates the Global Dis
 high	low	Microorganisms	2026-10-05	Differential Effects of Antibiotics on the Horizontal Transfer of blaKPC Plasmid in Clinical Klebsiella pneumoniae Strain.	https://doi.org/10.3390/microorganisms14102267
 high	low	Microorganisms	2026-10-06	Genomic Analysis of an IMP-1-Producing Atlantibacterhermannii Bloodstream Isolate Carrying a Transferable blaIMP-1-Harbouring IncHI2/pST1 Plasmid Related to Historical Enterobacterales Plasmids in Jap	https://doi.org/10.3390/microorganisms14102276
 high	low	Microorganisms	2026-10-20	Genomic Characterisation of Carbapenem-Resistant Klebsiella pneumoniae Clinical Isolates from a Tertiary-Care Hospital in Türkiye.	https://doi.org/10.3390/microorganisms14102402
+high	low	Microorganisms	2026-10-31	Plasmids in Lactic Acid Bacteria: From Functional Diversity to Ecological Adaptation and Fermentation Performance.	https://doi.org/10.3390/microorganisms14112478
 high	low	Mol Biol Evol	2026-10-21	Unilateral cross-feeding constrains adaptive evolution, even in the producer without direct fitness effects	https://doi.org/10.1093/molbev/msag263
 high	low	Nat Biotechnol	2026-10-05	Detectrons convert transient RNA sequences into stable DNA barcodes for high-throughput analysis of RNA-dependent processes.	https://doi.org/10.1038/s41587-026-03334-7
 high	low	Nat Commun	2026-10-14	Small viruses reveal bidirectional evolution between HK97-fold viruses and encapsulins via procapsids	https://doi.org/10.1038/s41467-026-78136-1
@@ -463,6 +464,7 @@ low		Antioxidants (Basel)	2026-10-14	ShenQiGan Extract Mitigates Intestinal Oxid
 low		Antioxidants (Basel)	2026-10-16	Macleaya cordata Extract Ameliorates DSS-Induced Ulcerative Colitis via Inhibiting M1 Macrophages and Reshaping Gut Microbiota.	https://doi.org/10.3390/antiox15101344
 low		Antioxidants (Basel)	2026-10-20	Effects of Ellagic Acid on Gut Microbiota and Tryptophan Metabolism in Paraquat-Challenged Piglets Subjected to Ampicillin-Induced Microbiota Perturbation.	https://doi.org/10.3390/antiox15101356
 low		Antioxidants (Basel)	2026-10-20	MAFF Expression Reshapes Key Stress-Response Proteins During Light-Induced Injury.	https://doi.org/10.3390/antiox15101354
+low		Antioxidants (Basel)	2026-10-27	The Gut Microbiota and Oxidative Stress as Converging Mechanisms in Environmental Chemical-Mediated Systemic Lupus Erythematosus.	https://doi.org/10.3390/antiox15111388
 low		Antonie Van Leeuwenhoek	2026-10-13	Mediterranean diet, gut microbiota, and intestinal barrier integrity: implications for digestive and systemic health.	https://doi.org/10.1007/s10482-026-02436-1
 low		Antonie Van Leeuwenhoek	2026-10-20	Impacts of farming practices on pig gut microbiota and their interactions with soil microbial communities in tropical agroecosystems.	https://doi.org/10.1007/s10482-026-02441-4
 low		Antonie Van Leeuwenhoek	2026-10-30	Genomic insights into environmental adaptation and metabolic versatility of Acinetobacter junii IK2 isolated from marine biofilm.	https://doi.org/10.1007/s10482-026-02448-x
@@ -671,6 +673,7 @@ low		Biochim Biophys Acta Rev Cancer	2026-10-07	Glycosylation in colorectal canc
 low		Biodegradation	2026-10-06	Catabolism of diethyl ether as a sole carbon and energy source by Mycolicibacterium sp. ELW1.	https://doi.org/10.1007/s10532-026-10378-8
 low		Bioeng Transl Med	2026-10-22	IL-10-secreting engineered macrophages alleviate DSS-induced colitis with macrophage phenotypic modulation and gut microbiota remodeling in mice.	https://doi.org/10.1002/btm2.70178
 low		Bioengineering (Basel)	2026-10-07	Influence of a Bacteriophage Cocktail as a Biocontrol Strategy on Sulfate-Reducing Bacteria in a Pilot-Scale System.	https://doi.org/10.3390/bioengineering13101166
+low		Bioengineering (Basel)	2026-10-30	Impact of Phage Cocktail Application on the Microbiota of Saline Produced Water During Ammonia Removal.	https://doi.org/10.3390/bioengineering13111287
 low		Bioessays	2026-10-01	Crosstalk in Silence: PIWIL/piRNA in ncRNA Hubs for Immune Gene Regulation and Epigenetic Antiviral Defense.	https://doi.org/10.1002/bies.70188
 low		Bioessays	2026-10-01	Taming Mre11-Rad50 at Telomeres: Convergent Strategies for Chromosome-End Protection Across Evolution.	https://doi.org/10.1002/bies.70197
 low		Biofilm	2026-10-29	Genome-wide screening reveals opposing roles for central metabolism in planktonic and biofilm survival of Salmonella under combined limonene and heat treatment.	https://doi.org/10.1016/j.bioflm.2026.100406
@@ -724,6 +727,10 @@ low		Biomedicines	2026-10-07	A Synbiotic for the Oral-Nasal Gateway: The Mechani
 low		Biomedicines	2026-10-14	Early-Diagnosed Gestational Diabetes Mellitus: Molecular and Metabolic Evidence Before 24 Weeks of Gestation.	https://doi.org/10.3390/biomedicines14102340
 low		Biomedicines	2026-10-16	Gut Microbiota-Driven Neuroimmune Crosstalk in Ulcerative Colitis: From Mechanisms to Therapeutic Implications.	https://doi.org/10.3390/biomedicines14102361
 low		Biomedicines	2026-10-17	Identification of Genes Associated with Gut Microbiota Metabolites in Type 2 Diabetes Mellitus Complicated by Acute Cerebral Infarction Based on Bioinformatics and Mendelian Randomization.	https://doi.org/10.3390/biomedicines14102371
+low		Biomedicines	2026-10-22	Cardiometabolic-Disease-Associated Gut Mycobiome Alterations and Their Relationship to Mediterranean Diet Adherence.	https://doi.org/10.3390/biomedicines14112414
+low		Biomedicines	2026-10-25	Dietary Micro- and Nanoplastics and Gastrointestinal Carcinogenesis: Mechanistic Insights, Toxicological Evidence, and Critical Knowledge Gaps.	https://doi.org/10.3390/biomedicines14112443
+low		Biomedicines	2026-10-27	Stress Testing of the Gut-Brain Axis for Precision Medicine in Functional Dyspepsia.	https://doi.org/10.3390/biomedicines14112463
+low		Biomedicines	2026-10-29	From Microbiome Modulation to Novel Therapeutics: Recent Advances in Therapeutic Strategies for Gastrointestinal Cancers.	https://doi.org/10.3390/biomedicines14112485
 low		Biometals	2026-10-16	Engineering the gut microbiome with metal-resistant bacteria could protect Artemia nauplii from cadmium toxicity.	https://doi.org/10.1007/s10534-026-00897-5
 low		Biomol Biomed	2026-10-12	Effects of plant extract formulations on anxiety-like behavior, sociability, and gut microbiota diversity in paracetamol-treated adult zebrafish.	https://doi.org/10.17305/bb.2026.14533
 low		Biomolecules	2026-10-06	Exploratory Metabolomic and Metagenomic Profiling of Fecal Samples in Isolated REM Sleep Behavior Disorder.	https://doi.org/10.3390/biom16101456
@@ -732,6 +739,7 @@ low		Biomolecules	2026-10-13	An Exploratory Randomized Clinical Trial to Assess 
 low		Biomolecules	2026-10-14	Bile Acids and Their Receptors in Respiratory Diseases: Mechanistic and Therapeutic Perspectives.	https://doi.org/10.3390/biom16101497
 low		Biomolecules	2026-10-19	Multiple Phagemids Within Single Bacterial Colonies During Construction and Bio-Panning of Single-Domain (VH and VHH) Phage Display Libraries: A Retransformation Strategy for Reliable Clone Screening.	https://doi.org/10.3390/biom16101523
 low		Biomolecules	2026-10-20	Mechanisms and Clinical Translational Prospects of the Microbiota-Gut-Lung Axis in Connective Tissue Disease-Associated Interstitial Lung Disease.	https://doi.org/10.3390/biom16101525
+low		Biomolecules	2026-10-23	Effects of Dietary Astragalus Polysaccharides on Serum Biochemical Parameters, Intestinal Morphology, Organic Acid Profiles, and Cecal Microbiota in Taihu Geese.	https://doi.org/10.3390/biom16111545
 low		Biophys Rep	2026-10-31	Screening for putative essential genes in Brucella abortus strains A19 and S2308 using transposon mutagenesis.	https://doi.org/10.52601/bpr.2025.250050
 low		Biophys Rev	2026-10-02	Evolutionary divergence of uric acid catabolic enzymes: structure-function constraints and genomic innovations across taxa.	https://doi.org/10.1007/s12551-026-01466-3
 low		Bioprocess Biosyst Eng	2026-10-12	Community succession and functional trait reorganization in a continuous aerobic denitrification reactor under repeated hydraulic retention time reductions.	https://doi.org/10.1007/s00449-026-03432-5
@@ -783,6 +791,8 @@ low		Brain Behav Immun	2026-10-23	SATB2 as a novel messenger of the cGAS-STING s
 low		Brain Res	2026-10-01	Gut bacterial isolates from individuals with Alzheimer's disease induce strain-specific intestinal, inflammatory, and neurobehavioral phenotypes in mice.	https://doi.org/10.1016/j.brainres.2026.150569
 low		Brain Res Bull	2026-10-14	High-frequency rTMS attenuates cerebral ischemia/reperfusion injury and modulates mTOR-related signaling and brain-gut-immune phenotypes in MCAO/R rats.	https://doi.org/10.1016/j.brainresbull.2026.112168
 low		Brain Res Bull	2026-10-31	Reduced BNIP1 impairs autophagosome-lysosome fusion in hippocampal neurons and contributes to Alzheimer's disease pathology.	https://doi.org/10.1016/j.brainresbull.2026.112186
+low		Brain Sci	2026-10-22	Gut Microbiome Species Levilactobacillus brevis Protects Dopaminergic Neurons from α-Synuclein Toxicity In Vivo.	https://doi.org/10.3390/brainsci16111141
+low		Brain Sci	2026-10-24	Affective Distress and the Selective Permeability of Environments: Ecological and Enactive Perspectives on Neural, Neuroendocrine, Neuroimmune and Gut-Brain Mechanisms.	https://doi.org/10.3390/brainsci16111156
 low		Braz J Microbiol	2026-10-09	Escherichia coli bacteriophage vB_EcoS_MS2 effectively prevents biofilm formation but shows limited activity against mature biofilms.	https://doi.org/10.1007/s42770-026-02116-2
 low		Braz J Microbiol	2026-10-23	Genotypic and phylogenetic characterization of Salmonella Minnesota ST548 strains with potential risk to public health.	https://doi.org/10.1007/s42770-026-02071-y
 low		Brief Bioinform	2026-10-14	DecBin: Bayesian-optimized deep clustering for long-read metagenomic binning	https://doi.org/10.1093/bib/bbag571
@@ -1210,6 +1220,7 @@ low		Environ Sci Technol	2026-10-20	Niche Divergence-Based Identification of Mic
 low		Environ Sci Technol	2026-10-27	Benzotriazole Ultraviolet Stabilizer UV-PS Exposure Induces Immune Hyperactivation and Metabolic Reprogramming in Drosophila in a Microbiota-Dependent Manner.	https://doi.org/10.1021/acs.est.6c07239
 low		Environ Sci Technol	2026-10-27	Soil Protists Consume Viruses to Drive Microbial Nutrient Cycling: Overlooked Trophic Pathways in Soil Food Web.	https://doi.org/10.1021/acs.est.6c06384
 low		Environ Toxicol	2026-10-23	Investigation of Polyethylene (PE) Exposure in Labeo rohita (Hamilton, 1822): Accumulation, Stress Responses and In Vitro Biodegradation of PE by a Gut-Associated Bacterium.	https://doi.org/10.1002/tox.70207
+low		Enzyme Microb Technol	2026-10-01	Microbial butyrate and tryptophan enzyme profiles and host immunometabolic programmes in ulcerative colitis: A secondary multi-omics analysis of public metagenomic and mucosal transcriptomic data.	https://doi.org/10.1016/j.enzmictec.2026.110974
 low		Epilepsia Open	2026-10-13	Exploring medical food supplementation as an adjunct strategy for microbiota restoration and seizure reduction in CDKL5 deficiency disorder.	https://doi.org/10.1002/epi4.70369
 low		Epilepsy Res	2026-10-15	Efficacy of Lactobacillus reuteri as an adjunctive therapy for seizure control and quality of life in pediatric drug-resistant epilepsy: A prospective interventional study.	https://doi.org/10.1016/j.eplepsyres.2026.107936
 low		Eur J Clin Microbiol Infect Dis	2026-10-08	Microbial profiles in pediatric complicated appendicitis: a systematic review and meta-analysis.	https://doi.org/10.1007/s10096-026-05662-7
@@ -2225,6 +2236,8 @@ low		Funct Integr Genomics	2026-10-01	Network pharmacology, single-cell transcri
 low		Funct Integr Genomics	2026-10-06	Vibrio repeats (VXRs) play a role in horizontal dissemination of sedentary chromosomal integron-associated antibiotic resistance genes across Vibrio species.	https://doi.org/10.1007/s10142-026-02068-8
 low		Funct Integr Genomics	2026-10-29	miR-4284 alleviates calcium oxalate monohydrate crystal-induced renal tubular epithelial injury in HK-2 cells via directly targeting MMP10.	https://doi.org/10.1007/s10142-026-02065-x
 low		Function (Oxf)	2026-10-26	The emerging functional landscape of piRNAs in ocular health and disease.	https://doi.org/10.1152/function.90030.2026
+low		Fungal Biol	2026-10-03	Diversity and community structure of anaerobic gut fungi in camel feces.	https://doi.org/10.1016/j.funbio.2026.101872
+low		Fungal Biol	2026-10-11	Soil fungal diversity and assembly in an endangered high-altitude Neotropical grassland.	https://doi.org/10.1016/j.funbio.2026.101876
 low		Future Microbiol	2026-10-20	Live biotherapeutics in the post-antibiotic era: exploring the potential of probiotics to counter multidrug resistance.	https://doi.org/10.1080/17460913.2026.2749225
 low		Future Microbiol	2026-10-29	Natural and engineered bacteriophages against multidrug-resistant ESKAPE pathogens: current landscape and clinical translation.	https://doi.org/10.1080/17460913.2026.2752147
 low		G3 (Bethesda)	2026-10-15	Spontaneous hypopigmentation mutant in threespine stickleback fish exhibits changes in the gut microbiome consistent with inflammatory bowel diseases.	https://doi.org/10.1093/g3journal/jkag284
@@ -2458,6 +2471,10 @@ low		Insects	2026-10-05	The Fungal Microbiome Associated with Schizaphis graminu
 low		Insects	2026-10-06	Honey Bees as Bioindicators of Environmental PFASs Contamination and Potential Effects on Gut-Microbial Communities.	https://doi.org/10.3390/insects17101027
 low		Insects	2026-10-12	Biochar Ingestion Is Associated with Hindgut Symbiotic Disruption and Mortality in Coptotermes formosanus: A Proposed Protist-to-Bacterial Cascade.	https://doi.org/10.3390/insects17101044
 low		Insects	2026-10-14	Insect CncC: Roles in Redox Homeostasis, Physiology, and Insecticide Resistance, with Prospects for Biotechnological Applications.	https://doi.org/10.3390/insects17101061
+low		Insects	2026-10-26	Gut Microbiota Restructuring and Elizabethkingia Enrichment in Aedes albopictus Larvae Under Pyriproxyfen Exposure.	https://doi.org/10.3390/insects17111106
+low		Insects	2026-10-26	Tetracycline Exposure Disrupts Gut Microbiota and Immune-Antioxidant Homeostasis in Honey Bees.	https://doi.org/10.3390/insects17111105
+low		Insects	2026-10-28	Development and Preliminary Evaluation of a qPCR Workflow for Assessing Nosema ceranae Infection Levels in Honey Bees (Apis mellifera).	https://doi.org/10.3390/insects17111115
+low		Insects	2026-10-29	Developmental Dynamics of Gut Microbiota in Male Bombus terrestris Produced by Queens Versus Workers.	https://doi.org/10.3390/insects17111126
 low		Int Immunopharmacol	2026-10-06	Gut microbiota - γδT cells axis: mechanisms of immunoregulation and therapeutic opportunities.	https://doi.org/10.1016/j.intimp.2026.117509
 low		Int Immunopharmacol	2026-10-07	Lactobacillus gasseri suppresses methionine-driven epigenetic programming of trained immunity-like priming to attenuate metabolic dysfunction.	https://doi.org/10.1016/j.intimp.2026.117507
 low		Int Immunopharmacol	2026-10-16	Fraxin alleviates intestinal epithelial cell necrosis in ulcerative colitis by inhibiting the P2Y₁₄R/cAMP/PKA/CREB signaling pathway.	https://doi.org/10.1016/j.intimp.2026.117536
@@ -2931,6 +2948,11 @@ low		Lancet Oncol	2026-10-01	Cancer and the microbiome: from association to inte
 low		Lett Appl Microbiol	2026-10-06	Isolation and characterization of lytic bacteriophages targeting clinical Staphylococcus other than S. aureus.	https://doi.org/10.1093/lambio/ovag082
 low		Lett Appl Microbiol	2026-10-06	Porcine methicillin-resistant Staphylococcus aureus CC5/t002 from southwestern Nigeria lacks mec gene and carries PVL and IEC genes on prophages incorporated in the β-hemolysin region.	https://doi.org/10.1093/lambio/ovag085
 low		Life (Basel)	2026-10-15	Circadian Rhythm and Lipid Metabolism: The Role of the Gut Microbiota.	https://doi.org/10.3390/life16101725
+low		Life (Basel)	2026-10-22	Guipi Tang Combined with Probiotics Ameliorates Sleep Deprivation-Induced Hippocampal Injury and Pentobarbital-Induced Sleep Alterations in Mice.	https://doi.org/10.3390/life16111775
+low		Life (Basel)	2026-10-23	Parental Dysbiosis and Nutritional Imbalance in Recurrent Implantation Failure: Potential Microbiome-Epigenome Links in Early Embryonic Programming.	https://doi.org/10.3390/life16111778
+low		Life (Basel)	2026-10-27	The Gut-Liver-Brain Axis in Neurodegeneration: Unraveling Metabolic-Immune Crosstalk from Peripheral Sensing to Central Vulnerability.	https://doi.org/10.3390/life16111808
+low		Life (Basel)	2026-10-27	Vaginal Lactic Acid Bacteria Isolated from Healthy Algerian Women Display Distinct Immunomodulatory Profiles Across Macrophage Models.	https://doi.org/10.3390/life16111805
+low		Life (Basel)	2026-10-29	Interface-Driven Resistome Ecology: A Conceptual Framework for Understanding Household AMR Transmission Within the One Health Landscape.	https://doi.org/10.3390/life16111828
 low		Life Sci	2026-10-13	β-Hydroxybutyrate alleviates intestinal aGVHD via remodeling gut microbiota-bile acid axis and inhibiting TLR4-NF-κB-driven Th1/Th17 differentiation.	https://doi.org/10.1016/j.lfs.2026.124737
 low		Life Sci Alliance	2026-10-12	Gut microbiota shaping fatty liver disease progression.	https://doi.org/10.26508/lsa.202603756
 low		Liver Int	2026-10-01	Oral Colonisation of the Gut May Explain the Cirrhosis Virome Signature.	https://doi.org/10.1111/liv.70857
@@ -2996,6 +3018,7 @@ low		MicroPubl Biol	2026-10-29	Genome Sequences of Gordonia rubripertincta Bacte
 low		Microb Biotechnol	2026-10-01	Position Effect Variegation of Penicillium rubens Genome and Application in Heterologous Production of the Plant-Derived Anthraquinone Physcion.	https://doi.org/10.1111/1751-7915.70449
 low		Microb Biotechnol	2026-10-01	Potential Roles of Escherichia coli in IgA Nephropathy: Evidence, Mechanistic Hypotheses and Microbiota-Targeted Strategies.	https://doi.org/10.1111/1751-7915.70455
 low		Microb Biotechnol	2026-10-01	Structural and Functional Characterisation of a Metagenome-Derived CYP108D18 Reveals an Unusual Dioxygen-Bound State and Selective Hydrocarbon Hydroxylation.	https://doi.org/10.1111/1751-7915.70451
+low		Microb Cell Fact	2026-10-17	Occupational environments are associated with distinct oral and gut microbiome-metabolome profiles.	https://doi.org/10.1186/s12934-026-03158-9
 low		Microb Drug Resist	2026-10-19	The Potential Role of Gut Microbiota in Combating Mycobacterium tuberculosis Infection.	https://doi.org/10.1177/10766294261500213
 low		Microb Genom	2026-10-01	Association of microbial pathways predicted/inferred using 16S and shotgun metagenome with faecal metabolite abundances.	https://doi.org/10.1099/mgen.0.001855
 low		Microb Genom	2026-10-01	Bile, sulphur and carbohydrate metabolic variation co-occur with host adiposity in mice colonized with primate microbiota.	https://doi.org/10.1099/mgen.0.001848
@@ -3158,6 +3181,8 @@ low		Microbiome	2026-10-30	Top-down mining of a lactobacilli-enriched gut niche 
 low		Microbiome Res Rep	2026-10-09	The skin microbiome in aging from ecological dysbiosis to molecular therapeutics	https://doi.org/10.20517/mrr.2026.42
 low		Microbiome Res Rep	2026-10-21	New insights into the gut-immune-brain axis: immune mechanisms and therapeutic targets for autism spectrum disorder.	https://doi.org/10.20517/mrr.2026.48
 low		Microlife	2026-10-23	Organ-specific microbiomes reveal strong bacterial compartmentalization in two tropical squid species.	https://doi.org/10.1093/femsml/uqag037
+low		Micromachines (Basel)	2026-10-31	Advances in Fabrication and Biomedical Integration of Precision Electroporation Devices.	https://doi.org/10.3390/mi17111274
+low		Micromachines (Basel)	2026-10-31	Organ-on-Chip Models of Microbiota-Associated Cardiovascular and Neurovascular Signaling: Molecular Transport, Tissue Exposure, and Functional Responses.	https://doi.org/10.3390/mi17111272
 low		Microorganisms	2026-10-01	Fluoroquinolone Resistance in Salmonella: Deciphering Molecular Mechanisms, Global Dissemination Dynamics, and Clinical Countermeasures.	https://doi.org/10.3390/microorganisms14102198
 low		Microorganisms	2026-10-01	Identification of Gut Microbiome Signatures Associated with the Kynurenine Pathway in Tryptophan Metabolism in Patients Undergoing Hemodialysis.	https://doi.org/10.3390/microorganisms14102211
 low		Microorganisms	2026-10-01	Limited Microbiota-Modulating Effects of Dietary Xylo-Oligosaccharide Supplementation in Apis mellifera.	https://doi.org/10.3390/microorganisms14102208
@@ -3202,6 +3227,14 @@ low		Microorganisms	2026-10-20	Molecular Characterization of Previous Unclassifi
 low		Microorganisms	2026-10-21	Characterization of a Salmonella Phage-Derived Endolysin LysSPYS2 and Its Combined Activity with Polymyxin B and Magnolol.	https://doi.org/10.3390/microorganisms14102407
 low		Microorganisms	2026-10-21	Dietary Mannan Oligosaccharide Supplementation During Gestation Alters Milk Composition in Jennies and Improves Growth Performance, Lipid Metabolism, and Gut Microbiota in Dezhou Donkey Foals.	https://doi.org/10.3390/microorganisms14102409
 low		Microorganisms	2026-10-21	Ecological Editing: Decoupling Microbial Signals from Metabolic Noise to Reprogram the Gut Ecosystem.	https://doi.org/10.3390/microorganisms14102410
+low		Microorganisms	2026-10-22	Antimicrobial Resistance: Evolutionary Implications of Dual Selection by Bacteriophages and Metal-Based Antimicrobials.	https://doi.org/10.3390/microorganisms14112424
+low		Microorganisms	2026-10-23	Complex Interrelationships Between Tumors, the Mycobiota, and Systemic Chemotherapy.	https://doi.org/10.3390/microorganisms14112430
+low		Microorganisms	2026-10-23	Genome-Resolved Metabolic Potential of Colony-Associated Bacteria Selectively Enriched from Microcystis aeruginosa Blooms in a Chilean Urban Wetland.	https://doi.org/10.3390/microorganisms14112429
+low		Microorganisms	2026-10-25	Differences in Cecal Bacterial Communities and Predicted Functional Profiles Between Sympatric Subterranean and Aboveground Rodents.	https://doi.org/10.3390/microorganisms14112446
+low		Microorganisms	2026-10-28	Integrative Genomics and Immunoinformatic Reveal Putative Drug Targets and Vaccine Candidates Against Enterococcus faecalis Isolated from Patient with Colorectal Cancer.	https://doi.org/10.3390/microorganisms14112461
+low		Microorganisms	2026-10-30	The Gut-Thyroid Axis in Hashimoto's Disease: Evidence of Reduced Short Chain Fatty Acid Producers and Enhanced Virulence Pathways.	https://doi.org/10.3390/microorganisms14112475
+low		Microorganisms	2026-10-30	The Microbiome in Melanoma Progression and Therapy: Current Evidence and Emerging Biotherapeutic Strategies.	https://doi.org/10.3390/microorganisms14112476
+low		Microorganisms	2026-10-30	Ultra-Processed Foods in Inflammatory Bowel Disease and Irritable Bowel Syndrome: Epidemiology, the Intestinal Microenvironment and Implications for Dietary Management.	https://doi.org/10.3390/microorganisms14112477
 low		Microsyst Nanoeng	2026-10-19	Microcapillary-assisted acoustoelectric platform for selective single-cell isolation and in situ transfection.	https://doi.org/10.1038/s41378-026-01490-z
 low		Mol Biol Evol	2026-10-01	Comparative pangenomics unveils distinct host adaptation trends and conserved biosynthetic potential in microbiome Clostridia	https://doi.org/10.1093/molbev/msag247
 low		Mol Biol Evol	2026-10-01	Identifying adaptive variation in spatially structured populations using low-coverage whole-genome sequencing data	https://doi.org/10.1093/molbev/msag255
@@ -3381,6 +3414,7 @@ low		Nat Commun	2026-10-22	O-antigen loss modulates meropenem resistance in Kleb
 low		Nat Commun	2026-10-27	Antibiotic contamination stimulates microbial methylmercury synthesis in rice paddies	https://doi.org/10.1038/s41467-026-79083-7
 low		Nat Commun	2026-10-27	Sex-based differences in clinical outcomes of enfortumab vedotin and NECTIN-4 expression in urothelial cancer	https://doi.org/10.1038/s41467-026-78988-7
 low		Nat Commun	2026-10-28	Early-life bovine respiratory virome analysis reveals phage-driven adaptation and cross-host evolutionary signatures	https://doi.org/10.1038/s41467-026-77597-8
+low		Nat Commun	2026-10-28	Lipid stoichiometry and biomarkers reflect microbial acclimation and nutrient stress across the Atlantic Ocean.	https://doi.org/10.1038/s41467-026-79011-9
 low		Nat Commun	2026-10-28	Statistical inference of keystone taxa reshaping the assembly rules of forest root microbiomes	https://doi.org/10.1038/s41467-026-78401-3
 low		Nat Commun	2026-10-29	A nanocomposite-mediated synergistic division inhibition strategy for selective antibacterial therapy against burn infections	https://doi.org/10.1038/s41467-026-79027-1
 low		Nat Commun	2026-10-29	Antimicrobial peptides derived from Nemuri induce ribosomal condensation to inhibit translation	https://doi.org/10.1038/s41467-026-78960-5
@@ -3879,6 +3913,10 @@ low		Pathogens	2026-10-02	Beta-Papillomaviruses in Cutaneous and Mucosal Carcino
 low		Pathogens	2026-10-02	Molecular Epidemiology and Conjugative Transferability of blaOXA-48/blaNDM-1 Co-Occurrence in Extensively Drug-Resistant Klebsiella pneumoniae from Egyptian Tertiary Care Hospitals.	https://doi.org/10.3390/pathogens15101043
 low		Pathogens	2026-10-08	Targeting Multidrug-Resistant Pseudomonas aeruginosa from Companion Animals Using Bacteriophages.	https://doi.org/10.3390/pathogens15101067
 low		Pathogens	2026-10-09	Genetic and Epigenetic Diversity of Salmonella enterica Isolates from Clinical and Veterinary Sources in Kazakhstan.	https://doi.org/10.3390/pathogens15101074
+low		Pathogens	2026-10-24	First Longitudinal Untargeted Metagenomic Survey Reveals Spatial and Temporal Structuring of the Microbial Community in Selected Tunisian Wastewater Treatment Plants.	https://doi.org/10.3390/pathogens15111111
+low		Pathogens	2026-10-28	Multi-Omics Identifies Associations of Gut Roseburia Abundance and Butyrate Levels with Antiviral Responses to Entecavir Plus Interferon-α in HBV Mouse Models.	https://doi.org/10.3390/pathogens15111128
+low		Pathogens	2026-10-31	Carbapenem-Resistant Acinetobacter baumannii: Treatment, PK/PD Considerations, and Emerging Strategies.	https://doi.org/10.3390/pathogens15111136
+low		Pathogens	2026-10-31	Hospital Wastewater as a Clinically Relevant Hotspot of Emerging Contaminants: Multidrug-Resistant Pathogens, Virulence Determinants, and the Challenge of Effluent Treatment.	https://doi.org/10.3390/pathogens15111137
 low		Pediatr Neonatol	2026-10-26	Impact of phthalate and microplastic exposure on childhood allergic diseases: A review of epidemiological evidence and mechanisms.	https://doi.org/10.1016/j.pedneo.2026.07.007
 low		Pediatr Nephrol	2026-10-26	IgA nephropathy: gut microbiome insights and unmet needs in pediatrics.	https://doi.org/10.1007/s00467-026-07583-1
 low		Pediatr Res	2026-10-14	Gut microbiota are linked to gastrointestinal symptoms and behavioral changes but not inflammation in autism spectrum disorder: a cross-sectional analysis.	https://doi.org/10.1038/s41390-026-05548-6
@@ -3894,10 +3932,14 @@ low		Pharmaceuticals (Basel)	2026-10-09	Network Pharmacology-Assisted Multi-Omic
 low		Pharmaceuticals (Basel)	2026-10-10	Colorectal Cancer-Associated Microbiome Remodeling Implicates Host Microbial Metabolite-Receptor Axes.	https://doi.org/10.3390/ph19101608
 low		Pharmaceuticals (Basel)	2026-10-18	Multi-Omics Analysis Identifies Gut-Associated Metabolic Signatures Associated with Metformin-Mediated Protection Against LPS-Induced Lung Injury.	https://doi.org/10.3390/ph19101643
 low		Pharmaceuticals (Basel)	2026-10-21	The Forgotten First Contact: The Oral Cavity as a Site of Local Biotransformation Shaping the Chemical Form of Polyphenolic Drugs and Dietary Compounds.	https://doi.org/10.3390/ph19101661
+low		Pharmaceuticals (Basel)	2026-10-24	Gut Microbiota-Activated Prodrugs: Enzymatic Mechanisms, Precision Design, Interindividual Variability, and Translational Challenges.	https://doi.org/10.3390/ph19111679
+low		Pharmaceuticals (Basel)	2026-10-26	Food Additives: Emerging Implications for Kidney Health.	https://doi.org/10.3390/ph19111690
 low		Pharmaceutics	2026-10-01	Bench-to-Bedside Development of IMNN-001: A Non-Viral IL-12 Gene Therapy for Advanced Ovarian Cancer.	https://doi.org/10.3390/pharmaceutics18101250
 low		Pharmaceutics	2026-10-07	Integrated Analysis of Microbiome and Serum Metabolomics to Understand How Rauvolfia vomitoria Alkaloids Inhibit Colorectal Cancer Growth.	https://doi.org/10.3390/pharmaceutics18101272
 low		Pharmaceutics	2026-10-09	Microbiota-Gut-Brain Axis Interactions with CNS Drugs: A Critical Mechanistic Review of Biopharmaceutical, Pharmacokinetic, and Pharmacodynamic Evidence.	https://doi.org/10.3390/pharmaceutics18101276
 low		Pharmaceutics	2026-10-13	Curcumin Nanodelivery for Tumor-Associated Macrophage Reprogramming and Immune-Checkpoint Sensitization: Engineering the Tumor Immune Microenvironment.	https://doi.org/10.3390/pharmaceutics18101295
+low		Pharmaceutics	2026-10-29	Isoliquiritigenin-Loaded Solid Nanoparticles Embedded in Sodium Alginate/Chitosan/Squid Ink Polysaccharide Hydrogel for Oral Colon-Targeted Therapy of Colitis.	https://doi.org/10.3390/pharmaceutics18111390
+low		Pharmaceutics	2026-10-30	Near-Infrared Fluorescent Probes and NIR-Responsive Nanomaterials for Inflammatory Bowel Disease: Advances in Imaging and Therapy.	https://doi.org/10.3390/pharmaceutics18111396
 low		Pharmacol Res	2026-10-02	From toxicity to therapy: Probiotics and novel adsorbents in aflatoxin detoxification.	https://doi.org/10.1016/j.phrs.2026.109661
 low		Pharmacol Res	2026-10-03	A branched α-glucan from Galli Gigeriae Endothelium Corneum alleviates high-fat diet-induced obesity in a gut microbiota-dependent manner.	https://doi.org/10.1016/j.phrs.2026.108482
 low		Pharmacol Res	2026-10-08	The gut-lumbar axis: A comprehensive review of mechanisms, clinical evidence, and future therapeutic perspectives.	https://doi.org/10.1016/j.phrs.2026.109667
@@ -4320,6 +4362,12 @@ low		Vet Sci	2026-10-16	Global Trends in Avian Pathogenic Escherichia coli Resea
 low		Vet Sci	2026-10-17	The Gut-Mammary Axis in Dairy Cattle: A Review of Gut Microbiota-Driven Influences on Lactation.	https://doi.org/10.3390/vetsci13101107
 low		Vet Sci	2026-10-19	Dietary Pieris japonica Leaf Powder Enhances Hepatic Antioxidant Capacity, Modulates Cecal Microbiota, and Improves Eggshell Thickness in Laying Hens.	https://doi.org/10.3390/vetsci13101116
 low		Vet Sci	2026-10-21	Machine Learning in Mammals' Health: Integrating Multi-Omics Data for Precision Nutrition and Sustainable Production.	https://doi.org/10.3390/vetsci13101122
+low		Vet Sci	2026-10-23	The First Genome-Based Characterization of a Photobacterium damselae subsp. piscicida Strain KLC25 from Türkiye.	https://doi.org/10.3390/vetsci13111130
+low		Vet Sci	2026-10-26	Genomic Characterization of a Multidrug-Resistant ST88 Enterotoxigenic/Shiga Toxin-Producing Hybrid Escherichia coli Isolated from a Pig in Korea.	https://doi.org/10.3390/vetsci13111144
+low		Vet Sci	2026-10-27	Identification of a Pseudomonas putida-like Strain and Its Association with the Immune Response in Hybrid Sturgeon (Huso dauricus × Acipenser schrenckii).	https://doi.org/10.3390/vetsci13111147
+low		Vet Sci	2026-10-28	Growth-Associated Gut Microbiota Succession in Decapterus maruadsi: Increasing Dominance of Persistent Taxa.	https://doi.org/10.3390/vetsci13111156
+low		Vet Sci	2026-10-29	Gut Microbiome Reconfiguration in Diseased Atlantic Salmon (Salmo salar): A Cross-Sectional Biomarker and Microbial Source Tracking Study.	https://doi.org/10.3390/vetsci13111164
+low		Vet Sci	2026-10-30	Development, Application and Epidemiological Analysis of a TaqMan-Based RT-qPCR Assay for Nairobi Sheep Disease Virus in China.	https://doi.org/10.3390/vetsci13111169
 low		Virol J	2026-10-03	Influenza A virus nonstructural protein 2 inhibits IFN-I signaling via competing with MAVS to bind to UBL7	https://doi.org/10.1186/s12985-026-03316-w
 low		Virol J	2026-10-04	Mechanisms and clinical characteristics of organ injury in severe fever with thrombocytopenia syndrome: a comprehensive review	https://doi.org/10.1186/s12985-026-03320-0
 low		Virol J	2026-10-07	Efficacy of direct-acting antiviral regimens for acute HCV infection: a systematic review and meta-analysis	https://doi.org/10.1186/s12985-026-03307-x
@@ -4371,6 +4419,8 @@ low		Viruses	2026-10-16	Generation and Characterization of Single-Domain Antibod
 low		Viruses	2026-10-16	High-Throughput Virome Surveillance Reveals Emerging Viral Threats to Cucumber Production in Taiwan.	https://doi.org/10.3390/v18101150
 low		Viruses	2026-10-17	Restriction Factor Control of Ty1 Family LTR-Retrotransposons in Saccharomyces cerevisiae.	https://doi.org/10.3390/v18101154
 low		Viruses	2026-10-18	DNA Methylation Profiling of rAAVs Reveals Hypomethylated Genomes and Evidence for Predominant Packaging of Replicated Genomes.	https://doi.org/10.3390/v18101158
+low		Viruses	2026-10-27	Viral Profiles in Aquaculture Fish from Kazakhstan: A Metagenomic Survey.	https://doi.org/10.3390/v18111193
+low		Viruses	2026-10-31	Kayvirus-Based Sensing of Lower Respiratory Tract Infection and Taxonomic Dissection of Prophages in Clinical Strains of Staphylococcus aureus.	https://doi.org/10.3390/v18111207
 low		Waste Manag	2026-10-15	Effects of substrate moisture content on physiological development, performance, and gut microbiome of black soldier fly larvae during swine waste treatment.	https://doi.org/10.1016/j.wasman.2026.115924
 low		Water Res	2026-10-01	Enhancing nitrogen and phosphorus removal for surface water remediation using ecological floating beds via FeC-plant coupling and root microenvironment reconfiguration.	https://doi.org/10.1016/j.watres.2026.127055
 low		Water Res	2026-10-01	Nitrogen removal and microbial community responses in anammox-enhanced biofilters across diverse urban waters.	https://doi.org/10.1016/j.watres.2026.127054
