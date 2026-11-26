@@ -2,10 +2,12 @@ name: daily
 
 on:
   schedule:
-    # GitHub may delay or drop scheduled runs, so fire hourly from 09:23 to 15:23 UTC.
-    # The script itself runs once per day, only after 12:00 Helsinki (summer or winter time);
-    # the other triggers exit in seconds.
-    - cron: "23 9-15 * * *"
+    # GitHub delays scheduled runs on this account by roughly 8-10 hours, and the delay
+    # varies, so a fixed noon cron never lands at noon. Firing every hour instead means
+    # that whatever the delay is, some trigger surfaces soon after the gate opens.
+    # The gate below still runs the screening once a day, only after 12:00 Helsinki;
+    # every other trigger exits in seconds.
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       window_days:
