@@ -1,6 +1,6 @@
 # trawl sources. Edit freely; the daily run reads this file.
 
-window_days: 2            # look back this many days (one day of buffer)
+window_days: 3            # look back this many days (two days of buffer)
 max_age_days: 60          # skip papers published longer ago than this (late-indexed)
 max_candidates: 900       # hard cap on abstracts screened per run (cost guard)
 keep_days: 14             # days of results shown in README

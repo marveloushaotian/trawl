@@ -6,7 +6,7 @@ import hashlib
 import json
 import re
 import sys
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -187,7 +187,9 @@ def main() -> None:
     prev = next((r for r in runs if r["date"] == today.isoformat()), None)
     stats["after_dedupe"] = len(cands)
     runs = [r for r in runs if r["date"] != today.isoformat()]
-    runs.append({"date": today.isoformat(), "candidates": len(cands),
+    runs.append({"date": today.isoformat(),
+                 "at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                 "candidates": len(cands),
                  "screened": len(fresh) + (prev["screened"] if prev else 0),
                  "picked": len(picked) + (prev["picked"] if prev else 0), "by_source": stats})
     runs = sorted(runs, key=lambda r: r["date"])[-cfg["keep_days"]:]
