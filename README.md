@@ -1,6 +1,12 @@
 # trawl
 
-New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. Last 14 days, newest first. Updated 2026-11-26 13:26. Everything selected so far, month by month, is in the [archive](archive/).
+New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. Last 14 days, newest first. Updated 2026-11-27 13:59. Everything selected so far, month by month, is in the [archive](archive/).
+
+## 2026-11-27 (Fri)
+
+Screened 241 · selected 0
+
+No matching papers.
 
 ## 2026-11-26 (Thu)
 
