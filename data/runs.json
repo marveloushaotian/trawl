@@ -76,5 +76,19 @@
    "PubMed": 822,
    "after_dedupe": 1021
   }
+ },
+ {
+  "date": "2026-11-28",
+  "at": "2026-11-28T14:13:26Z",
+  "candidates": 1366,
+  "screened": 345,
+  "picked": 1,
+  "by_source": {
+   "bioRxiv": 310,
+   "medRxiv": 0,
+   "Crossref": 255,
+   "PubMed": 978,
+   "after_dedupe": 1366
+  }
  }
 ]

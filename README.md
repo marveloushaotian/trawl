@@ -1,6 +1,14 @@
 # trawl
 
-New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. Last 14 days, newest first. Updated 2026-11-27 13:59. Everything selected so far, month by month, is in the [archive](archive/).
+New papers on plasmids, phages and mobile genetic elements, screened daily around 12:00 Helsinki time. Last 14 days, newest first. Updated 2026-11-28 16:09. Everything selected so far, month by month, is in the [archive](archive/).
+
+## 2026-11-28 (Sat)
+
+Screened 345 · selected 1
+
+| Grade | Paper | Source | Published | 最重要的结论 | 相关理由 |
+|---|---|---|---|---|---|
+| High | [Adult gut microbiomes single out individuals at population scale](https://www.biorxiv.org/content/10.64898/2026.11.25.769306) — Gautreau, G. et al. | bioRxiv | 2026-11-27 | 用一份粪便宏基因组在全部公开宏基因组中检索，94% 的 483 名成人可找回同一人的另一份样本。 | 不涉及质粒，但个体特异的菌株指纹可迁移到纵向队列的个体内追踪；同时提示婴儿数据公开的隐私风险。 |
 
 ## 2026-11-27 (Fri)
 

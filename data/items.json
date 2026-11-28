@@ -229,5 +229,20 @@
   "takeaway": "Archetypal analysis 把菌群表示为极端群落谱的凸组合，可将早期生命菌群演替描述为各 archetype 贡献随年龄变化。",
   "reason": "不涉及质粒；可借鉴到质粒组成的纵向轨迹，用 archetype 混合描述演替而无需硬聚类。",
   "run_date": "2026-11-26"
+ },
+ {
+  "source": "bioRxiv",
+  "doi": "10.64898/2026.11.25.769306",
+  "title": "Adult gut microbiomes single out individuals at population scale",
+  "authors": "Gautreau, G.; Kon Kam King, G.; Pons, N.; Faure, R.",
+  "date": "2026-11-27",
+  "version": "1",
+  "category": "bioinformatics",
+  "published_doi": "",
+  "url": "https://www.biorxiv.org/content/10.64898/2026.11.25.769306",
+  "grade": "high",
+  "takeaway": "用一份粪便宏基因组在全部公开宏基因组中检索，94% 的 483 名成人可找回同一人的另一份样本。",
+  "reason": "不涉及质粒，但个体特异的菌株指纹可迁移到纵向队列的个体内追踪；同时提示婴儿数据公开的隐私风险。",
+  "run_date": "2026-11-28"
  }
 ]
